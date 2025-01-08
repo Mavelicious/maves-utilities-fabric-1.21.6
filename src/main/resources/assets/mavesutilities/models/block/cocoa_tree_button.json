@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "maves-utilities:block/cocoa_tree_planks"
+  }
+}

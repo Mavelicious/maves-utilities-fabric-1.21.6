@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "maves-utilities:block/cocoa_tree_planks"
+  }
+}

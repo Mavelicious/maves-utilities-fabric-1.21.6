@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "maves-utilities:block/stripped_rubber_log",
+    "side": "maves-utilities:block/stripped_rubber_log"
+  }
+}

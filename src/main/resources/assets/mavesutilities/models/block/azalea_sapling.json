@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "maves-utilities:block/azalea_sapling"
+  }
+}

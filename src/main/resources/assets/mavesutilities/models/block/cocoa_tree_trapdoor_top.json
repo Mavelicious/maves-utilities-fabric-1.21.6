@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "maves-utilities:block/cocoa_tree_trapdoor"
+  }
+}

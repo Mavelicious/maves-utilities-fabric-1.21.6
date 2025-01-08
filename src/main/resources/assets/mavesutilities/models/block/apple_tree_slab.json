@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "maves-utilities:block/apple_tree_planks",
+    "side": "maves-utilities:block/apple_tree_planks",
+    "top": "maves-utilities:block/apple_tree_planks"
+  }
+}

@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.mavesutilities.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"MavesUtilitiesClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
