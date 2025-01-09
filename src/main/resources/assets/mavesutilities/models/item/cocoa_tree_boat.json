@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "mavesutilities:item/cocoa_tree_boat"
-  }
-}
