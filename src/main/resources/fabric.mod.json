@@ -18,16 +18,15 @@
 		"main": [
 			"com.mavesutilities.MavesUtilitiesMod"
 		],
+		"fabric-datagen": [
+			"com.mavesutilities.MavesUtilitiesDataGenerator"
+		],
 		"client": [
 			"com.mavesutilities.MavesUtilitiesClient"
 		]
 	},
 	"mixins": [
-		"mavesutilities.mixins.json",
-		{
-			"config": "mavesutilities.client.mixins.json",
-			"environment": "client"
-		}
+		"mavesutilities.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
