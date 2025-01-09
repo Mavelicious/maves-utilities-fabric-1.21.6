@@ -1,12 +1,13 @@
 package com.mavesutilities.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import java.util.concurrent.CompletableFuture;
+
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.registry.RegistryWrapper;
 
-import java.util.concurrent.CompletableFuture;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
 public class MavesRecipeProvider extends FabricRecipeProvider {
     public MavesRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -14,12 +15,19 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registryLookup, RecipeExporter exporter) {
-        return null;
+    public String getName () {
+        return "";
     }
 
-    @Override
-    public String getName() {
-        return "";
+    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registries, RecipeExporter exporter) {
+        return new RecipeGenerator(registries, exporter) {
+
+            @Override
+            public void generate() {
+
+            }
+
+
+        };
     }
 }

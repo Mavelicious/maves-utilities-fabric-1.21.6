@@ -1,17 +1,18 @@
 {
+  "item.mavesutilities.oak_bark": "Oak Bark",
+  "item.mavesutilities.spruce_bark": "Spruce Bark",
+  "item.mavesutilities.birch_bark": "Birch Bark",
+  "item.mavesutilities.jungle_bark": "Jungle Bark",
   "item.mavesutilities.acacia_bark": "Acacia Bark",
+  "item.mavesutilities.dark_oak_bark": "Dark Oak Bark",
+  "item.mavesutilities.mangrove_bark": "Mangrove Bark",
+  "item.mavesutilities.cherry_bark": "Cherry Bark",
+  "item.mavesutilities.pale_oak_bark": "Pale Oak Bark",
   "item.mavesutilities.apple_tree_bark": "Apple Tree Bark",
   "item.mavesutilities.azalea_bark": "Azalea Bark",
-  "item.mavesutilities.birch_bark": "Birch Bark",
-  "item.mavesutilities.cherry_bark": "Cherry Bark",
   "item.mavesutilities.cocoa_tree_bark": "Cocoa Tree Bark",
-  "item.mavesutilities.crimson_bark": "Crimson Bark",
-  "item.mavesutilities.dark_oak_bark": "Dark Oak Bark",
-  "item.mavesutilities.jungle_bark": "Jungle Bark",
-  "item.mavesutilities.mangrove_bark": "Mangrove Bark",
-  "item.mavesutilities.oak_bark": "Oak Bark",
   "item.mavesutilities.rubber_bark": "Rubber Bark",
-  "item.mavesutilities.spruce_bark": "Spruce Bark",
-  "item.mavesutilities.warped_bark": "Warped Bark",
-  "item.mavesutilities.willow_bark": "Willow Bark"
+  "item.mavesutilities.willow_bark": "Willow Bark",
+  "item.mavesutilities.crimson_bark": "Crimson Bark",
+  "item.mavesutilities.warped_bark": "Warped Bark"
 }

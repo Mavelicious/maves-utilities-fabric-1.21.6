@@ -27,13 +27,14 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.DARK_OAK_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.MANGROVE_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.CHERRY_BARK, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.CRIMSON_BARK, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.WARPED_BARK, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.PALE_OAK_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.APPLE_TREE_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.AZALEA_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.COCOA_TREE_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.RUBBER_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.WILLOW_BARK, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.CRIMSON_BARK, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WARPED_BARK, Models.GENERATED);
 
     }
 }

@@ -37,12 +37,9 @@ public class MavesItems {
     public static final Item CHERRY_BARK = registerItem("cherry_bark", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM,
                     Identifier.of(MavesUtilitiesMod.MOD_ID, "cherry_bark")))));
-    public static final Item CRIMSON_BARK = registerItem("crimson_bark", new Item(new Item.Settings()
+    public static final Item PALE_OAK_BARK = registerItem("pale_oak_bark", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM,
-                    Identifier.of(MavesUtilitiesMod.MOD_ID, "crimson_bark")))));
-    public static final Item WARPED_BARK = registerItem("warped_bark", new Item(new Item.Settings()
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM,
-                    Identifier.of(MavesUtilitiesMod.MOD_ID, "warped_bark")))));
+                    Identifier.of(MavesUtilitiesMod.MOD_ID, "pale_oak_bark")))));
     public static final Item APPLE_TREE_BARK = registerItem("apple_tree_bark", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM,
                     Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_bark")))));
@@ -58,6 +55,12 @@ public class MavesItems {
     public static final Item WILLOW_BARK = registerItem("willow_bark", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM,
                     Identifier.of(MavesUtilitiesMod.MOD_ID, "willow_bark")))));
+    public static final Item CRIMSON_BARK = registerItem("crimson_bark", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM,
+                    Identifier.of(MavesUtilitiesMod.MOD_ID, "crimson_bark")))));
+    public static final Item WARPED_BARK = registerItem("warped_bark", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM,
+                    Identifier.of(MavesUtilitiesMod.MOD_ID, "warped_bark")))));
 
     private static Item registerItem(String name, Item item) {
      return Registry.register(Registries.ITEM, Identifier.of(MavesUtilitiesMod.MOD_ID, name), item);
@@ -75,13 +78,14 @@ public class MavesItems {
             entries.add(DARK_OAK_BARK);
             entries.add(MANGROVE_BARK);
             entries.add(CHERRY_BARK);
-            entries.add(CRIMSON_BARK);
-            entries.add(WARPED_BARK);
+            entries.add(PALE_OAK_BARK);
             entries.add(APPLE_TREE_BARK);
             entries.add(AZALEA_BARK);
             entries.add(COCOA_TREE_BARK);
             entries.add(RUBBER_BARK);
             entries.add(WILLOW_BARK);
+            entries.add(CRIMSON_BARK);
+            entries.add(WARPED_BARK);
         });
     }
 }
