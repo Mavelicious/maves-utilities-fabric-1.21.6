@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "maves-utilities:item/cocoa_tree_hanging_sign"
+    "layer0": "mavesutilities:item/cocoa_tree_hanging_sign"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "maves-utilities:block/cocoa_tree_planks"
+    "all": "mavesutilities:block/cocoa_tree_planks"
   }
 }

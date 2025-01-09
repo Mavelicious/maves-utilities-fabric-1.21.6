@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "maves-utilities:block/willow_planks",
-    "side": "maves-utilities:block/willow_planks",
-    "top": "maves-utilities:block/willow_planks"
+    "bottom": "mavesutilities:block/willow_planks",
+    "side": "mavesutilities:block/willow_planks",
+    "top": "mavesutilities:block/willow_planks"
   }
 }

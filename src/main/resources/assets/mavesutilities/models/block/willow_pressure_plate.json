@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_up",
   "textures": {
-    "texture": "maves-utilities:block/willow_planks"
+    "texture": "mavesutilities:block/willow_planks"
   }
 }

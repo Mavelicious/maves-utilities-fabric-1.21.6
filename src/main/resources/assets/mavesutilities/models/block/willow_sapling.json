@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "maves-utilities:block/willow_sapling"
+    "cross": "mavesutilities:block/willow_sapling"
   }
 }

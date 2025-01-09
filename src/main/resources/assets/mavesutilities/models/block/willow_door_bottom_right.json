@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/door_bottom_right",
   "textures": {
-    "bottom": "maves-utilities:block/willow_door_bottom",
-    "top": "maves-utilities:block/willow_door_top"
+    "bottom": "mavesutilities:block/willow_door_bottom",
+    "top": "mavesutilities:block/willow_door_top"
   }
 }

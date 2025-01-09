@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "maves-utilities:block/willow_leaves"
+    "all": "mavesutilities:block/willow_leaves"
   }
 }

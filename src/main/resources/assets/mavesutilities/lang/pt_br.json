@@ -1,3 +1,17 @@
 {
-  "item.mavesutilities.acacia_bark": "Casca de acácia"
+  "item.mavesutilities.acacia_bark": "Casca de acácia",
+  "item.mavesutilities.apple_tree_bark": "Casca de macieira",
+  "item.mavesutilities.azalea_bark": "Casca de azaleia",
+  "item.mavesutilities.birch_bark": "Casca de bétula",
+  "item.mavesutilities.cherry_bark": "Casca de cerejeira",
+  "item.mavesutilities.cocoa_tree_bark": "Casca de cacaueiro",
+  "item.mavesutilities.crimson_bark": "Casca carmesim",
+  "item.mavesutilities.dark_oak_bark": "Casca de carvalho escuro",
+  "item.mavesutilities.jungle_bark": "Casca de selva",
+  "item.mavesutilities.mangrove_bark": "Casca de mangue",
+  "item.mavesutilities.oak_bark": "Casca de carvalho",
+  "item.mavesutilities.rubber_bark": "Casca de seringueira",
+  "item.mavesutilities.spruce_bark": "Casca de pinheiro",
+  "item.mavesutilities.warped_bark": "Casca distorcida",
+  "item.mavesutilities.willow_bark": "Casca de salgueiro"
 }

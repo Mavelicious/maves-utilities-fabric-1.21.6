@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "maves-utilities:item/apple_tree_door"
+    "layer0": "mavesutilities:item/apple_tree_door"
   }
 }

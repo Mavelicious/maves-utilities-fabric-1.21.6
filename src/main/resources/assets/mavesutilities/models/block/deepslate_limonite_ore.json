@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "maves-utilities:block/deepslate_limonite_ore"
+    "all": "mavesutilities:block/deepslate_limonite_ore"
   }
 }

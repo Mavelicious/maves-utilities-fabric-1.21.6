@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fence_gate_wall_open",
   "textures": {
-    "texture": "maves-utilities:block/cocoa_tree_planks"
+    "texture": "mavesutilities:block/cocoa_tree_planks"
   }
 }

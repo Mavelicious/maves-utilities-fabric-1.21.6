@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/door_top_left",
   "textures": {
-    "bottom": "maves-utilities:block/cocoa_tree_door_bottom",
-    "top": "maves-utilities:block/cocoa_tree_door_top"
+    "bottom": "mavesutilities:block/cocoa_tree_door_bottom",
+    "top": "mavesutilities:block/cocoa_tree_door_top"
   }
 }

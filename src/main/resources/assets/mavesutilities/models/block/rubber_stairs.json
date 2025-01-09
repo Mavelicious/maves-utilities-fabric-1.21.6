@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "maves-utilities:block/rubber_planks",
-    "side": "maves-utilities:block/rubber_planks",
-    "top": "maves-utilities:block/rubber_planks"
+    "bottom": "mavesutilities:block/rubber_planks",
+    "side": "mavesutilities:block/rubber_planks",
+    "top": "mavesutilities:block/rubber_planks"
   }
 }

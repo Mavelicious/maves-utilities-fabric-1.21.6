@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "maves-utilities:item/mangrove_bark"
+    "layer0": "mavesutilities:item/mangrove_bark"
   }
 }

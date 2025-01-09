@@ -1,3 +1,17 @@
 {
-  "item.mavesutilities.acacia_bark": "Acacia bark"
+  "item.mavesutilities.acacia_bark": "Acacia bark",
+  "item.mavesutilities.apple_tree_bark": "Apple tree bark",
+  "item.mavesutilities.azalea_bark": "Azalea bark",
+  "item.mavesutilities.birch_bark": "Birch bark",
+  "item.mavesutilities.cherry_bark": "Cherry bark",
+  "item.mavesutilities.cocoa_tree_bark": "Cocoa tree bark",
+  "item.mavesutilities.crimson_bark": "Crimson bark",
+  "item.mavesutilities.dark_oak_bark": "Dark oak bark",
+  "item.mavesutilities.jungle_bark": "Jungle bark",
+  "item.mavesutilities.mangrove_bark": "Mangrove bark",
+  "item.mavesutilities.oak_bark": "Oak bark",
+  "item.mavesutilities.rubber_bark": "Rubber bark",
+  "item.mavesutilities.spruce_bark": "Spruce bark",
+  "item.mavesutilities.warped_bark": "Warped bark",
+  "item.mavesutilities.willow_bark": "Willow bark"
 }

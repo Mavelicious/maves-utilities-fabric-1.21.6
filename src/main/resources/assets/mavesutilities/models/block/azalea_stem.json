@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "maves-utilities:block/azalea_stem_top",
-    "side": "maves-utilities:block/azalea_stem"
+    "end": "mavesutilities:block/azalea_stem_top",
+    "side": "mavesutilities:block/azalea_stem"
   }
 }

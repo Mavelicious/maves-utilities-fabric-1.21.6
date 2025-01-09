@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_orientable_trapdoor_top",
   "textures": {
-    "texture": "maves-utilities:block/rubber_trapdoor"
+    "texture": "mavesutilities:block/rubber_trapdoor"
   }
 }

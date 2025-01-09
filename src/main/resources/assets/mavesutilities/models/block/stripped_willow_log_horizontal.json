@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
-    "end": "maves-utilities:block/stripped_willow_log_top",
-    "side": "maves-utilities:block/stripped_willow_log"
+    "end": "mavesutilities:block/stripped_willow_log_top",
+    "side": "mavesutilities:block/stripped_willow_log"
   }
 }

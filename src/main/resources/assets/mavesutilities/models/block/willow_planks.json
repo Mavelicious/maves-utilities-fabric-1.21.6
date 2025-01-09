@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "maves-utilities:block/willow_planks"
+    "all": "mavesutilities:block/willow_planks"
   }
 }

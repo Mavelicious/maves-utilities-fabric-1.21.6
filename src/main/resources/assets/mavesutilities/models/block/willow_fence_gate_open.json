@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fence_gate_open",
   "textures": {
-    "texture": "maves-utilities:block/willow_planks"
+    "texture": "mavesutilities:block/willow_planks"
   }
 }

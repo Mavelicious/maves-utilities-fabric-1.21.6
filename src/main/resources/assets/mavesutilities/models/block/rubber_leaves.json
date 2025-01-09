@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "maves-utilities:block/rubber_leaves"
+    "all": "mavesutilities:block/rubber_leaves"
   }
 }

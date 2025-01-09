@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "maves-utilities:item/crimson_bark"
+    "layer0": "mavesutilities:item/crimson_bark"
   }
 }

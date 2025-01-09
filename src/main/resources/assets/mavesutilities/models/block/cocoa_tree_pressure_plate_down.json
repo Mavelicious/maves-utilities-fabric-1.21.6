@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/pressure_plate_down",
   "textures": {
-    "texture": "maves-utilities:block/cocoa_tree_planks"
+    "texture": "mavesutilities:block/cocoa_tree_planks"
   }
 }

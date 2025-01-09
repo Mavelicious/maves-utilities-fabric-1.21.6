@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "maves-utilities:item/azalea_sign"
+    "layer0": "mavesutilities:item/azalea_sign"
   }
 }
