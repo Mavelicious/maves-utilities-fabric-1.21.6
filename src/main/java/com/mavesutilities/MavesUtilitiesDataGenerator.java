@@ -10,13 +10,12 @@ public class MavesUtilitiesDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-
-
+        pack.addProvider(MavesRegistryDataGenerator::new);
         pack.addProvider(MavesBlockTagProvider::new);
         pack.addProvider(MavesItemTagProvider::new);
         pack.addProvider(MavesLootTableProvider::new);
         pack.addProvider(MavesModelProvider::new);
-        pack.addProvider(MavesRecipeProvider::new);
+        //pack.addProvider(MavesRecipeProvider::new);
     }
 
     @Override

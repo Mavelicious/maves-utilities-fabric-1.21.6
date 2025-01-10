@@ -31,8 +31,8 @@ public class MavesBlocks {
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_leaves")))));
 
     public static final Block APPLE_TREE_SAPLING = registerBlock("apple_tree_sapling",
-            new MavesSaplingBlock(MavesSaplingGenerators.APPLE_TREE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
-                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_sapling"))), Blocks.STONE));
+            new SaplingBlock(MavesSaplingGenerators.APPLE_TREE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_sapling")))));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
