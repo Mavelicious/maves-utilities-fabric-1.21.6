@@ -20,7 +20,7 @@ public class MavesModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_APPLE_TREE_LOG).log(MavesBlocks.STRIPPED_APPLE_TREE_LOG).wood(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
 
         blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.APPLE_TREE_PLANKS);
-        blockStateModelGenerator.registerSingleton(MavesBlocks.APPLE_TREE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.APPLE_TREE_LEAVES, TexturedModel.LEAVES, 0xbeff00);
         blockStateModelGenerator.registerTintableCrossBlockState(MavesBlocks.APPLE_TREE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
     }

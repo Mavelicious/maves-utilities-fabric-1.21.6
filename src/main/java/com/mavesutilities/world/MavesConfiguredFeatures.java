@@ -35,7 +35,7 @@ public class MavesConfiguredFeatures {
                 new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
                 new TwoLayersFeatureSize(1, 0, 1)
                 )
-                        .dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT))
+                        .dirtProvider(BlockStateProvider.of(Blocks.DIRT))
                         .forceDirt()
                         .build()
         );
