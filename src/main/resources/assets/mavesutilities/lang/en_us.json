@@ -14,5 +14,16 @@
   "item.mavesutilities.rubber_bark": "Rubber Bark",
   "item.mavesutilities.willow_bark": "Willow Bark",
   "item.mavesutilities.crimson_bark": "Crimson Bark",
-  "item.mavesutilities.warped_bark": "Warped Bark"
+  "item.mavesutilities.warped_bark": "Warped Bark",
+
+  "block.mavesutilities.apple_tree_log": "Apple Tree Log",
+  "block.mavesutilities.apple_tree_wood": "Apple Tree Wood",
+  "block.mavesutilities.stripped_apple_tree_log": "Stripped Apple Tree Log",
+  "block.mavesutilities.stripped_apple_tree_wood": "Stripped Apple Tree Wood",
+  "block.mavesutilities.apple_tree_planks": "Apple Tree Planks",
+  "block.mavesutilities.apple_tree_leaves": "Apple Tree Leaves",
+  "block.mavesutilities.apple_tree_sapling": "Apple Tree Sapling",
+
+  "itemgroup.mavesutilities.maves_items": "Mave's Items",
+  "itemgroup.mavesutilities.maves_blocks": "Mave's Blocks"
 }

@@ -14,5 +14,16 @@
   "item.mavesutilities.rubber_bark": "Casca de Seringueira",
   "item.mavesutilities.willow_bark": "Casca de Salgueiro",
   "item.mavesutilities.crimson_bark": "Casca Carmesim",
-  "item.mavesutilities.warped_bark": "Casca Distorcida"
+  "item.mavesutilities.warped_bark": "Casca Distorcida",
+
+  "block.mavesutilities.apple_tree_log": "Tronco de Macieira",
+  "block.mavesutilities.apple_tree_wood": "Madeira de Macieira",
+  "block.mavesutilities.stripped_apple_tree_log": "Tronco de Macieira Descascada",
+  "block.mavesutilities.stripped_apple_tree_wood": "Madeira de Macieira Descascado",
+  "block.mavesutilities.apple_tree_planks": "Tábuas de Macieira",
+  "block.mavesutilities.apple_tree_leaves": "Folhas de Macieira",
+  "block.mavesutilities.apple_tree_sapling": "Muda de Macieira",
+
+  "itemgroup.mavesutilities.maves_items": "Itens de Mave",
+  "itemgroup.mavesutilities.maves_blocks": "Blocos de Mave"
 }

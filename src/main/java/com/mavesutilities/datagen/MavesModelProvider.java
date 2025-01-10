@@ -1,6 +1,7 @@
 package com.mavesutilities.datagen;
 
 
+import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -14,6 +15,13 @@ public class MavesModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(net.minecraft.client.data.BlockStateModelGenerator blockStateModelGenerator) {
+
+        blockStateModelGenerator.registerLog(MavesBlocks.APPLE_TREE_LOG).log(MavesBlocks.APPLE_TREE_LOG).wood(MavesBlocks.APPLE_TREE_WOOD);
+        blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_APPLE_TREE_LOG).log(MavesBlocks.STRIPPED_APPLE_TREE_LOG).wood(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
+
+        blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.APPLE_TREE_PLANKS);
+        blockStateModelGenerator.registerSingleton(MavesBlocks.APPLE_TREE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(MavesBlocks.APPLE_TREE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
     }
 

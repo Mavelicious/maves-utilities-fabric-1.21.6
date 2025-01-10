@@ -2,8 +2,12 @@ package com.mavesutilities.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.mavesutilities.item.MavesItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -19,7 +23,7 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
         return "";
     }
 
-    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registries, RecipeExporter exporter) {
+    public RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registries, RecipeExporter exporter) {
         return new RecipeGenerator(registries, exporter) {
 
             @Override

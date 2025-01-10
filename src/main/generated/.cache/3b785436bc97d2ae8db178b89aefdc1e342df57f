@@ -1,1 +1,8 @@
 // 1.21.4	-999999999-01-01T00:00:00	Mave's Utilities/Block Loot Tables
+3d847f52ddf72ec1aeb9b1a2c049e3093a5d1c38 data/mavesutilities/loot_table/blocks/apple_tree_leaves.json
+9200316301a2c37285dc97610b577b703334d547 data/mavesutilities/loot_table/blocks/apple_tree_log.json
+62941783726aaa484f2ff0e038bc87578388eab7 data/mavesutilities/loot_table/blocks/apple_tree_planks.json
+12e6667e69624f5a3025c479453c37f61dc20b9c data/mavesutilities/loot_table/blocks/apple_tree_sapling.json
+359b84d7429af054d4de5bc98d3a7ba5f15c9a8a data/mavesutilities/loot_table/blocks/apple_tree_wood.json
+b961eab0a4141e6323ae50bb2a710de55f7e7119 data/mavesutilities/loot_table/blocks/stripped_apple_tree_log.json
+4ad55f25ac52f9af2ce2d364d3eb7ce79a42fc89 data/mavesutilities/loot_table/blocks/stripped_apple_tree_wood.json

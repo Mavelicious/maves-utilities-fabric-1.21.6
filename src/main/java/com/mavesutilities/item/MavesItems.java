@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 
 public class MavesItems {
 
-    //Items
     public static final Item OAK_BARK = registerItem("oak_bark", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM,
                     Identifier.of(MavesUtilitiesMod.MOD_ID, "oak_bark")))));
@@ -68,24 +67,5 @@ public class MavesItems {
 
     public static void registerMavesItems() {
         MavesUtilitiesMod.LOGGER.info("Registering Mave's Items for " + MavesUtilitiesMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(OAK_BARK);
-            entries.add(SPRUCE_BARK);
-            entries.add(BIRCH_BARK);
-            entries.add(JUNGLE_BARK);
-            entries.add(ACACIA_BARK);
-            entries.add(DARK_OAK_BARK);
-            entries.add(MANGROVE_BARK);
-            entries.add(CHERRY_BARK);
-            entries.add(PALE_OAK_BARK);
-            entries.add(APPLE_TREE_BARK);
-            entries.add(AZALEA_BARK);
-            entries.add(COCOA_TREE_BARK);
-            entries.add(RUBBER_BARK);
-            entries.add(WILLOW_BARK);
-            entries.add(CRIMSON_BARK);
-            entries.add(WARPED_BARK);
-        });
     }
 }
