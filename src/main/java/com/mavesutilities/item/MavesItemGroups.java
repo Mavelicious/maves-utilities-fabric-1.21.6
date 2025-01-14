@@ -40,12 +40,38 @@ public class MavesItemGroups {
                     .displayName(Text.translatable("itemgroup.mavesutilities.maves_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(MavesBlocks.APPLE_TREE_LOG);
+                        entries.add(MavesBlocks.AZALEA_STEM);
+                        entries.add(MavesBlocks.COCOA_TREE_LOG);
+                        entries.add(MavesBlocks.RUBBER_LOG);
+                        entries.add(MavesBlocks.WILLOW_LOG);
                         entries.add(MavesBlocks.APPLE_TREE_WOOD);
+                        entries.add(MavesBlocks.AZALEA_HYPHAE);
+                        entries.add(MavesBlocks.COCOA_TREE_WOOD);
+                        entries.add(MavesBlocks.RUBBER_WOOD);
+                        entries.add(MavesBlocks.WILLOW_WOOD);
                         entries.add(MavesBlocks.STRIPPED_APPLE_TREE_LOG);
+                        entries.add(MavesBlocks.STRIPPED_AZALEA_STEM);
+                        entries.add(MavesBlocks.STRIPPED_COCOA_TREE_LOG);
+                        entries.add(MavesBlocks.STRIPPED_RUBBER_LOG);
+                        entries.add(MavesBlocks.STRIPPED_WILLOW_LOG);
                         entries.add(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
+                        entries.add(MavesBlocks.STRIPPED_AZALEA_HYPHAE);
+                        entries.add(MavesBlocks.STRIPPED_COCOA_TREE_WOOD);
+                        entries.add(MavesBlocks.STRIPPED_RUBBER_WOOD);
+                        entries.add(MavesBlocks.STRIPPED_WILLOW_WOOD);
                         entries.add(MavesBlocks.APPLE_TREE_PLANKS);
+                        entries.add(MavesBlocks.AZALEA_PLANKS);
+                        entries.add(MavesBlocks.COCOA_TREE_PLANKS);
+                        entries.add(MavesBlocks.RUBBER_PLANKS);
+                        entries.add(MavesBlocks.WILLOW_PLANKS);
                         entries.add(MavesBlocks.APPLE_TREE_LEAVES);
+                        entries.add(MavesBlocks.COCOA_TREE_LEAVES);
+                        entries.add(MavesBlocks.RUBBER_LEAVES);
+                        entries.add(MavesBlocks.WILLOW_LEAVES);
                         entries.add(MavesBlocks.APPLE_TREE_SAPLING);
+                        entries.add(MavesBlocks.COCOA_TREE_SAPLING);
+                        entries.add(MavesBlocks.RUBBER_SAPLING);
+                        entries.add(MavesBlocks.WILLOW_SAPLING);
                     }).build());
 
     public static void registerItemGroups() {

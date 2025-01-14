@@ -18,8 +18,24 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(MavesBlocks.APPLE_TREE_LOG)
+                .add(MavesBlocks.AZALEA_STEM)
+                .add(MavesBlocks.COCOA_TREE_LOG)
+                .add(MavesBlocks.RUBBER_LOG)
+                .add(MavesBlocks.WILLOW_LOG)
                 .add(MavesBlocks.APPLE_TREE_WOOD)
+                .add(MavesBlocks.AZALEA_HYPHAE)
+                .add(MavesBlocks.COCOA_TREE_WOOD)
+                .add(MavesBlocks.RUBBER_WOOD)
+                .add(MavesBlocks.WILLOW_WOOD)
                 .add(MavesBlocks.STRIPPED_APPLE_TREE_LOG)
-                .add(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
+                .add(MavesBlocks.STRIPPED_AZALEA_STEM)
+                .add(MavesBlocks.STRIPPED_COCOA_TREE_LOG)
+                .add(MavesBlocks.STRIPPED_RUBBER_LOG)
+                .add(MavesBlocks.STRIPPED_WILLOW_LOG)
+                .add(MavesBlocks.STRIPPED_APPLE_TREE_WOOD)
+                .add(MavesBlocks.STRIPPED_AZALEA_HYPHAE)
+                .add(MavesBlocks.STRIPPED_COCOA_TREE_WOOD)
+                .add(MavesBlocks.STRIPPED_RUBBER_WOOD)
+                .add(MavesBlocks.STRIPPED_WILLOW_WOOD);
     }
 }

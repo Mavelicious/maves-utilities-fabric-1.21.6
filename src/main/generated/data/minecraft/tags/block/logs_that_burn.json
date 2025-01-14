@@ -1,8 +1,24 @@
 {
   "values": [
     "mavesutilities:apple_tree_log",
+    "mavesutilities:azalea_stem",
+    "mavesutilities:cocoa_tree_log",
+    "mavesutilities:rubber_log",
+    "mavesutilities:willow_log",
     "mavesutilities:apple_tree_wood",
+    "mavesutilities:azalea_hyphae",
+    "mavesutilities:cocoa_tree_wood",
+    "mavesutilities:rubber_wood",
+    "mavesutilities:willow_wood",
     "mavesutilities:stripped_apple_tree_log",
-    "mavesutilities:stripped_apple_tree_wood"
+    "mavesutilities:stripped_azalea_stem",
+    "mavesutilities:stripped_cocoa_tree_log",
+    "mavesutilities:stripped_rubber_log",
+    "mavesutilities:stripped_willow_log",
+    "mavesutilities:stripped_apple_tree_wood",
+    "mavesutilities:stripped_azalea_hyphae",
+    "mavesutilities:stripped_cocoa_tree_wood",
+    "mavesutilities:stripped_rubber_wood",
+    "mavesutilities:stripped_willow_wood"
   ]
 }

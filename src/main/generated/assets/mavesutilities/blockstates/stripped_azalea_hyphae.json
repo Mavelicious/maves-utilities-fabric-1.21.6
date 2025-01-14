@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mavesutilities:block/stripped_azalea_hyphae",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mavesutilities:block/stripped_azalea_hyphae"
+    },
+    "axis=z": {
+      "model": "mavesutilities:block/stripped_azalea_hyphae",
+      "x": 90
+    }
+  }
+}
