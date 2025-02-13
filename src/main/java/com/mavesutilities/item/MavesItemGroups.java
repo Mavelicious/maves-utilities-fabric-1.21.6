@@ -11,10 +11,13 @@ import net.minecraft.util.Identifier;
 
 public class MavesItemGroups {
 
+    public static final Text MAVES_ITEMS = Text.translatable("itemGroup." + MavesUtilitiesMod.MOD_ID + ".maves_items");
+    public static final Text MAVES_BLOCKS = Text.translatable("itemGroup." + MavesUtilitiesMod.MOD_ID + ".maves_blocks");
+
     public static final ItemGroup MAVES_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "maves_items"),
             FabricItemGroup.builder().icon(() -> new ItemStack(MavesItems.APPLE_TREE_BARK))
-                    .displayName(Text.translatable("itemgroup.mavesutilities.maves_items"))
+                    .displayName(MAVES_ITEMS)
                     .entries((displayContext, entries) -> {
                         entries.add(MavesItems.OAK_BARK);
                         entries.add(MavesItems.SPRUCE_BARK);
@@ -37,7 +40,7 @@ public class MavesItemGroups {
     public static final ItemGroup MAVES_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "maves_blocks"),
             FabricItemGroup.builder().icon(() -> new ItemStack(MavesBlocks.APPLE_TREE_LOG))
-                    .displayName(Text.translatable("itemgroup.mavesutilities.maves_blocks"))
+                    .displayName(MAVES_BLOCKS)
                     .entries((displayContext, entries) -> {
                         entries.add(MavesBlocks.APPLE_TREE_LOG);
                         entries.add(MavesBlocks.AZALEA_STEM);
@@ -45,7 +48,7 @@ public class MavesItemGroups {
                         entries.add(MavesBlocks.RUBBER_LOG);
                         entries.add(MavesBlocks.WILLOW_LOG);
                         entries.add(MavesBlocks.APPLE_TREE_WOOD);
-                        entries.add(MavesBlocks.AZALEA_HYPHAE);
+                        entries.add(MavesBlocks.AZALEA_WOOD);
                         entries.add(MavesBlocks.COCOA_TREE_WOOD);
                         entries.add(MavesBlocks.RUBBER_WOOD);
                         entries.add(MavesBlocks.WILLOW_WOOD);
@@ -55,7 +58,7 @@ public class MavesItemGroups {
                         entries.add(MavesBlocks.STRIPPED_RUBBER_LOG);
                         entries.add(MavesBlocks.STRIPPED_WILLOW_LOG);
                         entries.add(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
-                        entries.add(MavesBlocks.STRIPPED_AZALEA_HYPHAE);
+                        entries.add(MavesBlocks.STRIPPED_AZALEA_WOOD);
                         entries.add(MavesBlocks.STRIPPED_COCOA_TREE_WOOD);
                         entries.add(MavesBlocks.STRIPPED_RUBBER_WOOD);
                         entries.add(MavesBlocks.STRIPPED_WILLOW_WOOD);

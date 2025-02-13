@@ -1,3 +1,18 @@
 // 1.21.4	-999999999-01-01T00:00:00	Mave's Utilities/Tags for minecraft:item
-fc551c3008a01874c7caa0cae3f09e43eef4016f data/minecraft/tags/item/logs_that_burn.json
-b49f4a7d2b17f77339a758418974e6730be22055 data/minecraft/tags/item/planks.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/mavesutilities/tags/item/apple_tree_logs.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/mavesutilities/tags/item/azalea_stems.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/mavesutilities/tags/item/cocoa_tree_logs.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/mavesutilities/tags/item/rubber_tree_logs.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/mavesutilities/tags/item/willow_logs.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/fence_gates.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/minecraft/tags/item/leaves.json
+868e44f11df4ecd0871e72392d3233a38e173f4f data/minecraft/tags/item/logs_that_burn.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/planks.json
+ddad004dd8a0b64918d67051d6e10e80d0c006dc data/minecraft/tags/item/saplings.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_buttons.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_doors.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_fences.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_pressure_plates.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_slabs.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_stairs.json
+b9488e9e866625d6d8bc1f5344e3c9e36ca811da data/minecraft/tags/item/wooden_trapdoors.json

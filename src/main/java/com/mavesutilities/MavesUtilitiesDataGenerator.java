@@ -15,7 +15,9 @@ public class MavesUtilitiesDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MavesItemTagProvider::new);
         pack.addProvider(MavesLootTableProvider::new);
         pack.addProvider(MavesModelProvider::new);
-        //pack.addProvider(MavesRecipeProvider::new);
+        pack.addProvider(MavesRecipeProvider::new);
+        pack.addProvider(EnglishLangProvider::new);
+        pack.addProvider(PortuguesLangProvider::new);
     }
 
     @Override

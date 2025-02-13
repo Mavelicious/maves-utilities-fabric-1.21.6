@@ -23,13 +23,21 @@ public class MavesPlacedFeatures {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, APPLE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.APPLE_TREE_KEY),
-                PlacedFeatures.wouldSurvive(MavesBlocks.APPLE_TREE_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),
+                        MavesBlocks.APPLE_TREE_SAPLING));
         register(context, COCOA_TREE_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.COCOA_TREE_KEY),
-                PlacedFeatures.wouldSurvive(MavesBlocks.COCOA_TREE_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),
+                        MavesBlocks.COCOA_TREE_SAPLING));
         register(context, RUBBER_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.RUBBER_TREE_KEY),
-                PlacedFeatures.wouldSurvive(MavesBlocks.RUBBER_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),
+                        MavesBlocks.RUBBER_SAPLING));
         register(context, WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.WILLOW_TREE_KEY),
-                PlacedFeatures.wouldSurvive(MavesBlocks.WILLOW_SAPLING));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),
+                        MavesBlocks.WILLOW_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

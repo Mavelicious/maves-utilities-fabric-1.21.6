@@ -3,7 +3,8 @@
 	"package": "com.mavesutilities.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"MavesUtilitiesMixin"
+		"MavesUtilitiesMixin",
+		"AxeItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

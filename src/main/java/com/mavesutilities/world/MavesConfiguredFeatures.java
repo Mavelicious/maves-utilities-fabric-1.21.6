@@ -5,8 +5,6 @@ import com.mavesutilities.block.MavesBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.*;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -20,7 +18,6 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import net.minecraft.world.gen.trunk.UpwardsBranchingTrunkPlacer;
 
 public class MavesConfiguredFeatures {
 
@@ -68,7 +65,7 @@ public class MavesConfiguredFeatures {
         );
         register(context, WILLOW_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                         BlockStateProvider.of(MavesBlocks.WILLOW_LOG),
-                        new StraightTrunkPlacer(2, 1, 4),
+                        new StraightTrunkPlacer(4, 2, 0),
                         BlockStateProvider.of(MavesBlocks.WILLOW_LEAVES),
                         new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), 3),
                         new TwoLayersFeatureSize(2, 0, 2)
