@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:rubber_bark",
+    "y": "mavesutilities:stripped_rubber_log"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:rubber_log"
+  }
+}

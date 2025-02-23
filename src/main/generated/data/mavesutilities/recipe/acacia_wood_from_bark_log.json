@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:acacia_bark",
+    "y": "minecraft:acacia_log"
+  },
+  "pattern": [
+    " x ",
+    " y ",
+    " x "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:acacia_wood"
+  }
+}

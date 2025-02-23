@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mavesutilities:block/cacao_tree_slab"
+    },
+    "type=double": {
+      "model": "mavesutilities:block/cacao_tree_planks"
+    },
+    "type=top": {
+      "model": "mavesutilities:block/cacao_tree_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "mavesutilities:block/cacao_tree_planks",
+    "side": "mavesutilities:block/cacao_tree_planks",
+    "top": "mavesutilities:block/cacao_tree_planks"
+  }
+}

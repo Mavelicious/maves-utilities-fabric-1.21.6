@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:azalea_bark",
+    "y": "mavesutilities:azalea_stem"
+  },
+  "pattern": [
+    " x ",
+    " y ",
+    " x "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:azalea_wood"
+  }
+}

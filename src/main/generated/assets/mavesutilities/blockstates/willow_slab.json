@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mavesutilities:block/willow_slab"
+    },
+    "type=double": {
+      "model": "mavesutilities:block/willow_planks"
+    },
+    "type=top": {
+      "model": "mavesutilities:block/willow_slab_top"
+    }
+  }
+}

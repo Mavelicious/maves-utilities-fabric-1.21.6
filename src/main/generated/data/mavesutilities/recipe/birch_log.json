@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:birch_bark",
+    "y": "minecraft:stripped_birch_log"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:birch_log"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mavesutilities:block/cacao_tree_log",
+    "side": "mavesutilities:block/cacao_tree_log"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:dark_oak_bark",
+    "y": "minecraft:stripped_dark_oak_log"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:dark_oak_log"
+  }
+}

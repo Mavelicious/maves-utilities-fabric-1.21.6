@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:warped_bark",
+    "y": "minecraft:stripped_warped_stem"
+  },
+  "pattern": [
+    "xxx",
+    " y ",
+    "xxx"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:warped_hyphae"
+  }
+}

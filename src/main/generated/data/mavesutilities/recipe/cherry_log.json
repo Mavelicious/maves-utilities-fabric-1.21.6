@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:cherry_bark",
+    "y": "minecraft:stripped_cherry_log"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cherry_log"
+  }
+}

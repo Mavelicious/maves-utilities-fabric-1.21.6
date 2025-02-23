@@ -1,4 +1,4 @@
-# Fabric Example Mod
+# Mave's Utilities
 
 ## Setup
 

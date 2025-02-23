@@ -22,7 +22,7 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 public class MavesConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> APPLE_TREE_KEY = registerKey("apple_tree");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> COCOA_TREE_KEY = registerKey("cocoa_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CACAO_TREE_KEY = registerKey("cacao_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUBBER_TREE_KEY = registerKey("rubber_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_TREE_KEY = registerKey("willow_tree");
 
@@ -41,10 +41,10 @@ public class MavesConfiguredFeatures {
                         .dirtProvider(BlockStateProvider.of(Blocks.DIRT))
                         .build()
         );
-        register(context, COCOA_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(MavesBlocks.COCOA_TREE_LOG),
+        register(context, CACAO_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(MavesBlocks.CACAO_TREE_LOG),
                         new StraightTrunkPlacer(5, 2, 1),
-                        BlockStateProvider.of(MavesBlocks.COCOA_TREE_LEAVES),
+                        BlockStateProvider.of(MavesBlocks.CACAO_TREE_LEAVES),
                         new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
                         new TwoLayersFeatureSize(2, 0, 2)
                 )

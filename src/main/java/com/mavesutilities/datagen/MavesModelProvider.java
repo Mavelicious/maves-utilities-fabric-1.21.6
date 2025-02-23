@@ -20,8 +20,8 @@ public class MavesModelProvider extends FabricModelProvider {
                 .wood(MavesBlocks.APPLE_TREE_WOOD);
         blockStateModelGenerator.registerLog(MavesBlocks.AZALEA_STEM).log(MavesBlocks.AZALEA_STEM)
                 .wood(MavesBlocks.AZALEA_WOOD);
-        blockStateModelGenerator.registerLog(MavesBlocks.COCOA_TREE_LOG).log(MavesBlocks.COCOA_TREE_LOG)
-                .wood(MavesBlocks.COCOA_TREE_WOOD);
+        blockStateModelGenerator.registerLog(MavesBlocks.CACAO_TREE_LOG).log(MavesBlocks.CACAO_TREE_LOG)
+                .wood(MavesBlocks.CACAO_TREE_WOOD);
         blockStateModelGenerator.registerLog(MavesBlocks.RUBBER_LOG).log(MavesBlocks.RUBBER_LOG)
                 .wood(MavesBlocks.RUBBER_WOOD);
         blockStateModelGenerator.registerLog(MavesBlocks.WILLOW_LOG).log(MavesBlocks.WILLOW_LOG)
@@ -30,8 +30,8 @@ public class MavesModelProvider extends FabricModelProvider {
                 .wood(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
         blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_AZALEA_STEM).log(MavesBlocks.STRIPPED_AZALEA_STEM)
                 .wood(MavesBlocks.STRIPPED_AZALEA_WOOD);
-        blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_COCOA_TREE_LOG).log(MavesBlocks.STRIPPED_COCOA_TREE_LOG)
-                .wood(MavesBlocks.STRIPPED_COCOA_TREE_WOOD);
+        blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_CACAO_TREE_LOG).log(MavesBlocks.STRIPPED_CACAO_TREE_LOG)
+                .wood(MavesBlocks.STRIPPED_CACAO_TREE_WOOD);
         blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_RUBBER_LOG).log(MavesBlocks.STRIPPED_RUBBER_LOG)
                 .wood(MavesBlocks.STRIPPED_RUBBER_WOOD);
         blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_WILLOW_LOG).log(MavesBlocks.STRIPPED_WILLOW_LOG)
@@ -39,7 +39,7 @@ public class MavesModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.APPLE_TREE_LEAVES,
                 TexturedModel.LEAVES, 0xbeff00);
-        blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.COCOA_TREE_LEAVES,
+        blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.CACAO_TREE_LEAVES,
                 TexturedModel.LEAVES, 0x97ff00);
         blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.RUBBER_LEAVES,
                 TexturedModel.LEAVES, 0x00ff03);
@@ -47,25 +47,19 @@ public class MavesModelProvider extends FabricModelProvider {
                 TexturedModel.LEAVES, 0x67ff00);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(MavesBlocks.APPLE_TREE_SAPLING,
                 MavesBlocks.POTTED_APPLE_TREE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlantAndItem(MavesBlocks.COCOA_TREE_SAPLING,
-                MavesBlocks.POTTED_COCOA_TREE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(MavesBlocks.CACAO_TREE_SAPLING,
+                MavesBlocks.POTTED_CACAO_TREE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(MavesBlocks.RUBBER_SAPLING,
                 MavesBlocks.POTTED_RUBBER_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(MavesBlocks.WILLOW_SAPLING,
                 MavesBlocks.POTTED_WILLOW_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
-        blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.APPLE_TREE_PLANKS);
-        blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.AZALEA_PLANKS);
-        blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.COCOA_TREE_PLANKS);
-        blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.RUBBER_PLANKS);
-        blockStateModelGenerator.registerSimpleCubeAll(MavesBlocks.WILLOW_PLANKS);
-
         BlockStateModelGenerator.BlockTexturePool appleTreePool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(MavesBlocks.APPLE_TREE_PLANKS);
         BlockStateModelGenerator.BlockTexturePool azaleaPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(MavesBlocks.AZALEA_PLANKS);
-        BlockStateModelGenerator.BlockTexturePool cocoaTreePool = blockStateModelGenerator
-                .registerCubeAllModelTexturePool(MavesBlocks.COCOA_TREE_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool cacaoTreePool = blockStateModelGenerator
+                .registerCubeAllModelTexturePool(MavesBlocks.CACAO_TREE_PLANKS);
         BlockStateModelGenerator.BlockTexturePool rubberPool = blockStateModelGenerator
                 .registerCubeAllModelTexturePool(MavesBlocks.RUBBER_PLANKS);
         BlockStateModelGenerator.BlockTexturePool willowPool = blockStateModelGenerator
@@ -77,9 +71,12 @@ public class MavesModelProvider extends FabricModelProvider {
         appleTreePool.pressurePlate(MavesBlocks.APPLE_TREE_PRESSURE_PLATE);
         appleTreePool.slab(MavesBlocks.APPLE_TREE_SLAB);
         appleTreePool.stairs(MavesBlocks.APPLE_TREE_STAIRS);
+        appleTreePool.family(MavesBlocks.APPLE_TREE_FAMILY);
 
         blockStateModelGenerator.registerDoor(MavesBlocks.APPLE_TREE_DOOR);
-        blockStateModelGenerator.registerTrapdoor(MavesBlocks.APPLE_TREE_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(MavesBlocks.APPLE_TREE_TRAPDOOR);
+        blockStateModelGenerator.registerHangingSign(MavesBlocks.STRIPPED_APPLE_TREE_LOG,
+                MavesBlocks.APPLE_TREE_HANGING_SIGN, MavesBlocks.APPLE_TREE_WALL_HANGING_SIGN);
 
         azaleaPool.button(MavesBlocks.AZALEA_BUTTON);
         azaleaPool.fence(MavesBlocks.AZALEA_FENCE);
@@ -87,19 +84,25 @@ public class MavesModelProvider extends FabricModelProvider {
         azaleaPool.pressurePlate(MavesBlocks.AZALEA_PRESSURE_PLATE);
         azaleaPool.slab(MavesBlocks.AZALEA_SLAB);
         azaleaPool.stairs(MavesBlocks.AZALEA_STAIRS);
+        azaleaPool.family(MavesBlocks.AZALEA_FAMILY);
 
         blockStateModelGenerator.registerDoor(MavesBlocks.AZALEA_DOOR);
-        blockStateModelGenerator.registerTrapdoor(MavesBlocks.AZALEA_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(MavesBlocks.AZALEA_TRAPDOOR);
+        blockStateModelGenerator.registerHangingSign(MavesBlocks.STRIPPED_AZALEA_STEM,
+                MavesBlocks.AZALEA_HANGING_SIGN, MavesBlocks.AZALEA_WALL_HANGING_SIGN);
 
-        cocoaTreePool.button(MavesBlocks.COCOA_TREE_BUTTON);
-        cocoaTreePool.fence(MavesBlocks.COCOA_TREE_FENCE);
-        cocoaTreePool.fenceGate(MavesBlocks.COCOA_TREE_FENCE_GATE);
-        cocoaTreePool.pressurePlate(MavesBlocks.COCOA_TREE_PRESSURE_PLATE);
-        cocoaTreePool.slab(MavesBlocks.COCOA_TREE_SLAB);
-        cocoaTreePool.stairs(MavesBlocks.COCOA_TREE_STAIRS);
+        cacaoTreePool.button(MavesBlocks.CACAO_TREE_BUTTON);
+        cacaoTreePool.fence(MavesBlocks.CACAO_TREE_FENCE);
+        cacaoTreePool.fenceGate(MavesBlocks.CACAO_TREE_FENCE_GATE);
+        cacaoTreePool.pressurePlate(MavesBlocks.CACAO_TREE_PRESSURE_PLATE);
+        cacaoTreePool.slab(MavesBlocks.CACAO_TREE_SLAB);
+        cacaoTreePool.stairs(MavesBlocks.CACAO_TREE_STAIRS);
+        cacaoTreePool.family(MavesBlocks.CACAO_TREE_FAMILY);
 
-        blockStateModelGenerator.registerDoor(MavesBlocks.COCOA_TREE_DOOR);
-        blockStateModelGenerator.registerTrapdoor(MavesBlocks.COCOA_TREE_TRAPDOOR);
+        blockStateModelGenerator.registerDoor(MavesBlocks.CACAO_TREE_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(MavesBlocks.CACAO_TREE_TRAPDOOR);
+        blockStateModelGenerator.registerHangingSign(MavesBlocks.STRIPPED_CACAO_TREE_LOG,
+                MavesBlocks.CACAO_TREE_HANGING_SIGN, MavesBlocks.CACAO_TREE_WALL_HANGING_SIGN);
 
         rubberPool.button(MavesBlocks.RUBBER_BUTTON);
         rubberPool.fence(MavesBlocks.RUBBER_FENCE);
@@ -107,9 +110,12 @@ public class MavesModelProvider extends FabricModelProvider {
         rubberPool.pressurePlate(MavesBlocks.RUBBER_PRESSURE_PLATE);
         rubberPool.slab(MavesBlocks.RUBBER_SLAB);
         rubberPool.stairs(MavesBlocks.RUBBER_STAIRS);
+        rubberPool.family(MavesBlocks.RUBBER_FAMILY);
 
         blockStateModelGenerator.registerDoor(MavesBlocks.RUBBER_DOOR);
-        blockStateModelGenerator.registerTrapdoor(MavesBlocks.RUBBER_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(MavesBlocks.RUBBER_TRAPDOOR);
+        blockStateModelGenerator.registerHangingSign(MavesBlocks.STRIPPED_RUBBER_LOG,
+                MavesBlocks.RUBBER_HANGING_SIGN, MavesBlocks.RUBBER_WALL_HANGING_SIGN);
 
         willowPool.button(MavesBlocks.WILLOW_BUTTON);
         willowPool.fence(MavesBlocks.WILLOW_FENCE);
@@ -117,9 +123,12 @@ public class MavesModelProvider extends FabricModelProvider {
         willowPool.pressurePlate(MavesBlocks.WILLOW_PRESSURE_PLATE);
         willowPool.slab(MavesBlocks.WILLOW_SLAB);
         willowPool.stairs(MavesBlocks.WILLOW_STAIRS);
+        willowPool.family(MavesBlocks.WILLOW_FAMILY);
 
         blockStateModelGenerator.registerDoor(MavesBlocks.WILLOW_DOOR);
-        blockStateModelGenerator.registerTrapdoor(MavesBlocks.WILLOW_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(MavesBlocks.WILLOW_TRAPDOOR);
+        blockStateModelGenerator.registerHangingSign(MavesBlocks.STRIPPED_WILLOW_LOG,
+                MavesBlocks.WILLOW_HANGING_SIGN, MavesBlocks.WILLOW_WALL_HANGING_SIGN);
 
     }
 
@@ -136,16 +145,35 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.PALE_OAK_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.APPLE_TREE_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.AZALEA_BARK, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.COCOA_TREE_BARK, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.CACAO_TREE_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.RUBBER_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.WILLOW_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.CRIMSON_BARK, Models.GENERATED);
         itemModelGenerator.register(MavesItems.WARPED_BARK, Models.GENERATED);
 
-        itemModelGenerator.register(MavesBlocks.APPLE_TREE_SAPLING.asItem(), Models.GENERATED);
-        itemModelGenerator.register(MavesBlocks.COCOA_TREE_SAPLING.asItem(), Models.GENERATED);
-        itemModelGenerator.register(MavesBlocks.RUBBER_SAPLING.asItem(), Models.GENERATED);
-        itemModelGenerator.register(MavesBlocks.WILLOW_SAPLING.asItem(), Models.GENERATED);
+        itemModelGenerator.register(MavesItems.GREEN_APPLE, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.PUMPKIN_SLICE, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.CHERRIES, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WILD_BERRIES_BLUE, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WILD_BERRIES_GREEN, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WILD_BERRIES_YELLOW, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.MILK_CHOCOLATE, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WHITE_CHOCOLATE, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.DARK_CHOCOLATE, Models.GENERATED);
 
+        itemModelGenerator.register(MavesItems.ACORN, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.DARK_ACORN, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.PALE_ACORN, Models.GENERATED);
+
+        itemModelGenerator.register(MavesItems.APPLE_TREE_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.APPLE_TREE_CHEST_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.AZALEA_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.AZALEA_CHEST_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.CACAO_TREE_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.CACAO_TREE_CHEST_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.RUBBER_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.RUBBER_CHEST_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WILLOW_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.WILLOW_CHEST_BOAT, Models.GENERATED);
     }
 }

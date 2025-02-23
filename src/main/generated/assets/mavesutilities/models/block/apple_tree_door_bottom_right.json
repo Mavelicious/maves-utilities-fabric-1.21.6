@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "mavesutilities:block/apple_tree_door_bottom",
+    "top": "mavesutilities:block/apple_tree_door_top"
+  }
+}

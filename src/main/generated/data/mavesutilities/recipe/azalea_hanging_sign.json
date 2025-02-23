@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hanging_sign",
+  "key": {
+    "#": "mavesutilities:stripped_azalea_stem",
+    "X": "minecraft:chain"
+  },
+  "pattern": [
+    "X X",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "mavesutilities:azalea_hanging_sign"
+  }
+}

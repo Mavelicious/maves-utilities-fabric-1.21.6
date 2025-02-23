@@ -15,7 +15,7 @@ import java.util.List;
 public class MavesPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> APPLE_TREE_PLACED_KEY = registerKey("apple_tree_placed");
-    public static final RegistryKey<PlacedFeature> COCOA_TREE_PLACED_KEY = registerKey("cocoa_tree_placed");
+    public static final RegistryKey<PlacedFeature> CACAO_TREE_PLACED_KEY = registerKey("cacao_tree_placed");
     public static final RegistryKey<PlacedFeature> RUBBER_PLACED_KEY = registerKey("rubber_placed");
     public static final RegistryKey<PlacedFeature> WILLOW_PLACED_KEY = registerKey("willow_placed");
 
@@ -26,10 +26,10 @@ public class MavesPlacedFeatures {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),
                         MavesBlocks.APPLE_TREE_SAPLING));
-        register(context, COCOA_TREE_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.COCOA_TREE_KEY),
+        register(context, CACAO_TREE_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.CACAO_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),
-                        MavesBlocks.COCOA_TREE_SAPLING));
+                        MavesBlocks.CACAO_TREE_SAPLING));
         register(context, RUBBER_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.RUBBER_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(1, 0.1f, 2),

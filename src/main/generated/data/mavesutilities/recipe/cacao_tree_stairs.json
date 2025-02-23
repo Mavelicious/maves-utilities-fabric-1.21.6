@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "key": {
+    "#": "mavesutilities:cacao_tree_planks"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mavesutilities:cacao_tree_stairs"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_door",
+  "key": {
+    "#": "mavesutilities:cacao_tree_planks"
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "mavesutilities:cacao_tree_door"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#mavesutilities:cacao_tree_logs"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mavesutilities:cacao_tree_planks"
+  }
+}

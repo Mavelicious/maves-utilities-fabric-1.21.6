@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": "mavesutilities:crimson_bark",
+    "y": "minecraft:stripped_crimson_stem"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:crimson_stem"
+  }
+}

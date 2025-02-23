@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cacao_tree_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mavesutilities:cacao_tree_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mavesutilities:cacao_tree_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cacao_tree_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mavesutilities:cacao_tree_fence_gate"
+    ]
+  }
+}

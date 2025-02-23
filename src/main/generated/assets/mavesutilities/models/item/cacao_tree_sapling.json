@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mavesutilities:block/cacao_tree_sapling"
+  }
+}

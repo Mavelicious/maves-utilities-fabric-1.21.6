@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "mavesutilities:block/cacao_tree_planks"
+  }
+}
