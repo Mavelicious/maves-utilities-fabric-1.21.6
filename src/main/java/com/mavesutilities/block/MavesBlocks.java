@@ -616,7 +616,7 @@ public class MavesBlocks {
 
     public static final Block APPLE_TREE_SIGN = registerBlock(
             new TerraformSignBlock(APPLE_TREE_SIGN_TEXTURE_ID,
-            AbstractBlock.Settings.copy(Blocks.OAK_SIGN).sounds(BlockSoundGroup.ANVIL)
+            AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_SIGN_ID))),
             APPLE_TREE_SIGN_KEY,
             false
@@ -624,7 +624,7 @@ public class MavesBlocks {
 
     public static final Block APPLE_TREE_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(APPLE_TREE_SIGN_TEXTURE_ID,
-            AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).sounds(BlockSoundGroup.SAND)
+            AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
                     .lootTable(APPLE_TREE_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                             APPLE_TREE_WALL_SIGN_ID))),
             APPLE_TREE_WALL_SIGN_KEY,
@@ -634,7 +634,7 @@ public class MavesBlocks {
     public static final Block APPLE_TREE_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID,
             APPLE_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
-            .sounds(BlockSoundGroup.WOOL).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                     APPLE_TREE_HANGING_SIGN_ID))),
             APPLE_TREE_HANGING_SIGN_KEY,
             false
@@ -643,7 +643,7 @@ public class MavesBlocks {
     public static final Block APPLE_TREE_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID,
             APPLE_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
-            .sounds(BlockSoundGroup.SCULK_SENSOR).lootTable(APPLE_TREE_HANGING_SIGN.getLootTableKey())
+            .lootTable(APPLE_TREE_HANGING_SIGN.getLootTableKey())
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_WALL_HANGING_SIGN_ID))),
             APPLE_TREE_WALL_HANGING_SIGN_KEY,
             false
@@ -719,7 +719,7 @@ public class MavesBlocks {
 
     public static final Block AZALEA_SIGN = registerBlock(
             new TerraformSignBlock(AZALEA_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN).sounds(BlockSoundGroup.ANVIL)
+                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_SIGN_ID))),
             AZALEA_SIGN_KEY,
             false
@@ -727,7 +727,7 @@ public class MavesBlocks {
 
     public static final Block AZALEA_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(AZALEA_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).sounds(BlockSoundGroup.SAND)
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
                             .lootTable(AZALEA_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                                     AZALEA_WALL_SIGN_ID))),
             AZALEA_WALL_SIGN_KEY,
@@ -737,7 +737,7 @@ public class MavesBlocks {
     public static final Block AZALEA_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID,
                     AZALEA_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.WOOL).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                             AZALEA_HANGING_SIGN_ID))),
             AZALEA_HANGING_SIGN_KEY,
             false
@@ -746,7 +746,7 @@ public class MavesBlocks {
     public static final Block AZALEA_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID,
                     AZALEA_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.SCULK_SENSOR).lootTable(AZALEA_HANGING_SIGN.getLootTableKey())
+                    .lootTable(AZALEA_HANGING_SIGN.getLootTableKey())
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_WALL_HANGING_SIGN_ID))),
             AZALEA_WALL_HANGING_SIGN_KEY,
             false
@@ -837,7 +837,7 @@ public class MavesBlocks {
 
     public static final Block CACAO_TREE_SIGN = registerBlock(
             new TerraformSignBlock(CACAO_TREE_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN).sounds(BlockSoundGroup.ANVIL)
+                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_SIGN_ID))),
             CACAO_TREE_SIGN_KEY,
             false
@@ -845,7 +845,7 @@ public class MavesBlocks {
 
     public static final Block CACAO_TREE_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(CACAO_TREE_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).sounds(BlockSoundGroup.SAND)
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
                             .lootTable(CACAO_TREE_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                                     CACAO_TREE_WALL_SIGN_ID))),
             CACAO_TREE_WALL_SIGN_KEY,
@@ -855,7 +855,7 @@ public class MavesBlocks {
     public static final Block CACAO_TREE_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID,
                     CACAO_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.WOOL).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                             CACAO_TREE_HANGING_SIGN_ID))),
             CACAO_TREE_HANGING_SIGN_KEY,
             false
@@ -864,7 +864,7 @@ public class MavesBlocks {
     public static final Block CACAO_TREE_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID,
                     CACAO_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.SCULK_SENSOR).lootTable(CACAO_TREE_HANGING_SIGN.getLootTableKey())
+                    .lootTable(CACAO_TREE_HANGING_SIGN.getLootTableKey())
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_WALL_HANGING_SIGN_ID))),
             CACAO_TREE_WALL_HANGING_SIGN_KEY,
             false
@@ -955,7 +955,7 @@ public class MavesBlocks {
 
     public static final Block RUBBER_SIGN = registerBlock(
             new TerraformSignBlock(RUBBER_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN).sounds(BlockSoundGroup.ANVIL)
+                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_SIGN_ID))),
             RUBBER_SIGN_KEY,
             false
@@ -963,7 +963,7 @@ public class MavesBlocks {
 
     public static final Block RUBBER_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(RUBBER_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).sounds(BlockSoundGroup.SAND)
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
                             .lootTable(RUBBER_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                                     RUBBER_WALL_SIGN_ID))),
             RUBBER_WALL_SIGN_KEY,
@@ -973,7 +973,7 @@ public class MavesBlocks {
     public static final Block RUBBER_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(RUBBER_HANGING_SIGN_TEXTURE_ID,
                     RUBBER_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.WOOL).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                             RUBBER_HANGING_SIGN_ID))),
             RUBBER_HANGING_SIGN_KEY,
             false
@@ -982,7 +982,7 @@ public class MavesBlocks {
     public static final Block RUBBER_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(RUBBER_HANGING_SIGN_TEXTURE_ID,
                     RUBBER_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.SCULK_SENSOR).lootTable(RUBBER_HANGING_SIGN.getLootTableKey())
+                    .lootTable(RUBBER_HANGING_SIGN.getLootTableKey())
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_WALL_HANGING_SIGN_ID))),
             RUBBER_WALL_HANGING_SIGN_KEY,
             false
@@ -1073,7 +1073,7 @@ public class MavesBlocks {
 
     public static final Block WILLOW_SIGN = registerBlock(
             new TerraformSignBlock(WILLOW_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN).sounds(BlockSoundGroup.ANVIL)
+                    AbstractBlock.Settings.copy(Blocks.OAK_SIGN)
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_SIGN_ID))),
             WILLOW_SIGN_KEY,
             false
@@ -1081,7 +1081,7 @@ public class MavesBlocks {
 
     public static final Block WILLOW_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE_ID,
-                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN).sounds(BlockSoundGroup.SAND)
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
                             .lootTable(WILLOW_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                                     WILLOW_WALL_SIGN_ID))),
             WILLOW_WALL_SIGN_KEY,
@@ -1091,7 +1091,7 @@ public class MavesBlocks {
     public static final Block WILLOW_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE_ID,
                     WILLOW_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.WOOL).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK,
                             WILLOW_HANGING_SIGN_ID))),
             WILLOW_HANGING_SIGN_KEY,
             false
@@ -1100,7 +1100,7 @@ public class MavesBlocks {
     public static final Block WILLOW_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE_ID,
                     WILLOW_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
-                    .sounds(BlockSoundGroup.SCULK_SENSOR).lootTable(WILLOW_HANGING_SIGN.getLootTableKey())
+                    .lootTable(WILLOW_HANGING_SIGN.getLootTableKey())
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_WALL_HANGING_SIGN_ID))),
             WILLOW_WALL_HANGING_SIGN_KEY,
             false
