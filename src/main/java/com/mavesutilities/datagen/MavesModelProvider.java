@@ -3,15 +3,60 @@ package com.mavesutilities.datagen;
 
 import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItems;
+import net.minecraft.client.render.item.tint.TintSource;
+import net.minecraft.item.Item;
+import net.minecraft.state.property.*;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.*;
 import net.minecraft.client.data.*;
+import net.minecraft.util.Identifier;
+
+import java.util.function.BiConsumer;
 
 public class MavesModelProvider extends FabricModelProvider {
 
-    public MavesModelProvider(FabricDataOutput output) {
+    public MavesModelProvider(FabricDataOutput output, BiConsumer<Identifier, ModelSupplier> modelCollector) {
         super(output);
     }
+
+    public final void registerTintableBlockStateWithStages(
+            BlockStateModelGenerator generator, Block block, Property<Integer> stageProperty, int tintColor, int... stages
+    ) {
+        if (stageProperty.getValues().size() != stages.length) {
+            throw new IllegalArgumentException("missing values for property: " + stageProperty);
+        } else {
+            BlockStateVariantMap blockStateVariantMap = BlockStateVariantMap.create(stageProperty).register(stage -> {
+                String string = "_stage" + stages[stage];
+                TextureMap textureMap = TextureMap.all(TextureMap.getSubId(block, string));
+                Identifier identifier = Models.CUBE_ALL.upload(block, string, textureMap, generator.modelCollector);
+                return BlockStateVariant.create().put(VariantSettings.MODEL, identifier);
+            });
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(blockStateVariantMap));
+            String itemModelString = "_stage" + stages[stages.length - 1];
+            generator.registerTintedItemModel(block, Identifier.of(ModelIds.getBlockModelId(block) + itemModelString), ItemModels.constantTintSource(tintColor));
+        }
+    }
+
+    public final void registerBlockStateWithStages(
+            BlockStateModelGenerator generator, Block block, Property<Integer> stageProperty, int... stages
+    ) {
+        if (stageProperty.getValues().size() != stages.length) {
+            throw new IllegalArgumentException("missing values for property: " + stageProperty);
+        } else {
+            BlockStateVariantMap blockStateVariantMap = BlockStateVariantMap.create(stageProperty).register(stage -> {
+                String string = "_stage" + stages[stage];
+                TextureMap textureMap = TextureMap.all(TextureMap.getSubId(block, string));
+                Identifier identifier = Models.CUBE_ALL.upload(block, string, textureMap, generator.modelCollector);
+                return BlockStateVariant.create().put(VariantSettings.MODEL, identifier);
+            });
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(blockStateVariantMap));
+            String itemModelString = "_stage" + stages[stages.length - 1];
+            generator.registerItemModel(Item.fromBlock(block), Identifier.of(ModelIds.getBlockModelId(block) + itemModelString));
+        }
+    }
+
+
 
     @Override
     public void generateBlockStateModels(net.minecraft.client.data.BlockStateModelGenerator blockStateModelGenerator) {
@@ -37,7 +82,28 @@ public class MavesModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(MavesBlocks.STRIPPED_WILLOW_LOG).log(MavesBlocks.STRIPPED_WILLOW_LOG)
                 .wood(MavesBlocks.STRIPPED_WILLOW_WOOD);
 
+        registerTintableBlockStateWithStages(blockStateModelGenerator, MavesBlocks.ACACIA_FLOWERING_LEAVES,
+                Properties.AGE_3, -12012264, 0, 1, 2, 3);
+        blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.ACACIA_FLOWERED_LEAVES,
+                TexturedModel.LEAVES, -12012264);
+        registerTintableBlockStateWithStages(blockStateModelGenerator, MavesBlocks.BIRCH_FLOWERING_LEAVES,
+                Properties.AGE_3, -8345771, 0, 1, 2, 3);
+        registerBlockStateWithStages(blockStateModelGenerator, MavesBlocks.CHERRY_FLOWERING_LEAVES,
+                Properties.AGE_3, 0, 1, 2, 3);
+        registerTintableBlockStateWithStages(blockStateModelGenerator, MavesBlocks.DARK_OAK_FLOWERING_LEAVES,
+                Properties.AGE_3, -12012264, 0, 1, 2, 3);
+        registerTintableBlockStateWithStages(blockStateModelGenerator, MavesBlocks.JUNGLE_FLOWERING_LEAVES,
+                Properties.AGE_3, -12012264, 0, 1, 2, 3);
+        registerTintableBlockStateWithStages(blockStateModelGenerator, MavesBlocks.OAK_FLOWERING_LEAVES,
+                Properties.AGE_3, -12012264, 0, 1, 2, 3);
+        registerBlockStateWithStages(blockStateModelGenerator, MavesBlocks.PALE_OAK_FLOWERING_LEAVES,
+                Properties.AGE_3, 0, 1, 2, 3);
+
         blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.APPLE_TREE_LEAVES,
+                TexturedModel.LEAVES, 0xbeff00);
+        registerTintableBlockStateWithStages(blockStateModelGenerator, MavesBlocks.APPLE_TREE_FLOWERING_LEAVES,
+                Properties.AGE_3, 0xbeff00, 0, 1, 2, 3);
+        blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES,
                 TexturedModel.LEAVES, 0xbeff00);
         blockStateModelGenerator.registerTintedBlockAndItem(MavesBlocks.CACAO_TREE_LEAVES,
                 TexturedModel.LEAVES, 0x97ff00);
@@ -164,6 +230,13 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.ACORN, Models.GENERATED);
         itemModelGenerator.register(MavesItems.DARK_ACORN, Models.GENERATED);
         itemModelGenerator.register(MavesItems.PALE_ACORN, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.ACACIA_POD, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.SPRUCE_CONE, Models.GENERATED);
+
+        itemModelGenerator.register(MavesItems.ACACIA_BLOSSOM, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.APPLE_BLOSSOM, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.AZALEA_BLOSSOM, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.BIRCH_CATKINS, Models.GENERATED);
 
         itemModelGenerator.register(MavesItems.APPLE_TREE_BOAT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.APPLE_TREE_CHEST_BOAT, Models.GENERATED);

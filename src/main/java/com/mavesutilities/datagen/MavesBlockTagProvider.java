@@ -26,7 +26,17 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.WILLOW_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(MavesBlocks.ACACIA_FLOWERING_LEAVES)
+                .add(MavesBlocks.ACACIA_FLOWERED_LEAVES)
+                .add(MavesBlocks.BIRCH_FLOWERING_LEAVES)
+                .add(MavesBlocks.CHERRY_FLOWERING_LEAVES)
+                .add(MavesBlocks.DARK_OAK_FLOWERING_LEAVES)
+                .add(MavesBlocks.JUNGLE_FLOWERING_LEAVES)
+                .add(MavesBlocks.OAK_FLOWERING_LEAVES)
+                .add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES)
                 .add(MavesBlocks.APPLE_TREE_LEAVES)
+                .add(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES)
+                .add(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES)
                 .add(MavesBlocks.CACAO_TREE_LEAVES)
                 .add(MavesBlocks.RUBBER_LEAVES)
                 .add(MavesBlocks.WILLOW_LEAVES);

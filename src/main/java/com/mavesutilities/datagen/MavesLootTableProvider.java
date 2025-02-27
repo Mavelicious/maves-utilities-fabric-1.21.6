@@ -4,6 +4,7 @@ import com.mavesutilities.MavesUtilitiesMod;
 import com.mavesutilities.block.MavesBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -105,7 +106,28 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.WILLOW_STAIRS);
         addDrop(MavesBlocks.WILLOW_TRAPDOOR);
 
+        addDrop(MavesBlocks.ACACIA_FLOWERING_LEAVES, leavesDrops(MavesBlocks.ACACIA_FLOWERING_LEAVES,
+                Blocks.ACACIA_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.ACACIA_FLOWERED_LEAVES, leavesDrops(MavesBlocks.ACACIA_FLOWERED_LEAVES,
+                Blocks.ACACIA_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.BIRCH_FLOWERING_LEAVES, leavesDrops(MavesBlocks.BIRCH_FLOWERING_LEAVES,
+                Blocks.BIRCH_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.CHERRY_FLOWERING_LEAVES, leavesDrops(MavesBlocks.CHERRY_FLOWERING_LEAVES,
+                Blocks.CHERRY_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.DARK_OAK_FLOWERING_LEAVES, leavesDrops(MavesBlocks.DARK_OAK_FLOWERING_LEAVES,
+                Blocks.DARK_OAK_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.JUNGLE_FLOWERING_LEAVES, leavesDrops(MavesBlocks.JUNGLE_FLOWERING_LEAVES,
+                Blocks.JUNGLE_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.OAK_FLOWERING_LEAVES, leavesDrops(MavesBlocks.OAK_FLOWERING_LEAVES,
+                Blocks.OAK_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.PALE_OAK_FLOWERING_LEAVES, leavesDrops(MavesBlocks.PALE_OAK_FLOWERING_LEAVES,
+                Blocks.PALE_OAK_SAPLING, 0.0625f));
+
         addDrop(MavesBlocks.APPLE_TREE_LEAVES, leavesDrops(MavesBlocks.APPLE_TREE_LEAVES,
+                MavesBlocks.APPLE_TREE_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES, leavesDrops(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES,
+                MavesBlocks.APPLE_TREE_SAPLING, 0.0625f));
+        addDrop(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES, leavesDrops(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES,
                 MavesBlocks.APPLE_TREE_SAPLING, 0.0625f));
         addDrop(MavesBlocks.CACAO_TREE_LEAVES, leavesDrops(MavesBlocks.CACAO_TREE_LEAVES,
                 MavesBlocks.CACAO_TREE_SAPLING, 0.0625f));

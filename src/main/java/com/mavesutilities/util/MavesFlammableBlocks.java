@@ -7,11 +7,22 @@ public class MavesFlammableBlocks {
     public static void registerFlammableBlocks() {
         FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
 
+        registry.add(MavesBlocks.ACACIA_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.ACACIA_FLOWERED_LEAVES, 30, 60);
+        registry.add(MavesBlocks.BIRCH_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.CHERRY_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.DARK_OAK_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.OAK_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES, 30, 60);
+
         registry.add(MavesBlocks.APPLE_TREE_LOG, 5, 5);
         registry.add(MavesBlocks.APPLE_TREE_WOOD, 5, 5);
         registry.add(MavesBlocks.STRIPPED_APPLE_TREE_LOG, 5, 5);
         registry.add(MavesBlocks.STRIPPED_APPLE_TREE_WOOD, 5, 5);
         registry.add(MavesBlocks.APPLE_TREE_LEAVES, 30, 60);
+        registry.add(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES, 30, 60);
+        registry.add(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES, 30, 60);
 
         registry.add(MavesBlocks.APPLE_TREE_PLANKS, 5, 20);
         registry.add(MavesBlocks.APPLE_TREE_FENCE, 5, 20);

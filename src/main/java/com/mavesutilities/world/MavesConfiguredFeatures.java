@@ -33,7 +33,7 @@ public class MavesConfiguredFeatures {
                 new BendingTrunkPlacer(4,2,0,3, UniformIntProvider.create(1, 2)),
                 new WeightedBlockStateProvider(
                         DataPool.<BlockState>builder().add(MavesBlocks.APPLE_TREE_LEAVES.getDefaultState(), 3)
-                                .add(MavesBlocks.APPLE_TREE_LEAVES.getDefaultState(), 1)
+                                .add(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES.getDefaultState(), 1)
                 ),
                 new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
                 new TwoLayersFeatureSize(1, 0, 1)
@@ -42,33 +42,31 @@ public class MavesConfiguredFeatures {
                         .build()
         );
         register(context, CACAO_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(MavesBlocks.CACAO_TREE_LOG),
-                        new StraightTrunkPlacer(5, 2, 1),
-                        BlockStateProvider.of(MavesBlocks.CACAO_TREE_LEAVES),
-                        new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
-                        new TwoLayersFeatureSize(2, 0, 2)
+                BlockStateProvider.of(MavesBlocks.CACAO_TREE_LOG),
+                new StraightTrunkPlacer(5, 2, 1),
+                BlockStateProvider.of(MavesBlocks.CACAO_TREE_LEAVES),
+                new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
+                new TwoLayersFeatureSize(2, 0, 2)
                 )
                         .ignoreVines()
                         .build()
         );
         register(context, RUBBER_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(MavesBlocks.RUBBER_LOG),
-                        new BendingTrunkPlacer(5,3,0,4, UniformIntProvider.create(1, 2)),
-                        new WeightedBlockStateProvider(
-                                DataPool.<BlockState>builder().add(MavesBlocks.RUBBER_LEAVES.getDefaultState(), 3)
-                        ),
-                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
-                        new TwoLayersFeatureSize(3, 0, 3)
+                BlockStateProvider.of(MavesBlocks.RUBBER_LOG),
+                new BendingTrunkPlacer(5,3,0,4, UniformIntProvider.create(1, 2)),
+                BlockStateProvider.of(MavesBlocks.RUBBER_LEAVES),
+                new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                new TwoLayersFeatureSize(3, 0, 3)
                 )
                         .dirtProvider(BlockStateProvider.of(Blocks.DIRT))
                         .build()
         );
         register(context, WILLOW_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(MavesBlocks.WILLOW_LOG),
-                        new StraightTrunkPlacer(4, 2, 0),
-                        BlockStateProvider.of(MavesBlocks.WILLOW_LEAVES),
-                        new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), 3),
-                        new TwoLayersFeatureSize(2, 0, 2)
+                BlockStateProvider.of(MavesBlocks.WILLOW_LOG),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.of(MavesBlocks.WILLOW_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(2, 0, 2)
                 )
                         .build()
         );

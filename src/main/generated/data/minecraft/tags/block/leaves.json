@@ -1,6 +1,16 @@
 {
   "values": [
+    "mavesutilities:acacia_flowering_leaves",
+    "mavesutilities:acacia_flowered_leaves",
+    "mavesutilities:birch_flowering_leaves",
+    "mavesutilities:cherry_flowering_leaves",
+    "mavesutilities:dark_oak_flowering_leaves",
+    "mavesutilities:jungle_flowering_leaves",
+    "mavesutilities:oak_flowering_leaves",
+    "mavesutilities:pale_oak_flowering_leaves",
     "mavesutilities:apple_tree_leaves",
+    "mavesutilities:apple_tree_flowering_leaves",
+    "mavesutilities:apple_tree_flowered_leaves",
     "mavesutilities:cacao_tree_leaves",
     "mavesutilities:rubber_leaves",
     "mavesutilities:willow_leaves"

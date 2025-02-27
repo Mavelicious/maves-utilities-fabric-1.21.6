@@ -65,6 +65,12 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.ACORN);
             itemGroup.add(MavesItems.DARK_ACORN);
             itemGroup.add(MavesItems.PALE_ACORN);
+            itemGroup.add(MavesItems.ACACIA_POD);
+            itemGroup.add(MavesItems.SPRUCE_CONE);
+            itemGroup.add(MavesItems.ACACIA_BLOSSOM);
+            itemGroup.add(MavesItems.APPLE_BLOSSOM);
+            itemGroup.add(MavesItems.AZALEA_BLOSSOM);
+            itemGroup.add(MavesItems.BIRCH_CATKINS);
             itemGroup.add(MavesItems.APPLE_TREE_BOAT);
             itemGroup.add(MavesItems.APPLE_TREE_CHEST_BOAT);
             itemGroup.add(MavesItems.AZALEA_BOAT);
@@ -78,6 +84,14 @@ public class MavesItemGroups {
         });
 
         ItemGroupEvents.modifyEntriesEvent(MAVES_BLOCKS_GROUP_KEY).register(itemGroup -> {
+            itemGroup.add(MavesBlocks.ACACIA_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.ACACIA_FLOWERED_LEAVES);
+            itemGroup.add(MavesBlocks.BIRCH_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.CHERRY_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.DARK_OAK_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.OAK_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES);
             itemGroup.add(MavesBlocks.APPLE_TREE_LOG);
             itemGroup.add(MavesBlocks.APPLE_TREE_WOOD);
             itemGroup.add(MavesBlocks.STRIPPED_APPLE_TREE_LOG);
@@ -94,6 +108,8 @@ public class MavesItemGroups {
             itemGroup.add(MavesBlocks.APPLE_TREE_PRESSURE_PLATE);
             itemGroup.add(MavesBlocks.APPLE_TREE_BUTTON);
             itemGroup.add(MavesBlocks.APPLE_TREE_LEAVES);
+            itemGroup.add(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES);
             itemGroup.add(MavesBlocks.APPLE_TREE_SAPLING);
             itemGroup.add(MavesBlocks.AZALEA_STEM);
             itemGroup.add(MavesBlocks.AZALEA_WOOD);

@@ -4,7 +4,11 @@ import com.mavesutilities.datagen.*;
 import com.mavesutilities.world.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.client.data.ModelSupplier;
 import net.minecraft.registry.*;
+import net.minecraft.util.Identifier;
+
+import java.util.function.BiConsumer;
 
 public class MavesUtilitiesDataGenerator implements DataGeneratorEntrypoint {
     @Override
@@ -14,10 +18,13 @@ public class MavesUtilitiesDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MavesBlockTagProvider::new);
         pack.addProvider(MavesItemTagProvider::new);
         pack.addProvider(MavesLootTableProvider::new);
-        pack.addProvider(MavesModelProvider::new);
         pack.addProvider(MavesRecipeProvider::new);
         pack.addProvider(EnglishLangProvider::new);
         pack.addProvider(PortuguesLangProvider::new);
+        BiConsumer<Identifier, ModelSupplier> modelCollector = (identifier, modelSupplier) -> {
+        };
+        pack.addProvider((FabricDataGenerator.Pack.Factory<MavesModelProvider>)
+                output -> new MavesModelProvider(output, modelCollector));
     }
 
     @Override

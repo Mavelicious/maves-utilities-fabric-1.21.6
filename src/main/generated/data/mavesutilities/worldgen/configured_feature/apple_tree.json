@@ -31,8 +31,9 @@
         },
         {
           "data": {
-            "Name": "mavesutilities:apple_tree_leaves",
+            "Name": "mavesutilities:apple_tree_flowering_leaves",
             "Properties": {
+              "age": "3",
               "distance": "7",
               "persistent": "false",
               "waterlogged": "false"

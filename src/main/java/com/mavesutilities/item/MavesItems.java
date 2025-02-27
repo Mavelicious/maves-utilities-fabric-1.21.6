@@ -81,6 +81,19 @@ public class MavesItems {
             Identifier.of(MavesUtilitiesMod.MOD_ID, "dark_acorn"));
     public static final RegistryKey<Item> PALE_ACORN_KEY = RegistryKey.of(RegistryKeys.ITEM,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "pale_acorn"));
+    public static final RegistryKey<Item> ACACIA_POD_KEY = RegistryKey.of(RegistryKeys.ITEM,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_pod"));
+    public static final RegistryKey<Item> SPRUCE_CONE_KEY = RegistryKey.of(RegistryKeys.ITEM,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "spruce_cone"));
+
+    public static final RegistryKey<Item> ACACIA_BLOSSOM_KEY = RegistryKey.of(RegistryKeys.ITEM,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_blossom"));
+    public static final RegistryKey<Item> APPLE_BLOSSOM_KEY = RegistryKey.of(RegistryKeys.ITEM,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_blossom"));
+    public static final RegistryKey<Item> AZALEA_BLOSSOM_KEY = RegistryKey.of(RegistryKeys.ITEM,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea_blossom"));
+    public static final RegistryKey<Item> BIRCH_CATKINS_KEY = RegistryKey.of(RegistryKeys.ITEM,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "birch_catkins"));
 
     public static final RegistryKey<Item> APPLE_TREE_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_sign"));
@@ -173,6 +186,19 @@ public class MavesItems {
             new Item(new Item.Settings().registryKey(DARK_ACORN_KEY)), DARK_ACORN_KEY);
     public static final Item PALE_ACORN = registerItem(
             new Item(new Item.Settings().registryKey(PALE_ACORN_KEY)), PALE_ACORN_KEY);
+    public static final Item ACACIA_POD = registerItem(
+            new Item(new Item.Settings().registryKey(ACACIA_POD_KEY)), ACACIA_POD_KEY);
+    public static final Item SPRUCE_CONE = registerItem(
+            new Item(new Item.Settings().registryKey(SPRUCE_CONE_KEY)), SPRUCE_CONE_KEY);
+
+    public static final Item ACACIA_BLOSSOM = registerItem(
+            new Item(new Item.Settings().registryKey(ACACIA_BLOSSOM_KEY)), ACACIA_BLOSSOM_KEY);
+    public static final Item APPLE_BLOSSOM = registerItem(
+            new Item(new Item.Settings().registryKey(APPLE_BLOSSOM_KEY)), APPLE_BLOSSOM_KEY);
+    public static final Item AZALEA_BLOSSOM = registerItem(
+            new Item(new Item.Settings().registryKey(AZALEA_BLOSSOM_KEY)), AZALEA_BLOSSOM_KEY);
+    public static final Item BIRCH_CATKINS = registerItem(
+            new Item(new Item.Settings().registryKey(BIRCH_CATKINS_KEY)), BIRCH_CATKINS_KEY);
 
     public static final Item APPLE_TREE_SIGN = registerItem(
             new SignItem(MavesBlocks.APPLE_TREE_SIGN,
@@ -255,41 +281,5 @@ public class MavesItems {
 
     public static void registerMavesItems() {
         MavesUtilitiesMod.LOGGER.info("Registering Mave's Items for " + MavesUtilitiesMod.MOD_ID);
-
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.OAK_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.SPRUCE_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.BIRCH_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.JUNGLE_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.ACACIA_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.DARK_OAK_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.MANGROVE_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.CHERRY_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.PALE_OAK_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.APPLE_TREE_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.AZALEA_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.CACAO_TREE_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.RUBBER_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.WILLOW_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.CRIMSON_BARK, 0.3f);
-        CompostingChanceRegistry.INSTANCE.add(MavesItems.WARPED_BARK, 0.3f);
-
-        FuelRegistryEvents.BUILD.register((builder, context) -> {
-            builder.add(MavesItems.OAK_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.SPRUCE_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.BIRCH_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.JUNGLE_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.ACACIA_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.DARK_OAK_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.MANGROVE_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.CHERRY_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.PALE_OAK_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.APPLE_TREE_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.AZALEA_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.CACAO_TREE_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.RUBBER_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.WILLOW_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.CRIMSON_BARK, 20 * 15 / 2);
-            builder.add(MavesItems.WARPED_BARK, 20 * 15 / 2);
-        });
     }
 }

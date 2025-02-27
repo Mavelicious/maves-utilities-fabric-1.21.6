@@ -27,6 +27,9 @@ public class MavesTags {
         public static final TagKey<Item> RUBBER_TREE_LOGS = createTag("rubber_tree_logs");
         public static final TagKey<Item> WILLOW_LOGS = createTag("willow_logs");
 
+        public static final TagKey<Item> APPLES = createTag("apples");
+        public static final TagKey<Item> WILD_BERRIES = createTag("wild_berries");
+
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MavesUtilitiesMod.MOD_ID, name));
         }

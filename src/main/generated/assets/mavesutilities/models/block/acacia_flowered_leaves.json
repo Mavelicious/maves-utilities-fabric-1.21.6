@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "mavesutilities:block/acacia_flowered_leaves"
+  }
+}

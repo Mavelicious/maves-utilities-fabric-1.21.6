@@ -942,6 +942,34 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(MavesBlocks.WILLOW_LOG),
                                 conditionsFromItem(MavesBlocks.WILLOW_LOG))
                         .offerTo(exporter);
+
+                createShapeless(RecipeCategory.MISC, Items.YELLOW_DYE)
+                        .input(MavesItems.ACACIA_BLOSSOM)
+                        .group("yellow_dye")
+                        .criterion(hasItem(MavesItems.ACACIA_BLOSSOM),
+                                conditionsFromItem(MavesItems.ACACIA_BLOSSOM))
+                        .offerTo(exporter, "yellow_dye_from_acacia_blossom");
+
+                createShapeless(RecipeCategory.MISC, Items.WHITE_DYE)
+                        .input(MavesItems.APPLE_BLOSSOM)
+                        .group("white_dye")
+                        .criterion(hasItem(MavesItems.APPLE_BLOSSOM),
+                                conditionsFromItem(MavesItems.APPLE_BLOSSOM))
+                        .offerTo(exporter, "white_dye_from_apple_blossom");
+
+                createShapeless(RecipeCategory.MISC, Items.PINK_DYE)
+                        .input(MavesItems.AZALEA_BLOSSOM)
+                        .group("pink_dye")
+                        .criterion(hasItem(MavesItems.AZALEA_BLOSSOM),
+                                conditionsFromItem(MavesItems.AZALEA_BLOSSOM))
+                        .offerTo(exporter, "pink_dye_from_azalea_blossom");
+
+                createShapeless(RecipeCategory.MISC, Items.BROWN_DYE)
+                        .input(MavesItems.BIRCH_CATKINS)
+                        .group("brown_dye")
+                        .criterion(hasItem(MavesItems.BIRCH_CATKINS),
+                                conditionsFromItem(MavesItems.BIRCH_CATKINS))
+                        .offerTo(exporter, "brown_dye_from_birch_catkin");
             }
         };
     }

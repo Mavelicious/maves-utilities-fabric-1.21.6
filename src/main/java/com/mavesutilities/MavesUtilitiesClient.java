@@ -3,7 +3,6 @@ package com.mavesutilities;
 import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItems;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
-import com.terraformersmc.terraform.sign.api.SpriteIdentifierRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -46,6 +45,10 @@ public class MavesUtilitiesClient implements ClientModInitializer {
 
 		ColorProviderRegistry.BLOCK.register((state, view, pos,
 											  tintIndex) -> 0xbeff00, MavesBlocks.APPLE_TREE_LEAVES);
+		ColorProviderRegistry.BLOCK.register((state, view, pos,
+											  tintIndex) -> 0xbeff00, MavesBlocks.APPLE_TREE_FLOWERING_LEAVES);
+		ColorProviderRegistry.BLOCK.register((state, view, pos,
+											  tintIndex) -> 0xbeff00, MavesBlocks.APPLE_TREE_FLOWERED_LEAVES);
 		ColorProviderRegistry.BLOCK.register((state, view, pos,
 											  tintIndex) -> 0x97ff00, MavesBlocks.CACAO_TREE_LEAVES);
 		ColorProviderRegistry.BLOCK.register((state, view, pos,

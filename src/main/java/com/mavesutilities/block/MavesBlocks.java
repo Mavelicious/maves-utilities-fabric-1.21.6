@@ -1,6 +1,7 @@
 package com.mavesutilities.block;
 
 import com.mavesutilities.MavesUtilitiesMod;
+import com.mavesutilities.item.MavesItems;
 import com.mavesutilities.world.tree.MavesSaplingGenerators;
 import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
@@ -142,6 +143,16 @@ public class MavesBlocks {
     public static final Identifier WILLOW_WALL_HANGING_SIGN_ID =
             Identifier.of(MavesUtilitiesMod.MOD_ID, "willow_wall_hanging_sign");
 
+
+    public static final RegistryKey<Block> ACACIA_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_flowering_leaves")
+    );
+    public static final RegistryKey<Block> ACACIA_FLOWERED_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_flowered_leaves")
+    );
+
     public static final RegistryKey<Block> APPLE_TREE_LOG_KEY = RegistryKey.of(
             RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_log")
@@ -161,6 +172,14 @@ public class MavesBlocks {
     public static final RegistryKey<Block> APPLE_TREE_LEAVES_KEY = RegistryKey.of(
             RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_leaves")
+    );
+    public static final RegistryKey<Block> APPLE_TREE_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_flowering_leaves")
+    );
+    public static final RegistryKey<Block> APPLE_TREE_FLOWERED_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_flowered_leaves")
     );
     public static final RegistryKey<Block> APPLE_TREE_SAPLING_KEY = RegistryKey.of(
             RegistryKeys.BLOCK,
@@ -288,6 +307,12 @@ public class MavesBlocks {
             Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea_wall_hanging_sign")
     );
 
+
+    public static final RegistryKey<Block> BIRCH_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "birch_flowering_leaves")
+    );
+
     public static final RegistryKey<Block> CACAO_TREE_LOG_KEY = RegistryKey.of(
             RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_log")
@@ -367,6 +392,31 @@ public class MavesBlocks {
     public static final RegistryKey<Block> CACAO_TREE_WALL_HANGING_SIGN_KEY = RegistryKey.of(
             RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_wall_hanging_sign")
+    );
+
+    public static final RegistryKey<Block> CHERRY_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "cherry_flowering_leaves")
+    );
+
+    public static final RegistryKey<Block> DARK_OAK_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "dark_oak_flowering_leaves")
+    );
+
+    public static final RegistryKey<Block> JUNGLE_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "jungle_flowering_leaves")
+    );
+
+    public static final RegistryKey<Block> OAK_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "oak_flowering_leaves")
+    );
+
+    public static final RegistryKey<Block> PALE_OAK_FLOWERING_LEAVES_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "pale_oak_flowering_leaves")
     );
 
     public static final RegistryKey<Block> RUBBER_LOG_KEY = RegistryKey.of(
@@ -533,6 +583,19 @@ public class MavesBlocks {
 
 
 
+    public static final Block ACACIA_FLOWERING_LEAVES = registerBlock(
+            new MavesFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    ACACIA_FLOWERING_LEAVES_KEY), new ItemStack(MavesItems.ACACIA_POD), MavesBlocks.ACACIA_FLOWERED_LEAVES),
+            ACACIA_FLOWERING_LEAVES_KEY,
+            true
+    );
+    public static final Block ACACIA_FLOWERED_LEAVES = registerBlock(
+            new MavesFloweredLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).registryKey(
+                    ACACIA_FLOWERED_LEAVES_KEY), MavesItems.ACACIA_BLOSSOM, Blocks.ACACIA_LEAVES),
+            ACACIA_FLOWERED_LEAVES_KEY,
+            true
+    );
+
     public static final Block APPLE_TREE_LOG = registerBlock(
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).registryKey(APPLE_TREE_LOG_KEY)),
             APPLE_TREE_LOG_KEY,
@@ -556,6 +619,18 @@ public class MavesBlocks {
     public static final Block APPLE_TREE_LEAVES = registerBlock(
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).registryKey(APPLE_TREE_LEAVES_KEY)),
             APPLE_TREE_LEAVES_KEY,
+            true
+    );
+    public static final Block APPLE_TREE_FLOWERING_LEAVES = registerBlock(
+            new MavesAppleFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    APPLE_TREE_FLOWERING_LEAVES_KEY), MavesBlocks.APPLE_TREE_FLOWERED_LEAVES),
+            APPLE_TREE_FLOWERING_LEAVES_KEY,
+            true
+    );
+    public static final Block APPLE_TREE_FLOWERED_LEAVES = registerBlock(
+            new MavesFloweredLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).registryKey(
+                    APPLE_TREE_FLOWERED_LEAVES_KEY), MavesItems.APPLE_BLOSSOM, MavesBlocks.APPLE_TREE_LEAVES),
+            APPLE_TREE_FLOWERED_LEAVES_KEY,
             true
     );
     public static final Block APPLE_TREE_SAPLING = registerBlock(
@@ -621,7 +696,6 @@ public class MavesBlocks {
             APPLE_TREE_SIGN_KEY,
             false
     );
-
     public static final Block APPLE_TREE_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(APPLE_TREE_SIGN_TEXTURE_ID,
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
@@ -630,7 +704,6 @@ public class MavesBlocks {
             APPLE_TREE_WALL_SIGN_KEY,
             false
     );
-
     public static final Block APPLE_TREE_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID,
             APPLE_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
@@ -639,7 +712,6 @@ public class MavesBlocks {
             APPLE_TREE_HANGING_SIGN_KEY,
             false
     );
-
     public static final Block APPLE_TREE_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID,
             APPLE_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
@@ -724,7 +796,6 @@ public class MavesBlocks {
             AZALEA_SIGN_KEY,
             false
     );
-
     public static final Block AZALEA_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(AZALEA_SIGN_TEXTURE_ID,
                     AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
@@ -733,7 +804,6 @@ public class MavesBlocks {
             AZALEA_WALL_SIGN_KEY,
             false
     );
-
     public static final Block AZALEA_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID,
                     AZALEA_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
@@ -742,7 +812,6 @@ public class MavesBlocks {
             AZALEA_HANGING_SIGN_KEY,
             false
     );
-
     public static final Block AZALEA_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID,
                     AZALEA_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
@@ -750,6 +819,15 @@ public class MavesBlocks {
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_WALL_HANGING_SIGN_ID))),
             AZALEA_WALL_HANGING_SIGN_KEY,
             false
+    );
+
+
+
+    public static final Block BIRCH_FLOWERING_LEAVES = registerBlock(
+            new MavesFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    BIRCH_FLOWERING_LEAVES_KEY), new ItemStack(MavesItems.BIRCH_CATKINS), Blocks.BIRCH_LEAVES),
+            BIRCH_FLOWERING_LEAVES_KEY,
+            true
     );
 
 
@@ -842,7 +920,6 @@ public class MavesBlocks {
             CACAO_TREE_SIGN_KEY,
             false
     );
-
     public static final Block CACAO_TREE_WALL_SIGN = registerBlock(
             new TerraformWallSignBlock(CACAO_TREE_SIGN_TEXTURE_ID,
                     AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
@@ -851,7 +928,6 @@ public class MavesBlocks {
             CACAO_TREE_WALL_SIGN_KEY,
             false
     );
-
     public static final Block CACAO_TREE_HANGING_SIGN = registerBlock(
             new TerraformHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID,
                     CACAO_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)
@@ -860,7 +936,6 @@ public class MavesBlocks {
             CACAO_TREE_HANGING_SIGN_KEY,
             false
     );
-
     public static final Block CACAO_TREE_WALL_HANGING_SIGN = registerBlock(
             new TerraformWallHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID,
                     CACAO_TREE_GUI_SIGN_TEXTURE_ID, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
@@ -868,6 +943,51 @@ public class MavesBlocks {
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_WALL_HANGING_SIGN_ID))),
             CACAO_TREE_WALL_HANGING_SIGN_KEY,
             false
+    );
+
+
+
+    public static final Block CHERRY_FLOWERING_LEAVES = registerBlock(
+            new MavesFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    CHERRY_FLOWERING_LEAVES_KEY), new ItemStack(MavesItems.CHERRIES), Blocks.CHERRY_LEAVES),
+            CHERRY_FLOWERING_LEAVES_KEY,
+            true
+    );
+
+
+
+    public static final Block DARK_OAK_FLOWERING_LEAVES = registerBlock(
+            new MavesFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    DARK_OAK_FLOWERING_LEAVES_KEY), new ItemStack(MavesItems.DARK_ACORN), Blocks.DARK_OAK_LEAVES),
+            DARK_OAK_FLOWERING_LEAVES_KEY,
+            true
+    );
+
+
+
+    public static final Block JUNGLE_FLOWERING_LEAVES = registerBlock(
+            new MavesJungleFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    JUNGLE_FLOWERING_LEAVES_KEY), Blocks.JUNGLE_LEAVES),
+            JUNGLE_FLOWERING_LEAVES_KEY,
+            true
+    );
+
+
+
+    public static final Block OAK_FLOWERING_LEAVES = registerBlock(
+            new MavesFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    OAK_FLOWERING_LEAVES_KEY), new ItemStack(MavesItems.ACORN), Blocks.OAK_LEAVES),
+            OAK_FLOWERING_LEAVES_KEY,
+            true
+    );
+
+
+
+    public static final Block PALE_OAK_FLOWERING_LEAVES = registerBlock(
+            new MavesFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
+                    PALE_OAK_FLOWERING_LEAVES_KEY), new ItemStack(MavesItems.PALE_ACORN), Blocks.PALE_OAK_LEAVES),
+            PALE_OAK_FLOWERING_LEAVES_KEY,
+            true
     );
 
 
@@ -1127,7 +1247,7 @@ public class MavesBlocks {
     public static Block registerBlock(Block block, RegistryKey<Block> blockKey, boolean shouldRegisterItem) {
         if (shouldRegisterItem) {
             RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, blockKey.getValue());
-            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
+            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey).useBlockPrefixedTranslationKey());
             Registry.register(Registries.ITEM, itemKey, blockItem);
         }
 

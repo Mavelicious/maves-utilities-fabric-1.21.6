@@ -5,6 +5,7 @@ import com.mavesutilities.item.MavesItems;
 import com.mavesutilities.util.MavesTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -131,5 +132,14 @@ public class MavesItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(MavesBlocks.CACAO_TREE_TRAPDOOR.asItem())
                 .add(MavesBlocks.RUBBER_TRAPDOOR.asItem())
                 .add(MavesBlocks.WILLOW_TRAPDOOR.asItem());
+
+        getOrCreateTagBuilder(MavesTags.Items.APPLES)
+                .add(Items.APPLE)
+                .add(MavesItems.GREEN_APPLE);
+
+        getOrCreateTagBuilder(MavesTags.Items.WILD_BERRIES)
+                .add(MavesItems.WILD_BERRIES_BLUE)
+                .add(MavesItems.WILD_BERRIES_GREEN)
+                .add(MavesItems.WILD_BERRIES_YELLOW);
     }
 }
