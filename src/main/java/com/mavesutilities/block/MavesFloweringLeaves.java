@@ -83,7 +83,8 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
             dropStack.setCount(j + (bl ? 1 : 0));
             dropStack(world, pos, dropStack);
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
-            BlockState blockState = state.with(AGE, Integer.valueOf(1));
+            BlockState blockState = state.with(AGE, Integer.valueOf(0));
+            world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, blockState));
             return ActionResult.SUCCESS;
         } else {

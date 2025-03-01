@@ -3,11 +3,10 @@ package com.mavesutilities;
 import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItemGroups;
 import com.mavesutilities.item.MavesItems;
-import com.mavesutilities.util.MavesCompostableItems;
-import com.mavesutilities.util.MavesFlammableBlocks;
-import com.mavesutilities.util.MavesFuelItems;
-import com.mavesutilities.util.MavesStrippableBlocks;
+import com.mavesutilities.util.*;
 import com.mavesutilities.world.gen.MavesWorldGeneration;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;

@@ -3,9 +3,7 @@ package com.mavesutilities.mixin;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.*;
@@ -16,8 +14,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 @Mixin(AxeItem.class)

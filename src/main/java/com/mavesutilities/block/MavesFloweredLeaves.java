@@ -4,6 +4,7 @@ import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.sound.*;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
@@ -11,6 +12,7 @@ import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 
 public class MavesFloweredLeaves extends LeavesBlock {
     public static final int MAX_DISTANCE = 7;
@@ -30,7 +32,12 @@ public class MavesFloweredLeaves extends LeavesBlock {
         this.shearedLeaves = shearedLeaves;
     }
 
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    @Override
+    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
+        return new ItemStack(flowerItem);
+    }
+
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
             dropStack(world, pos, new ItemStack(flowerItem));
 
@@ -43,5 +50,10 @@ public class MavesFloweredLeaves extends LeavesBlock {
         } else {
             return super.onUse(state, world, pos, player, hit);
         }
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(DISTANCE, PERSISTENT, WATERLOGGED);
     }
 }

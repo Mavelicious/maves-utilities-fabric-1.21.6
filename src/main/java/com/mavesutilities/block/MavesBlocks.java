@@ -623,7 +623,7 @@ public class MavesBlocks {
     );
     public static final Block APPLE_TREE_FLOWERING_LEAVES = registerBlock(
             new MavesAppleFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
-                    APPLE_TREE_FLOWERING_LEAVES_KEY), MavesBlocks.APPLE_TREE_FLOWERED_LEAVES),
+                    APPLE_TREE_FLOWERING_LEAVES_KEY)),
             APPLE_TREE_FLOWERING_LEAVES_KEY,
             true
     );
@@ -967,7 +967,7 @@ public class MavesBlocks {
 
     public static final Block JUNGLE_FLOWERING_LEAVES = registerBlock(
             new MavesJungleFloweringLeaves(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly().registryKey(
-                    JUNGLE_FLOWERING_LEAVES_KEY), Blocks.JUNGLE_LEAVES),
+                    JUNGLE_FLOWERING_LEAVES_KEY)),
             JUNGLE_FLOWERING_LEAVES_KEY,
             true
     );

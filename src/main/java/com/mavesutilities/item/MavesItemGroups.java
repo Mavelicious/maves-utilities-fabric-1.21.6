@@ -84,13 +84,13 @@ public class MavesItemGroups {
         });
 
         ItemGroupEvents.modifyEntriesEvent(MAVES_BLOCKS_GROUP_KEY).register(itemGroup -> {
+            itemGroup.add(MavesBlocks.OAK_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.BIRCH_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES);
             itemGroup.add(MavesBlocks.ACACIA_FLOWERING_LEAVES);
             itemGroup.add(MavesBlocks.ACACIA_FLOWERED_LEAVES);
-            itemGroup.add(MavesBlocks.BIRCH_FLOWERING_LEAVES);
-            itemGroup.add(MavesBlocks.CHERRY_FLOWERING_LEAVES);
             itemGroup.add(MavesBlocks.DARK_OAK_FLOWERING_LEAVES);
-            itemGroup.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES);
-            itemGroup.add(MavesBlocks.OAK_FLOWERING_LEAVES);
+            itemGroup.add(MavesBlocks.CHERRY_FLOWERING_LEAVES);
             itemGroup.add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES);
             itemGroup.add(MavesBlocks.APPLE_TREE_LOG);
             itemGroup.add(MavesBlocks.APPLE_TREE_WOOD);

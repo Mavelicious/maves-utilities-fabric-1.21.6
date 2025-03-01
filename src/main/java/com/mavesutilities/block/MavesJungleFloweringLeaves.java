@@ -3,6 +3,7 @@ package com.mavesutilities.block;
 import com.mavesutilities.item.MavesItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -17,11 +18,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
 public class MavesJungleFloweringLeaves extends MavesFloweringLeaves {
-    private final Block shearedLeaves;
 
-    public MavesJungleFloweringLeaves(Settings settings, Block shearedLeaves) {
-        super(settings, new ItemStack(MavesItems.WILD_BERRIES_YELLOW), shearedLeaves);
-        this.shearedLeaves = shearedLeaves;
+    public MavesJungleFloweringLeaves(Settings settings) {
+        super(settings, new ItemStack(MavesItems.WILD_BERRIES_YELLOW), Blocks.JUNGLE_LEAVES);
     }
 
     @Override
@@ -30,7 +29,7 @@ public class MavesJungleFloweringLeaves extends MavesFloweringLeaves {
         boolean bl = i == 3;
 
         if (player.getStackInHand(Hand.MAIN_HAND).getItem() instanceof ShearsItem) {
-            BlockState newState = shearedLeaves.getDefaultState();
+            BlockState newState = Blocks.JUNGLE_LEAVES.getDefaultState();
             world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
             return ActionResult.SUCCESS;
         }
@@ -39,16 +38,16 @@ public class MavesJungleFloweringLeaves extends MavesFloweringLeaves {
             ItemStack dropStack;
             float chance = world.random.nextFloat();
             if (chance < 0.5f) {
-                dropStack = new ItemStack(MavesItems.WILD_BERRIES_YELLOW);
-            } else if (chance < 0.85f) {
                 dropStack = new ItemStack(MavesItems.WILD_BERRIES_GREEN);
+            } else if (chance < 0.85f) {
+                dropStack = new ItemStack(MavesItems.WILD_BERRIES_YELLOW);
             } else {
                 dropStack = new ItemStack(MavesItems.WILD_BERRIES_BLUE);
             }
             dropStack.setCount(1 + world.random.nextInt(2) + (bl ? 1 : 0));
             dropStack(world, pos, dropStack);
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
-            BlockState blockState = state.with(AGE, Integer.valueOf(1));
+            BlockState blockState = state.with(AGE, Integer.valueOf(0));
             world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, blockState));
             return ActionResult.SUCCESS;

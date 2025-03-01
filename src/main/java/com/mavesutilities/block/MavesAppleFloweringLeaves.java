@@ -17,11 +17,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
 public class MavesAppleFloweringLeaves extends MavesFloweringLeaves {
-    private final Block shearedLeaves;
 
-    public MavesAppleFloweringLeaves(Settings settings, Block shearedLeaves) {
-        super(settings, new ItemStack(Items.APPLE), shearedLeaves);
-        this.shearedLeaves = shearedLeaves;
+    public MavesAppleFloweringLeaves(Settings settings) {
+        super(settings, new ItemStack(Items.APPLE), MavesBlocks.APPLE_TREE_FLOWERED_LEAVES);
     }
 
     @Override
@@ -30,14 +28,14 @@ public class MavesAppleFloweringLeaves extends MavesFloweringLeaves {
         boolean bl = i == 3;
 
         if (player.getStackInHand(Hand.MAIN_HAND).getItem() instanceof ShearsItem) {
-            BlockState newState = shearedLeaves.getDefaultState();
+            BlockState newState = MavesBlocks.APPLE_TREE_FLOWERED_LEAVES.getDefaultState();
             world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
             return ActionResult.SUCCESS;
         }
 
         if (i > 1) {
             ItemStack dropStack;
-            if (world.random.nextFloat() < 0.95f) {
+            if (world.random.nextFloat() < 0.85f) {
                 dropStack = new ItemStack(Items.APPLE);
             } else {
                 dropStack = new ItemStack(MavesItems.GREEN_APPLE);
@@ -45,7 +43,7 @@ public class MavesAppleFloweringLeaves extends MavesFloweringLeaves {
             dropStack.setCount(1 + world.random.nextInt(2) + (bl ? 1 : 0));
             dropStack(world, pos, dropStack);
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
-            BlockState blockState = state.with(AGE, Integer.valueOf(1));
+            BlockState blockState = state.with(AGE, Integer.valueOf(0));
             world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, blockState));
             return ActionResult.SUCCESS;
