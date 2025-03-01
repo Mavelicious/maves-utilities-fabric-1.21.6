@@ -9,6 +9,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ShearsItem;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.StateManager;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -28,9 +29,11 @@ public class MavesAppleFloweringLeaves extends MavesFloweringLeaves {
         boolean bl = i == 3;
 
         if (player.getStackInHand(Hand.MAIN_HAND).getItem() instanceof ShearsItem) {
-            BlockState newState = MavesBlocks.APPLE_TREE_FLOWERED_LEAVES.getDefaultState();
+            if (i < 1) {
+                BlockState newState = MavesBlocks.APPLE_TREE_FLOWERED_LEAVES.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
             world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
             return ActionResult.SUCCESS;
+            }
         }
 
         if (i > 1) {
@@ -50,5 +53,10 @@ public class MavesAppleFloweringLeaves extends MavesFloweringLeaves {
         } else {
             return super.onUse(state, world, pos, player, hit);
         }
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(AGE, DISTANCE, PERSISTENT, WATERLOGGED);
     }
 }

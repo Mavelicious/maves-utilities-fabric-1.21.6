@@ -72,9 +72,11 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
         boolean bl = i == 3;
 
         if (player.getStackInHand(Hand.MAIN_HAND).getItem() instanceof ShearsItem) {
-            BlockState newState = shearedLeaves.getDefaultState();
+            if (i < 1) {
+            BlockState newState = shearedLeaves.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
             world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
             return ActionResult.SUCCESS;
+            }
         }
 
         if (i > 1) {

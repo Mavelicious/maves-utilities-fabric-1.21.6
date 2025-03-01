@@ -41,7 +41,7 @@ public class MavesFloweredLeaves extends LeavesBlock {
         if (!world.isClient) {
             dropStack(world, pos, new ItemStack(flowerItem));
 
-            BlockState newState = shearedLeaves.getDefaultState();
+            BlockState newState = shearedLeaves.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
             world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
 
             world.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
