@@ -970,6 +970,49 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(MavesItems.BIRCH_CATKINS),
                                 conditionsFromItem(MavesItems.BIRCH_CATKINS))
                         .offerTo(exporter, "brown_dye_from_birch_catkin");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.PUMPKIN)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .input(MavesItems.PUMPKIN_SLICE)
+                        .criterion(hasItem(Items.PUMPKIN),
+                                conditionsFromItem(Items.PUMPKIN))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.PALE_PUMPKIN)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .criterion(hasItem(MavesBlocks.PALE_PUMPKIN),
+                                conditionsFromItem(MavesBlocks.PALE_PUMPKIN))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.MISC, MavesItems.PALE_PUMPKIN_SEEDS)
+                        .input(MavesItems.PALE_PUMPKIN_SLICE)
+                        .criterion(hasItem(MavesItems.PALE_PUMPKIN_SEEDS),
+                                conditionsFromItem(MavesItems.PALE_PUMPKIN_SEEDS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.PALE_JACK_O_LANTERN)
+                        .input('A', MavesBlocks.CARVED_PALE_PUMPKIN)
+                        .input('B', Blocks.SOUL_TORCH)
+                        .pattern("A")
+                        .pattern("B")
+                        .criterion(hasItem(MavesBlocks.CARVED_PALE_PUMPKIN),
+                                conditionsFromItem(MavesBlocks.CARVED_PALE_PUMPKIN))
+                        .offerTo(this.exporter);
             }
         };
     }

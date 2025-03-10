@@ -5,10 +5,12 @@ dd9af4297dc81131d15171999fce96692feac015 data/mavesutilities/tags/block/azalea_s
 c696bc0e9607b94a65a6290f97aa800e296e7886 data/mavesutilities/tags/block/rubber_tree_logs.json
 c46086d77b5ac7fb6dd03646050dfeb54097484c data/mavesutilities/tags/block/willow_logs.json
 60ea1f508e0d07ca6637aa9aec082c994d5dfce0 data/minecraft/tags/block/ceiling_hanging_signs.json
+db681b52753b730e6d4093459d824a2b1f4881df data/minecraft/tags/block/crops.json
 2182419278ad9afdf8c24e0bd4122a711f6d3f29 data/minecraft/tags/block/fence_gates.json
 2041c29324c909f7beebbac3fb7aed6c71e21bdd data/minecraft/tags/block/flower_pots.json
 788a852de979bbadb4968483d806fb53781a58c7 data/minecraft/tags/block/leaves.json
 e8de1a1e1a852d4f8ad40f9c6bc376ffe37c6a8e data/minecraft/tags/block/logs_that_burn.json
+846990c8ec853082d18684cdc3adadc4be562ada data/minecraft/tags/block/mineable/axe.json
 a973c8ae1b0686bdb6a0b282e88d5127e6f366e7 data/minecraft/tags/block/planks.json
 5c45358cd73e20b7c3c9e94ce6699dd65c75d970 data/minecraft/tags/block/saplings.json
 eb020b1895e1937f389cfa19caac9a4cb7d329cb data/minecraft/tags/block/standing_signs.json

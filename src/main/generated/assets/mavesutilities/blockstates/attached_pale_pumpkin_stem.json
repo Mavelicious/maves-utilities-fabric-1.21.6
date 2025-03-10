@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mavesutilities:block/attached_pale_pumpkin_stem",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "mavesutilities:block/attached_pale_pumpkin_stem",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mavesutilities:block/attached_pale_pumpkin_stem",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "mavesutilities:block/attached_pale_pumpkin_stem"
+    }
+  }
+}

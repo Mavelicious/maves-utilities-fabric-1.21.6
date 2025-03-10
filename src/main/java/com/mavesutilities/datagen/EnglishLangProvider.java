@@ -51,6 +51,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(MavesItems.GREEN_APPLE, "Green Apple");
         translationBuilder.add(MavesItems.PUMPKIN_SLICE, "Pumpkin Slice");
+        translationBuilder.add(MavesItems.PALE_PUMPKIN_SLICE, "Pale Pumpkin Slice");
         translationBuilder.add(MavesItems.CHERRIES, "Cherries");
         translationBuilder.add(MavesItems.WILD_BERRIES_BLUE, "Blue Wild Berries");
         translationBuilder.add(MavesItems.WILD_BERRIES_GREEN, "Green Wild Berries");
@@ -64,6 +65,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.PALE_ACORN, "Pale Acorn");
         translationBuilder.add(MavesItems.ACACIA_POD, "Acacia Pod");
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Spruce Cone");
+        translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Pale Pumpkin Seeds");
 
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Acacia Blossom");
         translationBuilder.add(MavesItems.APPLE_BLOSSOM, "Apple Blossom");
@@ -89,6 +91,12 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES, "Flowering Jungle Leaves");
         translationBuilder.add(MavesBlocks.OAK_FLOWERING_LEAVES, "Flowering Oak Leaves");
         translationBuilder.add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES, "Flowering Pale Oak Leaves");
+
+        translationBuilder.add(MavesBlocks.PALE_PUMPKIN, "Pale Pumpkin");
+        translationBuilder.add(MavesBlocks.CARVED_PALE_PUMPKIN, "Carved Pale Pumpkin");
+        translationBuilder.add(MavesBlocks.PALE_JACK_O_LANTERN, "Pale Jack O'Lantern");
+        translationBuilder.add(MavesBlocks.PALE_PUMPKIN_STEM, "Pale Pumpkin Stem");
+        translationBuilder.add(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM, "Attached Pale Pumpkin Stem");
 
         translationBuilder.add(MavesBlocks.APPLE_TREE_LOG, "Apple Tree Log");
         translationBuilder.add(MavesBlocks.APPLE_TREE_WOOD, "Apple Tree Wood");

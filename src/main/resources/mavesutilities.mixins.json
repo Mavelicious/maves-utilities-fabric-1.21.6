@@ -4,7 +4,8 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"MavesUtilitiesMixin",
-		"AxeItemMixin"
+		"AxeItemMixin",
+		"ShearsItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

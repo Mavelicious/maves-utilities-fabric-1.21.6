@@ -2,18 +2,21 @@ package com.mavesutilities.item;
 
 import com.mavesutilities.MavesUtilitiesMod;
 import com.mavesutilities.block.MavesBlocks;
-import com.mavesutilities.item.MavesItemGroups;
-import com.mavesutilities.util.MavesTags;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.minecraft.block.Block;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.EquippableComponent;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 public class MavesItems {
 
@@ -23,234 +26,186 @@ public class MavesItems {
     public static final Identifier RUBBER = Identifier.of(MavesUtilitiesMod.MOD_ID, "rubber");
     public static final Identifier WILLOW = Identifier.of(MavesUtilitiesMod.MOD_ID, "willow");
 
-    public static final RegistryKey<Item> OAK_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "oak_bark"));
-    public static final RegistryKey<Item> SPRUCE_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "spruce_bark"));
-    public static final RegistryKey<Item> BIRCH_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "birch_bark"));
-    public static final RegistryKey<Item> JUNGLE_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "jungle_bark"));
-    public static final RegistryKey<Item> ACACIA_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_bark"));
-    public static final RegistryKey<Item> DARK_OAK_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "dark_oak_bark"));
-    public static final RegistryKey<Item> MANGROVE_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "mangrove_bark"));
-    public static final RegistryKey<Item> CHERRY_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "cherry_bark"));
-    public static final RegistryKey<Item> PALE_OAK_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "pale_oak_bark"));
-    public static final RegistryKey<Item> APPLE_TREE_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_bark"));
-    public static final RegistryKey<Item> AZALEA_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea_bark"));
-    public static final RegistryKey<Item> CACAO_TREE_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_bark"));
-    public static final RegistryKey<Item> RUBBER_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "rubber_bark"));
-    public static final RegistryKey<Item> WILLOW_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "willow_bark"));
-    public static final RegistryKey<Item> CRIMSON_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "crimson_bark"));
-    public static final RegistryKey<Item> WARPED_BARK_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "warped_bark"));
+    public static final RegistryKey<Item> PALE_PUMPKIN_SEEDS_KEY = of("pale_pumpkin_seeds");
 
-    public static final RegistryKey<Item> GREEN_APPLE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "green_apple"));
-    public static final RegistryKey<Item> PUMPKIN_SLICE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "pumpkin_slice"));
-    public static final RegistryKey<Item> CHERRIES_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "cherries"));
-    public static final RegistryKey<Item> WILD_BERRIES_BLUE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "wild_berries_blue"));
-    public static final RegistryKey<Item> WILD_BERRIES_GREEN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "wild_berries_green"));
-    public static final RegistryKey<Item> WILD_BERRIES_YELLOW_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "wild_berries_yellow"));
-    public static final RegistryKey<Item> MILK_CHOCOLATE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "milk_chocolate"));
-    public static final RegistryKey<Item> WHITE_CHOCOLATE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "white_chocolate"));
-    public static final RegistryKey<Item> DARK_CHOCOLATE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "dark_chocolate"));
+    public static final Item OAK_FLOWERING_LEAVES = register(MavesBlocks.OAK_FLOWERING_LEAVES);
+    public static final Item BIRCH_FLOWERING_LEAVES = register(MavesBlocks.BIRCH_FLOWERING_LEAVES);
+    public static final Item JUNGLE_FLOWERING_LEAVES = register(MavesBlocks.JUNGLE_FLOWERING_LEAVES);
+    public static final Item ACACIA_FLOWERING_LEAVES = register(MavesBlocks.ACACIA_FLOWERING_LEAVES);
+    public static final Item ACACIA_FLOWERED_LEAVES = register(MavesBlocks.ACACIA_FLOWERED_LEAVES);
+    public static final Item DARK_OAK_FLOWERING_LEAVES = register(MavesBlocks.DARK_OAK_FLOWERING_LEAVES);
+    public static final Item CHERRY_FLOWERING_LEAVES = register(MavesBlocks.CHERRY_FLOWERING_LEAVES);
+    public static final Item PALE_OAK_FLOWERING_LEAVES = register(MavesBlocks.PALE_OAK_FLOWERING_LEAVES);
 
-    public static final RegistryKey<Item> ACORN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "acorn"));
-    public static final RegistryKey<Item> DARK_ACORN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "dark_acorn"));
-    public static final RegistryKey<Item> PALE_ACORN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "pale_acorn"));
-    public static final RegistryKey<Item> ACACIA_POD_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_pod"));
-    public static final RegistryKey<Item> SPRUCE_CONE_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "spruce_cone"));
+    public static final Item APPLE_TREE_LOG = register(MavesBlocks.APPLE_TREE_LOG);
+    public static final Item APPLE_TREE_WOOD = register(MavesBlocks.APPLE_TREE_WOOD);
+    public static final Item STRIPPED_APPLE_TREE_LOG = register(MavesBlocks.STRIPPED_APPLE_TREE_LOG);
+    public static final Item STRIPPED_APPLE_TREE_WOOD = register(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
+    public static final Item APPLE_TREE_LEAVES = register(MavesBlocks.APPLE_TREE_LEAVES);
+    public static final Item APPLE_TREE_FLOWERING_LEAVES = register(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES);
+    public static final Item APPLE_TREE_FLOWERED_LEAVES = register(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES);
+    public static final Item APPLE_TREE_SAPLING = register(MavesBlocks.APPLE_TREE_SAPLING);
+    public static final Item APPLE_TREE_PLANKS = register(MavesBlocks.APPLE_TREE_PLANKS);
+    public static final Item APPLE_TREE_BUTTON = register(MavesBlocks.APPLE_TREE_BUTTON);
+    public static final Item APPLE_TREE_DOOR = register(MavesBlocks.APPLE_TREE_DOOR, TallBlockItem::new);
+    public static final Item APPLE_TREE_FENCE = register(MavesBlocks.APPLE_TREE_FENCE);
+    public static final Item APPLE_TREE_FENCE_GATE = register(MavesBlocks.APPLE_TREE_FENCE_GATE);
+    public static final Item APPLE_TREE_PRESSURE_PLATE = register(MavesBlocks.APPLE_TREE_PRESSURE_PLATE);
+    public static final Item APPLE_TREE_SLAB = register(MavesBlocks.APPLE_TREE_SLAB);
+    public static final Item APPLE_TREE_STAIRS = register(MavesBlocks.APPLE_TREE_STAIRS);
+    public static final Item APPLE_TREE_TRAPDOOR = register(MavesBlocks.APPLE_TREE_TRAPDOOR);
 
-    public static final RegistryKey<Item> ACACIA_BLOSSOM_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "acacia_blossom"));
-    public static final RegistryKey<Item> APPLE_BLOSSOM_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_blossom"));
-    public static final RegistryKey<Item> AZALEA_BLOSSOM_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea_blossom"));
-    public static final RegistryKey<Item> BIRCH_CATKINS_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "birch_catkins"));
+    public static final Item AZALEA_STEM = register(MavesBlocks.AZALEA_STEM);
+    public static final Item AZALEA_WOOD = register(MavesBlocks.AZALEA_WOOD);
+    public static final Item STRIPPED_AZALEA_STEM = register(MavesBlocks.STRIPPED_AZALEA_STEM);
+    public static final Item STRIPPED_AZALEA_WOOD = register(MavesBlocks.STRIPPED_AZALEA_WOOD);
+    public static final Item AZALEA_PLANKS = register(MavesBlocks.AZALEA_PLANKS);
+    public static final Item AZALEA_BUTTON = register(MavesBlocks.AZALEA_BUTTON);
+    public static final Item AZALEA_DOOR = register(MavesBlocks.AZALEA_DOOR, TallBlockItem::new);
+    public static final Item AZALEA_FENCE = register(MavesBlocks.AZALEA_FENCE);
+    public static final Item AZALEA_FENCE_GATE = register(MavesBlocks.AZALEA_FENCE_GATE);
+    public static final Item AZALEA_PRESSURE_PLATE = register(MavesBlocks.AZALEA_PRESSURE_PLATE);
+    public static final Item AZALEA_SLAB = register(MavesBlocks.AZALEA_SLAB);
+    public static final Item AZALEA_STAIRS = register(MavesBlocks.AZALEA_STAIRS);
+    public static final Item AZALEA_TRAPDOOR = register(MavesBlocks.AZALEA_TRAPDOOR);
 
-    public static final RegistryKey<Item> APPLE_TREE_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_sign"));
-    public static final RegistryKey<Item> APPLE_TREE_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree_hanging_sign"));
-    public static final RegistryKey<Item> AZALEA_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea_sign"));
-    public static final RegistryKey<Item> AZALEA_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea_hanging_sign"));
-    public static final RegistryKey<Item> CACAO_TREE_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_sign"));
-    public static final RegistryKey<Item> CACAO_TREE_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_hanging_sign"));
-    public static final RegistryKey<Item> RUBBER_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "rubber_sign"));
-    public static final RegistryKey<Item> RUBBER_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "rubber_hanging_sign"));
-    public static final RegistryKey<Item> WILLOW_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "willow_sign"));
-    public static final RegistryKey<Item> WILLOW_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.ITEM,
-            Identifier.of(MavesUtilitiesMod.MOD_ID, "willow_hanging_sign"));
+    public static final Item CACAO_TREE_LOG = register(MavesBlocks.CACAO_TREE_LOG);
+    public static final Item CACAO_TREE_WOOD = register(MavesBlocks.CACAO_TREE_WOOD);
+    public static final Item STRIPPED_CACAO_TREE_LOG = register(MavesBlocks.STRIPPED_CACAO_TREE_LOG);
+    public static final Item STRIPPED_CACAO_TREE_WOOD = register(MavesBlocks.STRIPPED_CACAO_TREE_WOOD);
+    public static final Item CACAO_TREE_LEAVES = register(MavesBlocks.CACAO_TREE_LEAVES);
+    public static final Item CACAO_TREE_SAPLING = register(MavesBlocks.CACAO_TREE_SAPLING);
+    public static final Item CACAO_TREE_PLANKS = register(MavesBlocks.CACAO_TREE_PLANKS);
+    public static final Item CACAO_TREE_BUTTON = register(MavesBlocks.CACAO_TREE_BUTTON);
+    public static final Item CACAO_TREE_DOOR = register(MavesBlocks.CACAO_TREE_DOOR, TallBlockItem::new);
+    public static final Item CACAO_TREE_FENCE = register(MavesBlocks.CACAO_TREE_FENCE);
+    public static final Item CACAO_TREE_FENCE_GATE = register(MavesBlocks.CACAO_TREE_FENCE_GATE);
+    public static final Item CACAO_TREE_PRESSURE_PLATE = register(MavesBlocks.CACAO_TREE_PRESSURE_PLATE);
+    public static final Item CACAO_TREE_SLAB = register(MavesBlocks.CACAO_TREE_SLAB);
+    public static final Item CACAO_TREE_STAIRS = register(MavesBlocks.CACAO_TREE_STAIRS);
+    public static final Item CACAO_TREE_TRAPDOOR = register(MavesBlocks.CACAO_TREE_TRAPDOOR);
 
+    public static final Item PALE_PUMPKIN = register(MavesBlocks.PALE_PUMPKIN);
+    public static final Item CARVED_PALE_PUMPKIN = register(MavesBlocks.CARVED_PALE_PUMPKIN,
+            (UnaryOperator<Item.Settings>)(settings -> settings.component(
+                    DataComponentTypes.EQUIPPABLE,
+                    EquippableComponent.builder(EquipmentSlot.HEAD).swappable(false).cameraOverlay(Identifier.ofVanilla("misc/pumpkinblur")).build()
+            )));
+    public static final Item PALE_JACK_O_LANTERN = register(MavesBlocks.PALE_JACK_O_LANTERN);
 
+    public static final Item RUBBER_LOG = register(MavesBlocks.RUBBER_LOG);
+    public static final Item RUBBER_WOOD = register(MavesBlocks.RUBBER_WOOD);
+    public static final Item STRIPPED_RUBBER_LOG = register(MavesBlocks.STRIPPED_RUBBER_LOG);
+    public static final Item STRIPPED_RUBBER_WOOD = register(MavesBlocks.STRIPPED_RUBBER_WOOD);
+    public static final Item RUBBER_LEAVES = register(MavesBlocks.RUBBER_LEAVES);
+    public static final Item RUBBER_SAPLING = register(MavesBlocks.RUBBER_SAPLING);
+    public static final Item RUBBER_PLANKS = register(MavesBlocks.RUBBER_PLANKS);
+    public static final Item RUBBER_BUTTON = register(MavesBlocks.RUBBER_BUTTON);
+    public static final Item RUBBER_DOOR = register(MavesBlocks.RUBBER_DOOR, TallBlockItem::new);
+    public static final Item RUBBER_FENCE = register(MavesBlocks.RUBBER_FENCE);
+    public static final Item RUBBER_FENCE_GATE = register(MavesBlocks.RUBBER_FENCE_GATE);
+    public static final Item RUBBER_PRESSURE_PLATE = register(MavesBlocks.RUBBER_PRESSURE_PLATE);
+    public static final Item RUBBER_SLAB = register(MavesBlocks.RUBBER_SLAB);
+    public static final Item RUBBER_STAIRS = register(MavesBlocks.RUBBER_STAIRS);
+    public static final Item RUBBER_TRAPDOOR = register(MavesBlocks.RUBBER_TRAPDOOR);
 
-    public static final Item OAK_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(OAK_BARK_KEY)), OAK_BARK_KEY);
-    public static final Item SPRUCE_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(SPRUCE_BARK_KEY)), SPRUCE_BARK_KEY);
-    public static final Item BIRCH_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(BIRCH_BARK_KEY)), BIRCH_BARK_KEY);
-    public static final Item JUNGLE_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(JUNGLE_BARK_KEY)), JUNGLE_BARK_KEY);
-    public static final Item ACACIA_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(ACACIA_BARK_KEY)), ACACIA_BARK_KEY);
-    public static final Item DARK_OAK_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(DARK_OAK_BARK_KEY)), DARK_OAK_BARK_KEY);
-    public static final Item MANGROVE_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(MANGROVE_BARK_KEY)), MANGROVE_BARK_KEY);
-    public static final Item CHERRY_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(CHERRY_BARK_KEY)), CHERRY_BARK_KEY);
-    public static final Item PALE_OAK_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(PALE_OAK_BARK_KEY)), PALE_OAK_BARK_KEY);
-    public static final Item APPLE_TREE_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(APPLE_TREE_BARK_KEY)), APPLE_TREE_BARK_KEY);
-    public static final Item AZALEA_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(AZALEA_BARK_KEY)), AZALEA_BARK_KEY);
-    public static final Item CACAO_TREE_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(CACAO_TREE_BARK_KEY)), CACAO_TREE_BARK_KEY);
-    public static final Item RUBBER_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(RUBBER_BARK_KEY)), RUBBER_BARK_KEY);
-    public static final Item WILLOW_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(WILLOW_BARK_KEY)), WILLOW_BARK_KEY);
-    public static final Item CRIMSON_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(CRIMSON_BARK_KEY)), CRIMSON_BARK_KEY);
-    public static final Item WARPED_BARK = registerItem(
-            new Item(new Item.Settings().registryKey(WARPED_BARK_KEY)), WARPED_BARK_KEY);
+    public static final Item WILLOW_LOG = register(MavesBlocks.WILLOW_LOG);
+    public static final Item WILLOW_WOOD = register(MavesBlocks.WILLOW_WOOD);
+    public static final Item STRIPPED_WILLOW_LOG = register(MavesBlocks.STRIPPED_WILLOW_LOG);
+    public static final Item STRIPPED_WILLOW_WOOD = register(MavesBlocks.STRIPPED_WILLOW_WOOD);
+    public static final Item WILLOW_LEAVES = register(MavesBlocks.WILLOW_LEAVES);
+    public static final Item WILLOW_SAPLING = register(MavesBlocks.WILLOW_SAPLING);
+    public static final Item WILLOW_PLANKS = register(MavesBlocks.WILLOW_PLANKS);
+    public static final Item WILLOW_BUTTON = register(MavesBlocks.WILLOW_BUTTON);
+    public static final Item WILLOW_DOOR = register(MavesBlocks.WILLOW_DOOR, TallBlockItem::new);
+    public static final Item WILLOW_FENCE = register(MavesBlocks.WILLOW_FENCE);
+    public static final Item WILLOW_FENCE_GATE = register(MavesBlocks.WILLOW_FENCE_GATE);
+    public static final Item WILLOW_PRESSURE_PLATE = register(MavesBlocks.WILLOW_PRESSURE_PLATE);
+    public static final Item WILLOW_SLAB = register(MavesBlocks.WILLOW_SLAB);
+    public static final Item WILLOW_STAIRS = register(MavesBlocks.WILLOW_STAIRS);
+    public static final Item WILLOW_TRAPDOOR = register(MavesBlocks.WILLOW_TRAPDOOR);
 
+    public static final Item OAK_BARK = register("oak_bark");
+    public static final Item SPRUCE_BARK = register("spruce_bark");
+    public static final Item BIRCH_BARK = register("birch_bark");
+    public static final Item JUNGLE_BARK = register("jungle_bark");
+    public static final Item ACACIA_BARK = register("acacia_bark");
+    public static final Item DARK_OAK_BARK = register("dark_oak_bark");
+    public static final Item MANGROVE_BARK = register("mangrove_bark");
+    public static final Item CHERRY_BARK = register("cherry_bark");
+    public static final Item PALE_OAK_BARK = register("pale_oak_bark");
+    public static final Item APPLE_TREE_BARK = register("apple_tree_bark");
+    public static final Item AZALEA_BARK = register("azalea_bark");
+    public static final Item CACAO_TREE_BARK = register("cacao_tree_bark");
+    public static final Item RUBBER_BARK = register("rubber_bark");
+    public static final Item WILLOW_BARK = register("willow_bark");
+    public static final Item CRIMSON_BARK = register("crimson_bark");
+    public static final Item WARPED_BARK = register("warped_bark");
 
-    public static final Item GREEN_APPLE = registerItem(
-            new Item(new Item.Settings().registryKey(GREEN_APPLE_KEY).food(
-                    MavesFoods.GREEN_APPLE_FOOD_COMPONENT)), GREEN_APPLE_KEY);
-    public static final Item PUMPKIN_SLICE = registerItem(
-            new Item(new Item.Settings().registryKey(PUMPKIN_SLICE_KEY).food(
-                    MavesFoods.PUMPKIN_SLICE_FOOD_COMPONENT)), PUMPKIN_SLICE_KEY);
-    public static final Item CHERRIES = registerItem(
-            new Item(new Item.Settings().registryKey(CHERRIES_KEY).food(
-                    MavesFoods.CHERRIES_FOOD_COMPONENT)), CHERRIES_KEY);
-    public static final Item WILD_BERRIES_BLUE = registerItem(
-            new Item(new Item.Settings().registryKey(WILD_BERRIES_BLUE_KEY).food(
-                    MavesFoods.WILD_BERRIES_BLUE_FOOD_COMPONENT)), WILD_BERRIES_BLUE_KEY);
-    public static final Item WILD_BERRIES_GREEN = registerItem(
-            new Item(new Item.Settings().registryKey(WILD_BERRIES_GREEN_KEY).food(
-                    MavesFoods.WILD_BERRIES_GREEN_FOOD_COMPONENT)), WILD_BERRIES_GREEN_KEY);
-    public static final Item WILD_BERRIES_YELLOW = registerItem(
-            new Item(new Item.Settings().registryKey(WILD_BERRIES_YELLOW_KEY).food(
-                    MavesFoods.WILD_BERRIES_YELLOW_FOOD_COMPONENT)), WILD_BERRIES_YELLOW_KEY);
-    public static final Item MILK_CHOCOLATE = registerItem(
-            new Item(new Item.Settings().registryKey(MILK_CHOCOLATE_KEY).maxCount(1).food(
-                    MavesFoods.MILK_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL)), MILK_CHOCOLATE_KEY);
-    public static final Item WHITE_CHOCOLATE = registerItem(
-            new Item(new Item.Settings().registryKey(WHITE_CHOCOLATE_KEY).maxCount(1).food(
-                    MavesFoods.WHITE_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL)), WHITE_CHOCOLATE_KEY);
-    public static final Item DARK_CHOCOLATE = registerItem(
-            new Item(new Item.Settings().registryKey(DARK_CHOCOLATE_KEY).maxCount(1).food(
-                    MavesFoods.DARK_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL)), DARK_CHOCOLATE_KEY);
+    public static final Item GREEN_APPLE = register("green_apple",
+            new Item.Settings().food(MavesFoods.GREEN_APPLE_FOOD_COMPONENT));
+    public static final Item PUMPKIN_SLICE = register("pumpkin_slice",
+            new Item.Settings().food(MavesFoods.PUMPKIN_SLICE_FOOD_COMPONENT));
+    public static final Item PALE_PUMPKIN_SLICE = register("pale_pumpkin_slice",
+            new Item.Settings().food(MavesFoods.PALE_PUMPKIN_SLICE_FOOD_COMPONENT));
+    public static final Item CHERRIES = register("cherries",
+            new Item.Settings().food(MavesFoods.CHERRIES_FOOD_COMPONENT));
+    public static final Item WILD_BERRIES_BLUE = register("wild_berries_blue",
+            new Item.Settings().food(MavesFoods.WILD_BERRIES_BLUE_FOOD_COMPONENT));
+    public static final Item WILD_BERRIES_GREEN = register("wild_berries_green",
+            new Item.Settings().food(MavesFoods.WILD_BERRIES_GREEN_FOOD_COMPONENT));
+    public static final Item WILD_BERRIES_YELLOW = register("wild_berries_yellow",
+            new Item.Settings().food(MavesFoods.WILD_BERRIES_YELLOW_FOOD_COMPONENT));
+    public static final Item MILK_CHOCOLATE = register("milk_chocolate",
+            new Item.Settings().maxCount(1).food(MavesFoods.MILK_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL));
+    public static final Item WHITE_CHOCOLATE = register("white_chocolate",
+            new Item.Settings().maxCount(1).food(MavesFoods.WHITE_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL));
+    public static final Item DARK_CHOCOLATE = register("dark_chocolate",
+            new Item.Settings().maxCount(1).food(MavesFoods.DARK_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL));
 
-    public static final Item ACORN = registerItem(
-            new Item(new Item.Settings().registryKey(ACORN_KEY)), ACORN_KEY);
-    public static final Item DARK_ACORN = registerItem(
-            new Item(new Item.Settings().registryKey(DARK_ACORN_KEY)), DARK_ACORN_KEY);
-    public static final Item PALE_ACORN = registerItem(
-            new Item(new Item.Settings().registryKey(PALE_ACORN_KEY)), PALE_ACORN_KEY);
-    public static final Item ACACIA_POD = registerItem(
-            new Item(new Item.Settings().registryKey(ACACIA_POD_KEY)), ACACIA_POD_KEY);
-    public static final Item SPRUCE_CONE = registerItem(
-            new Item(new Item.Settings().registryKey(SPRUCE_CONE_KEY)), SPRUCE_CONE_KEY);
+    public static final Item ACORN = register("acorn");
+    public static final Item DARK_ACORN = register("dark_acorn");
+    public static final Item PALE_ACORN = register("pale_acorn");
+    public static final Item ACACIA_POD = register("acacia_pod");
+    public static final Item SPRUCE_CONE = register("spruce_cone");
+    public static final Item PALE_PUMPKIN_SEEDS = register(PALE_PUMPKIN_SEEDS_KEY,
+            createBlockItemWithUniqueName(MavesBlocks.PALE_PUMPKIN_STEM));
 
-    public static final Item ACACIA_BLOSSOM = registerItem(
-            new Item(new Item.Settings().registryKey(ACACIA_BLOSSOM_KEY)), ACACIA_BLOSSOM_KEY);
-    public static final Item APPLE_BLOSSOM = registerItem(
-            new Item(new Item.Settings().registryKey(APPLE_BLOSSOM_KEY)), APPLE_BLOSSOM_KEY);
-    public static final Item AZALEA_BLOSSOM = registerItem(
-            new Item(new Item.Settings().registryKey(AZALEA_BLOSSOM_KEY)), AZALEA_BLOSSOM_KEY);
-    public static final Item BIRCH_CATKINS = registerItem(
-            new Item(new Item.Settings().registryKey(BIRCH_CATKINS_KEY)), BIRCH_CATKINS_KEY);
+    public static final Item ACACIA_BLOSSOM = register("acacia_blossom");
+    public static final Item APPLE_BLOSSOM = register("apple_blossom");
+    public static final Item AZALEA_BLOSSOM = register("azalea_blossom");
+    public static final Item BIRCH_CATKINS = register("birch_catkins");
 
-    public static final Item APPLE_TREE_SIGN = registerItem(
-            new SignItem(MavesBlocks.APPLE_TREE_SIGN,
-            MavesBlocks.APPLE_TREE_WALL_SIGN, new Item.Settings().maxCount(16).
-            registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.APPLE_TREE_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), APPLE_TREE_SIGN_KEY);
-    public static final Item APPLE_TREE_HANGING_SIGN = registerItem(
-            new HangingSignItem(MavesBlocks.APPLE_TREE_HANGING_SIGN,
-            MavesBlocks.APPLE_TREE_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.APPLE_TREE_HANGING_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), APPLE_TREE_HANGING_SIGN_KEY);
-    public static final Item AZALEA_SIGN = registerItem(
-            new SignItem(MavesBlocks.AZALEA_SIGN,
-            MavesBlocks.AZALEA_WALL_SIGN, new Item.Settings().maxCount(16).
-            registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.AZALEA_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), AZALEA_SIGN_KEY);
-    public static final Item AZALEA_HANGING_SIGN = registerItem(
-            new HangingSignItem(MavesBlocks.AZALEA_HANGING_SIGN,
-            MavesBlocks.AZALEA_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.AZALEA_HANGING_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), AZALEA_HANGING_SIGN_KEY);
-    public static final Item CACAO_TREE_SIGN = registerItem(
-            new SignItem(MavesBlocks.CACAO_TREE_SIGN,
-            MavesBlocks.CACAO_TREE_WALL_SIGN, new Item.Settings().maxCount(16).
-            registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.CACAO_TREE_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), CACAO_TREE_SIGN_KEY);
-    public static final Item CACAO_TREE_HANGING_SIGN = registerItem(
-            new HangingSignItem(MavesBlocks.CACAO_TREE_HANGING_SIGN,
-            MavesBlocks.CACAO_TREE_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.CACAO_TREE_HANGING_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), CACAO_TREE_HANGING_SIGN_KEY);
-    public static final Item RUBBER_SIGN = registerItem(
-            new SignItem(MavesBlocks.RUBBER_SIGN,
-            MavesBlocks.RUBBER_WALL_SIGN, new Item.Settings().maxCount(16).
-            registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.RUBBER_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), RUBBER_SIGN_KEY);
-    public static final Item RUBBER_HANGING_SIGN = registerItem(
-            new HangingSignItem(MavesBlocks.RUBBER_HANGING_SIGN,
-            MavesBlocks.RUBBER_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.RUBBER_HANGING_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), RUBBER_HANGING_SIGN_KEY);
-    public static final Item WILLOW_SIGN = registerItem(
-            new SignItem(MavesBlocks.WILLOW_SIGN,
-            MavesBlocks.WILLOW_WALL_SIGN, new Item.Settings().maxCount(16).
-            registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.WILLOW_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), WILLOW_SIGN_KEY);
-    public static final Item WILLOW_HANGING_SIGN = registerItem(
-            new HangingSignItem(MavesBlocks.WILLOW_HANGING_SIGN,
-            MavesBlocks.WILLOW_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
-            .registryKey(RegistryKey.of(RegistryKeys.ITEM, MavesBlocks.WILLOW_HANGING_SIGN_ID))
-            .useBlockPrefixedTranslationKey()), WILLOW_HANGING_SIGN_KEY);
-
+    public static final Item APPLE_TREE_SIGN = register(MavesBlocks.APPLE_TREE_SIGN,
+            (block, settings) -> new SignItem(block, MavesBlocks.APPLE_TREE_WALL_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item APPLE_TREE_HANGING_SIGN = register(MavesBlocks.APPLE_TREE_HANGING_SIGN,
+            (block, settings) -> new HangingSignItem(block, MavesBlocks.APPLE_TREE_WALL_HANGING_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item AZALEA_SIGN = register(MavesBlocks.AZALEA_SIGN,
+            (block, settings) -> new SignItem(block, MavesBlocks.AZALEA_WALL_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item AZALEA_HANGING_SIGN = register(MavesBlocks.AZALEA_HANGING_SIGN,
+            (block, settings) -> new HangingSignItem(block, MavesBlocks.AZALEA_WALL_HANGING_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item CACAO_TREE_SIGN = register(MavesBlocks.CACAO_TREE_SIGN,
+            (block, settings) -> new SignItem(block, MavesBlocks.CACAO_TREE_WALL_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item CACAO_TREE_HANGING_SIGN = register(MavesBlocks.CACAO_TREE_HANGING_SIGN,
+            (block, settings) -> new HangingSignItem(block, MavesBlocks.CACAO_TREE_WALL_HANGING_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item RUBBER_SIGN = register(MavesBlocks.RUBBER_SIGN,
+            (block, settings) -> new SignItem(block, MavesBlocks.RUBBER_WALL_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item RUBBER_HANGING_SIGN = register(MavesBlocks.RUBBER_HANGING_SIGN,
+            (block, settings) -> new HangingSignItem(block, MavesBlocks.RUBBER_WALL_HANGING_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item WILLOW_SIGN = register(MavesBlocks.WILLOW_SIGN,
+            (block, settings) -> new SignItem(block, MavesBlocks.WILLOW_WALL_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item WILLOW_HANGING_SIGN = register(MavesBlocks.WILLOW_HANGING_SIGN,
+            (block, settings) -> new HangingSignItem(block, MavesBlocks.WILLOW_WALL_HANGING_SIGN, settings),
+            new Item.Settings().maxCount(16));
 
     public static final Item APPLE_TREE_BOAT = TerraformBoatItemHelper
             .registerBoatItem(APPLE_TREE, false);
@@ -273,10 +228,83 @@ public class MavesItems {
     public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper
             .registerBoatItem(WILLOW, true);
 
-    public static Item registerItem(Item item, RegistryKey<Item> registryKey) {
-        Item registeredItem = Registry.register(Registries.ITEM, registryKey.getValue(), item);
 
-        return registeredItem;
+
+    private static RegistryKey<Item> of(String id) {
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MavesUtilitiesMod.MOD_ID, id));
+    }
+
+    private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
+        return settings -> new BlockItem(block, settings.useItemPrefixedTranslationKey());
+    }
+
+    private static RegistryKey<Item> keyOf(String id) {
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MavesUtilitiesMod.MOD_ID, id));
+    }
+
+    private static RegistryKey<Item> keyOf(RegistryKey<Block> blockKey) {
+        return RegistryKey.of(RegistryKeys.ITEM, blockKey.getValue());
+    }
+
+    public static Item register(Block block) {
+        return register(block, BlockItem::new);
+    }
+
+    public static Item register(Block block, Item.Settings settings) {
+        return register(block, BlockItem::new, settings);
+    }
+
+    public static Item register(Block block, UnaryOperator<Item.Settings> settingsOperator) {
+        return register(block, (BiFunction<Block, Item.Settings, Item>)((blockx, settings) -> new BlockItem(blockx, (Item.Settings)settingsOperator.apply(settings))));
+    }
+
+    public static Item register(Block block, Block... blocks) {
+        Item item = register(block);
+
+        for (Block block2 : blocks) {
+            Item.BLOCK_ITEMS.put(block2, item);
+        }
+
+        return item;
+    }
+
+    public static Item register(Block block, BiFunction<Block, Item.Settings, Item> factory) {
+        return register(block, factory, new Item.Settings());
+    }
+
+    public static Item register(Block block, BiFunction<Block, Item.Settings, Item> factory, Item.Settings settings) {
+        return register(
+                keyOf(block.getRegistryEntry().registryKey()), itemSettings -> (Item)factory.apply(block, itemSettings), settings.useBlockPrefixedTranslationKey()
+        );
+    }
+
+    public static Item register(String id, Function<Item.Settings, Item> factory) {
+        return register(keyOf(id), factory, new Item.Settings());
+    }
+
+    public static Item register(String id, Function<Item.Settings, Item> factory, Item.Settings settings) {
+        return register(keyOf(id), factory, settings);
+    }
+
+    public static Item register(String id, Item.Settings settings) {
+        return register(keyOf(id), Item::new, settings);
+    }
+
+    public static Item register(String id) {
+        return register(keyOf(id), Item::new, new Item.Settings());
+    }
+
+    public static Item register(RegistryKey<Item> key, Function<Item.Settings, Item> factory) {
+        return register(key, factory, new Item.Settings());
+    }
+
+    public static Item register(RegistryKey<Item> key, Function<Item.Settings, Item> factory, Item.Settings settings) {
+        Item item = (Item)factory.apply(settings.registryKey(key));
+        if (item instanceof BlockItem blockItem) {
+            blockItem.appendBlocks(Item.BLOCK_ITEMS, item);
+        }
+
+        return Registry.register(Registries.ITEM, key, item);
     }
 
     public static void registerMavesItems() {

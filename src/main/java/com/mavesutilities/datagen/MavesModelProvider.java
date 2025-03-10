@@ -6,12 +6,15 @@ import com.mavesutilities.item.MavesItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 
 import java.util.function.BiConsumer;
+
+import static net.minecraft.client.data.BlockStateModelGenerator.createSingletonBlockState;
 
 public class MavesModelProvider extends FabricModelProvider {
 
@@ -53,6 +56,14 @@ public class MavesModelProvider extends FabricModelProvider {
             String itemModelString = "_stage" + stages[stages.length - 1];
             generator.registerItemModel(block.asItem(), Identifier.of(ModelIds.getBlockModelId(block) + itemModelString));
         }
+    }
+
+    private void registerPalePumpkins(BlockStateModelGenerator generator) {
+        TextureMap textureMap = TextureMap.sideEnd(MavesBlocks.PALE_PUMPKIN);
+        Identifier modelId = Models.CUBE_COLUMN.upload(MavesBlocks.PALE_PUMPKIN, textureMap, generator.modelCollector);
+        generator.blockStateCollector.accept(createSingletonBlockState(MavesBlocks.PALE_PUMPKIN, modelId));
+        generator.registerNorthDefaultHorizontalRotatable(MavesBlocks.CARVED_PALE_PUMPKIN, textureMap);
+        generator.registerNorthDefaultHorizontalRotatable(MavesBlocks.PALE_JACK_O_LANTERN, textureMap);
     }
 
 
@@ -194,6 +205,9 @@ public class MavesModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerHangingSign(MavesBlocks.STRIPPED_WILLOW_LOG,
                 MavesBlocks.WILLOW_HANGING_SIGN, MavesBlocks.WILLOW_WALL_HANGING_SIGN);
 
+        blockStateModelGenerator.registerGourd(MavesBlocks.PALE_PUMPKIN_STEM,
+                MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM);
+        registerPalePumpkins(blockStateModelGenerator);
     }
 
     @Override
@@ -217,6 +231,7 @@ public class MavesModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(MavesItems.GREEN_APPLE, Models.GENERATED);
         itemModelGenerator.register(MavesItems.PUMPKIN_SLICE, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.PALE_PUMPKIN_SLICE, Models.GENERATED);
         itemModelGenerator.register(MavesItems.CHERRIES, Models.GENERATED);
         itemModelGenerator.register(MavesItems.WILD_BERRIES_BLUE, Models.GENERATED);
         itemModelGenerator.register(MavesItems.WILD_BERRIES_GREEN, Models.GENERATED);

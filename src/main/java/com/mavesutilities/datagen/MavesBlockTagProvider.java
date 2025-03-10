@@ -173,5 +173,15 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.POTTED_CACAO_TREE_SAPLING)
                 .add(MavesBlocks.POTTED_RUBBER_SAPLING)
                 .add(MavesBlocks.POTTED_WILLOW_SAPLING);
+
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(MavesBlocks.PALE_PUMPKIN)
+                .add(MavesBlocks.CARVED_PALE_PUMPKIN)
+                .add(MavesBlocks.PALE_JACK_O_LANTERN)
+                .add(MavesBlocks.PALE_PUMPKIN_STEM)
+                .add(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM);
+
+        getOrCreateTagBuilder(BlockTags.CROPS)
+                .add(MavesBlocks.PALE_PUMPKIN_STEM);
     }
 }

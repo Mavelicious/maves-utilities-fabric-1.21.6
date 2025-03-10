@@ -1,5 +1,7 @@
 package com.mavesutilities.block;
 
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SaplingGenerator;
 

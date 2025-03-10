@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mavesutilities:pale_pumpkin_slice"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:pale_pumpkin_seeds"
+  }
+}

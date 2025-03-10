@@ -14,6 +14,11 @@ public class MavesFoods {
             .saturationModifier(0.4f)
             .build();
 
+    public static final FoodComponent PALE_PUMPKIN_SLICE_FOOD_COMPONENT = new FoodComponent.Builder()
+            .nutrition(2)
+            .saturationModifier(0.5f)
+            .build();
+
     public static final FoodComponent CHERRIES_FOOD_COMPONENT = new FoodComponent.Builder()
             .nutrition(2)
             .saturationModifier(0.2f)

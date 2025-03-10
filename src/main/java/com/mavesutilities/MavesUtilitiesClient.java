@@ -18,6 +18,8 @@ public class MavesUtilitiesClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.CACAO_TREE_SAPLING, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.RUBBER_SAPLING, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.WILLOW_SAPLING, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.PALE_PUMPKIN_STEM, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM, RenderLayer.getCutout());
 
 		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.APPLE_TREE_DOOR, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.APPLE_TREE_DOOR, RenderLayer.getTranslucent());

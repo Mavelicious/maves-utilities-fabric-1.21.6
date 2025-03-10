@@ -6,9 +6,14 @@ dd9af4297dc81131d15171999fce96692feac015 data/mavesutilities/tags/item/azalea_st
 c696bc0e9607b94a65a6290f97aa800e296e7886 data/mavesutilities/tags/item/rubber_tree_logs.json
 83f3f19aef30eb5c0a3ea9145da78a06679916be data/mavesutilities/tags/item/wild_berries.json
 c46086d77b5ac7fb6dd03646050dfeb54097484c data/mavesutilities/tags/item/willow_logs.json
+50f01b81ed3a4fc196b8fd9cf230b1974d15f484 data/minecraft/tags/item/bee_food.json
+d23d5b449b3a0e6f8792acf92ce4b8ff1b359909 data/minecraft/tags/item/chicken_food.json
 2182419278ad9afdf8c24e0bd4122a711f6d3f29 data/minecraft/tags/item/fence_gates.json
-e053584fa0587f460dcc0529b851260458da3386 data/minecraft/tags/item/leaves.json
+329a5c191a2549c43111d310e3ce21e1ada60b16 data/minecraft/tags/item/fox_food.json
+4bdad985ed1c2c9fe17a35da60505fab987ac11b data/minecraft/tags/item/horse_food.json
+af0103c2b4ad228d2cb55fde91819e555f87c49e data/minecraft/tags/item/leaves.json
 e8de1a1e1a852d4f8ad40f9c6bc376ffe37c6a8e data/minecraft/tags/item/logs_that_burn.json
+d23d5b449b3a0e6f8792acf92ce4b8ff1b359909 data/minecraft/tags/item/parrot_food.json
 a973c8ae1b0686bdb6a0b282e88d5127e6f366e7 data/minecraft/tags/item/planks.json
 5c45358cd73e20b7c3c9e94ce6699dd65c75d970 data/minecraft/tags/item/saplings.json
 56dc85dcbf2b2c8f26c202c831b80fd9b020309b data/minecraft/tags/item/wooden_buttons.json

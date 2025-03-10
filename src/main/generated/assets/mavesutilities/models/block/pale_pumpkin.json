@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mavesutilities:block/pale_pumpkin_top",
+    "side": "mavesutilities:block/pale_pumpkin_side"
+  }
+}

@@ -2,10 +2,23 @@ package com.mavesutilities.datagen;
 
 import com.mavesutilities.MavesUtilitiesMod;
 import com.mavesutilities.block.MavesBlocks;
+import com.mavesutilities.item.MavesItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
+import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.LimitCountLootFunction;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.operator.BoundedIntUnaryOperator;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -17,6 +30,7 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 
         addDrop(MavesBlocks.APPLE_TREE_LOG);
         addDrop(MavesBlocks.APPLE_TREE_WOOD);
@@ -105,6 +119,26 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.WILLOW_SLAB, slabDrops(MavesBlocks.WILLOW_SLAB));
         addDrop(MavesBlocks.WILLOW_STAIRS);
         addDrop(MavesBlocks.WILLOW_TRAPDOOR);
+
+        addDrop(
+                MavesBlocks.PALE_PUMPKIN,
+                block -> dropsWithSilkTouch(
+                        block,
+                        (LootPoolEntry.Builder<?>)applyExplosionDecay(
+                                block,
+                                ItemEntry.builder(MavesItems.PALE_PUMPKIN_SLICE)
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0F, 7.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                                        .apply(LimitCountLootFunction.builder(BoundedIntUnaryOperator.createMax(9)))
+                        )
+                )
+        );
+        addDrop(MavesBlocks.CARVED_PALE_PUMPKIN);
+        addDrop(MavesBlocks.PALE_JACK_O_LANTERN);
+        addDrop(MavesBlocks.PALE_PUMPKIN_STEM, block ->
+                cropStemDrops(block, MavesItems.PALE_PUMPKIN_SEEDS));
+        addDrop(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM, block ->
+                attachedCropStemDrops(block, MavesItems.PALE_PUMPKIN_SEEDS));
 
         addDrop(MavesBlocks.ACACIA_FLOWERING_LEAVES, leavesDrops(MavesBlocks.ACACIA_FLOWERING_LEAVES,
                 Blocks.ACACIA_SAPLING, 0.0625f));

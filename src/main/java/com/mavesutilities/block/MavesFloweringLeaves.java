@@ -1,9 +1,11 @@
 package com.mavesutilities.block;
 
+import com.mojang.serialization.MapCodec;
+
+import java.util.function.Function;
+
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.*;
@@ -24,10 +26,10 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     private static final int field_31112 = 1;
     public static final IntProperty AGE = Properties.AGE_3;
-    private final ItemStack fruitItem;
+    private final Item fruitItem;
     private final Block shearedLeaves;
 
-    public MavesFloweringLeaves(AbstractBlock.Settings settings, ItemStack fruitItem, Block shearedLeaves) {
+    public MavesFloweringLeaves(Item fruitItem, Block shearedLeaves, Settings settings) {
         super(settings);
         this.fruitItem = fruitItem;
         this.shearedLeaves = shearedLeaves;
@@ -40,7 +42,7 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
 
     @Override
     protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
-        return fruitItem.copy();
+        return new ItemStack(fruitItem);
     }
 
     @Override
@@ -81,7 +83,7 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
 
         if (i > 1) {
             int j = 1 + world.random.nextInt(2);
-            ItemStack dropStack = fruitItem.copy();
+            ItemStack dropStack = new ItemStack(fruitItem);
             dropStack.setCount(j + (bl ? 1 : 0));
             dropStack(world, pos, dropStack);
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);

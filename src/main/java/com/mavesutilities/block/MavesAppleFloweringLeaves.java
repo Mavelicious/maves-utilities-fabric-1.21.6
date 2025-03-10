@@ -1,8 +1,10 @@
 package com.mavesutilities.block;
 
 import com.mavesutilities.item.MavesItems;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -18,9 +20,15 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
 public class MavesAppleFloweringLeaves extends MavesFloweringLeaves {
+    public static final MapCodec<MavesAppleFloweringLeaves> CODEC = createCodec(MavesAppleFloweringLeaves::new);
 
     public MavesAppleFloweringLeaves(Settings settings) {
-        super(settings, new ItemStack(Items.APPLE), MavesBlocks.APPLE_TREE_FLOWERED_LEAVES);
+        super(Items.APPLE, MavesBlocks.APPLE_TREE_FLOWERED_LEAVES, settings);
+    }
+
+    @Override
+    public MapCodec<? extends MavesAppleFloweringLeaves> getCodec() {
+        return CODEC;
     }
 
     @Override

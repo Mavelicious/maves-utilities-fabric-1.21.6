@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "mavesutilities:block/carved_pale_pumpkin",
+    "side": "mavesutilities:block/pale_pumpkin_side",
+    "top": "mavesutilities:block/pale_pumpkin_top"
+  }
+}

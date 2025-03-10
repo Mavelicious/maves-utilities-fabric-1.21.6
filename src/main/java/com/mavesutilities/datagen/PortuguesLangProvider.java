@@ -51,6 +51,7 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
 
         translationBuilder.add(MavesItems.GREEN_APPLE, "Maçã Verde");
         translationBuilder.add(MavesItems.PUMPKIN_SLICE, "Fatia de Abóbora");
+        translationBuilder.add(MavesItems.PALE_PUMPKIN_SLICE, "Fatia de Abóbora Pálida");
         translationBuilder.add(MavesItems.CHERRIES, "Cerejas");
         translationBuilder.add(MavesItems.WILD_BERRIES_BLUE, "Bagas Selvagens Azuis");
         translationBuilder.add(MavesItems.WILD_BERRIES_GREEN, "Bagas Selvagens Verdes");
@@ -64,6 +65,7 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.PALE_ACORN, "Bolota Pálida");
         translationBuilder.add(MavesItems.ACACIA_POD, "Vagem de Acácia");
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Cone de Pinheiro");
+        translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Sementes de Abóbora Pálida");
 
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Flores de Acácia");
         translationBuilder.add(MavesItems.APPLE_BLOSSOM, "Flores de Macieira");
@@ -89,6 +91,12 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES, "Folhas de Selva Florescentes");
         translationBuilder.add(MavesBlocks.OAK_FLOWERING_LEAVES, "Folhas de Carvalho Florescentes");
         translationBuilder.add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES, "Folhas de Carvalho Pálido Florescentes");
+
+        translationBuilder.add(MavesBlocks.PALE_PUMPKIN, "Abóbora Pálida");
+        translationBuilder.add(MavesBlocks.CARVED_PALE_PUMPKIN, "Abóbora Pálida Esculpida");
+        translationBuilder.add(MavesBlocks.PALE_JACK_O_LANTERN, "Abóbora Pálida de Halloween");
+        translationBuilder.add(MavesBlocks.PALE_PUMPKIN_STEM, "Caule de Abóbora Pálida");
+        translationBuilder.add(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM, "Caule de Abóbora Pálida Unido");
 
         translationBuilder.add(MavesBlocks.APPLE_TREE_LOG, "Tronco de Macieira");
         translationBuilder.add(MavesBlocks.APPLE_TREE_WOOD, "Madeira de Macieira");

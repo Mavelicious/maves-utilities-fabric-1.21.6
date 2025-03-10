@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice",
+    "mavesutilities:pale_pumpkin_slice"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:pale_pumpkin"
+  }
+}
