@@ -316,6 +316,8 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.ACACIA_POD, Models.GENERATED);
         itemModelGenerator.register(MavesItems.SPRUCE_CONE, Models.GENERATED);
 
+        itemModelGenerator.register(MavesItems.LATEX_BOTTLE, Models.GENERATED);
+
         itemModelGenerator.register(MavesItems.ACACIA_BLOSSOM, Models.GENERATED);
         itemModelGenerator.register(MavesItems.APPLE_BLOSSOM, Models.GENERATED);
         itemModelGenerator.register(MavesItems.AZALEA_BLOSSOM, Models.GENERATED);

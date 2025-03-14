@@ -100,6 +100,8 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Spruce Cone");
         translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Pale Pumpkin Seeds");
 
+        translationBuilder.add(MavesItems.LATEX_BOTTLE, "Latex Bottle");
+
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Acacia Blossom");
         translationBuilder.add(MavesItems.APPLE_BLOSSOM, "Apple Blossom");
         translationBuilder.add(MavesItems.AZALEA_BLOSSOM, "Azalea Blossom");

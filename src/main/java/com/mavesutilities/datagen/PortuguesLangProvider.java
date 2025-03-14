@@ -100,6 +100,8 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Cone de Pinheiro");
         translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Sementes de Abóbora Pálida");
 
+        translationBuilder.add(MavesItems.LATEX_BOTTLE, "Frasco de Látex");
+
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Flores de Acácia");
         translationBuilder.add(MavesItems.APPLE_BLOSSOM, "Flores de Macieira");
         translationBuilder.add(MavesItems.AZALEA_BLOSSOM, "Flores de Azaleia");

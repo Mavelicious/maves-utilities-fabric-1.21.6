@@ -5,7 +5,9 @@ import com.mavesutilities.block.MavesBlocks;
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.EquippableComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -240,6 +242,9 @@ public class MavesItems {
     public static final Item SPRUCE_CONE = register("spruce_cone");
     public static final Item PALE_PUMPKIN_SEEDS = register(PALE_PUMPKIN_SEEDS_KEY,
             createBlockItemWithUniqueName(MavesBlocks.PALE_PUMPKIN_STEM));
+
+    public static final Item LATEX_BOTTLE = register("latex_bottle", new Item.Settings()
+                    .recipeRemainder(Items.GLASS_BOTTLE).maxCount(16));
 
     public static final Item ACACIA_BLOSSOM = register("acacia_blossom");
     public static final Item APPLE_BLOSSOM = register("apple_blossom");

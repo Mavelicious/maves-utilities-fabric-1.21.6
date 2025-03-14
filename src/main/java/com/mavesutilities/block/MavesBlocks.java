@@ -258,7 +258,7 @@ public class MavesBlocks {
             AbstractBlock.Settings.copy(Blocks.OAK_LOG));
     public static final Block CACAO_TREE_BLOCK = register("cacao_tree_block", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LOG));
-    public static final Block RUBBER_BLOCK = register("rubber_block", PillarBlock::new,
+    public static final Block RUBBER_BLOCK = register("rubber_block", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LOG));
     public static final Block WILLOW_BLOCK = register("willow_block", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LOG));
@@ -292,7 +292,7 @@ public class MavesBlocks {
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_CACAO_TREE_BLOCK = register("stripped_cacao_tree_block", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
-    public static final Block STRIPPED_RUBBER_BLOCK = register("stripped_rubber_block", PillarBlock::new,
+    public static final Block STRIPPED_RUBBER_BLOCK = register("stripped_rubber_block", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_WILLOW_BLOCK = register("stripped_willow_block", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
@@ -465,13 +465,13 @@ public class MavesBlocks {
             settings -> new StemBlock(PALE_PUMPKIN_KEY, ATTACHED_PALE_PUMPKIN_STEM_KEY, MavesItems.PALE_PUMPKIN_SEEDS_KEY, settings),
             AbstractBlock.Settings.copy(Blocks.PUMPKIN_STEM));
 
-    public static final Block RUBBER_LOG = register("rubber_log", PillarBlock::new,
+    public static final Block RUBBER_LOG = register("rubber_log", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LOG));
-    public static final Block RUBBER_WOOD = register("rubber_wood", PillarBlock::new,
+    public static final Block RUBBER_WOOD = register("rubber_wood", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.OAK_WOOD));
-    public static final Block STRIPPED_RUBBER_LOG = register("stripped_rubber_log", PillarBlock::new,
+    public static final Block STRIPPED_RUBBER_LOG = register("stripped_rubber_log", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
-    public static final Block STRIPPED_RUBBER_WOOD = register("stripped_rubber_wood", PillarBlock::new,
+    public static final Block STRIPPED_RUBBER_WOOD = register("stripped_rubber_wood", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD));
     public static final Block RUBBER_LEAVES = register("rubber_leaves", LeavesBlock::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));

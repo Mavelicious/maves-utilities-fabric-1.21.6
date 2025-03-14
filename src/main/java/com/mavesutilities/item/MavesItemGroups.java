@@ -100,6 +100,7 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.ACACIA_POD);
             itemGroup.add(MavesItems.SPRUCE_CONE);
             itemGroup.add(MavesItems.PALE_PUMPKIN_SEEDS);
+            itemGroup.add(MavesItems.LATEX_BOTTLE);
             itemGroup.add(MavesItems.ACACIA_BLOSSOM);
             itemGroup.add(MavesItems.APPLE_BLOSSOM);
             itemGroup.add(MavesItems.AZALEA_BLOSSOM);
