@@ -16,6 +16,36 @@ public class MavesFlammableBlocks {
         registry.add(MavesBlocks.OAK_FLOWERING_LEAVES, 30, 60);
         registry.add(MavesBlocks.PALE_OAK_FLOWERING_LEAVES, 30, 60);
 
+        registry.add(MavesBlocks.OAK_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_OAK_BLOCK, 5,5);
+        registry.add(MavesBlocks.SPRUCE_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_SPRUCE_BLOCK, 5,5);
+        registry.add(MavesBlocks.BIRCH_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_BIRCH_BLOCK, 5,5);
+        registry.add(MavesBlocks.JUNGLE_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_JUNGLE_BLOCK, 5,5);
+        registry.add(MavesBlocks.ACACIA_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_ACACIA_BLOCK, 5,5);
+        registry.add(MavesBlocks.DARK_OAK_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_DARK_OAK_BLOCK, 5,5);
+        registry.add(MavesBlocks.MANGROVE_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_MANGROVE_BLOCK, 5,5);
+        registry.add(MavesBlocks.CHERRY_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_CHERRY_BLOCK, 5,5);
+        registry.add(MavesBlocks.PALE_OAK_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_PALE_OAK_BLOCK, 5,5);
+
+        registry.add(MavesBlocks.APPLE_TREE_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_APPLE_TREE_BLOCK, 5,5);
+        registry.add(MavesBlocks.AZALEA_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_AZALEA_BLOCK, 5,5);
+        registry.add(MavesBlocks.CACAO_TREE_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_CACAO_TREE_BLOCK, 5,5);
+        registry.add(MavesBlocks.RUBBER_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_RUBBER_BLOCK, 5,5);
+        registry.add(MavesBlocks.WILLOW_BLOCK, 5,5);
+        registry.add(MavesBlocks.STRIPPED_WILLOW_BLOCK, 5,5);
+
         registry.add(MavesBlocks.APPLE_TREE_LOG, 5, 5);
         registry.add(MavesBlocks.APPLE_TREE_WOOD, 5, 5);
         registry.add(MavesBlocks.STRIPPED_APPLE_TREE_LOG, 5, 5);

@@ -37,6 +37,42 @@ public class MavesItems {
     public static final Item CHERRY_FLOWERING_LEAVES = register(MavesBlocks.CHERRY_FLOWERING_LEAVES);
     public static final Item PALE_OAK_FLOWERING_LEAVES = register(MavesBlocks.PALE_OAK_FLOWERING_LEAVES);
 
+    public static final Item OAK_BLOCK = register(MavesBlocks.OAK_BLOCK);
+    public static final Item SPRUCE_BLOCK = register(MavesBlocks.SPRUCE_BLOCK);
+    public static final Item BIRCH_BLOCK = register(MavesBlocks.BIRCH_BLOCK);
+    public static final Item JUNGLE_BLOCK = register(MavesBlocks.JUNGLE_BLOCK);
+    public static final Item ACACIA_BLOCK = register(MavesBlocks.ACACIA_BLOCK);
+    public static final Item DARK_OAK_BLOCK = register(MavesBlocks.DARK_OAK_BLOCK);
+    public static final Item MANGROVE_BLOCK = register(MavesBlocks.MANGROVE_BLOCK);
+    public static final Item CHERRY_BLOCK = register(MavesBlocks.CHERRY_BLOCK);
+    public static final Item PALE_OAK_BLOCK = register(MavesBlocks.PALE_OAK_BLOCK);
+    public static final Item CRIMSON_BLOCK = register(MavesBlocks.CRIMSON_BLOCK);
+    public static final Item WARPED_BLOCK = register(MavesBlocks.WARPED_BLOCK);
+
+    public static final Item APPLE_TREE_BLOCK = register(MavesBlocks.APPLE_TREE_BLOCK);
+    public static final Item AZALEA_BLOCK = register(MavesBlocks.AZALEA_BLOCK);
+    public static final Item CACAO_TREE_BLOCK = register(MavesBlocks.CACAO_TREE_BLOCK);
+    public static final Item RUBBER_BLOCK = register(MavesBlocks.RUBBER_BLOCK);
+    public static final Item WILLOW_BLOCK = register(MavesBlocks.WILLOW_BLOCK);
+
+    public static final Item STRIPPED_OAK_BLOCK = register(MavesBlocks.STRIPPED_OAK_BLOCK);
+    public static final Item STRIPPED_SPRUCE_BLOCK = register(MavesBlocks.STRIPPED_SPRUCE_BLOCK);
+    public static final Item STRIPPED_BIRCH_BLOCK = register(MavesBlocks.STRIPPED_BIRCH_BLOCK);
+    public static final Item STRIPPED_JUNGLE_BLOCK = register(MavesBlocks.STRIPPED_JUNGLE_BLOCK);
+    public static final Item STRIPPED_ACACIA_BLOCK = register(MavesBlocks.STRIPPED_ACACIA_BLOCK);
+    public static final Item STRIPPED_DARK_OAK_BLOCK = register(MavesBlocks.STRIPPED_DARK_OAK_BLOCK);
+    public static final Item STRIPPED_MANGROVE_BLOCK = register(MavesBlocks.STRIPPED_MANGROVE_BLOCK);
+    public static final Item STRIPPED_CHERRY_BLOCK = register(MavesBlocks.STRIPPED_CHERRY_BLOCK);
+    public static final Item STRIPPED_PALE_OAK_BLOCK = register(MavesBlocks.STRIPPED_PALE_OAK_BLOCK);
+    public static final Item STRIPPED_CRIMSON_BLOCK = register(MavesBlocks.STRIPPED_CRIMSON_BLOCK);
+    public static final Item STRIPPED_WARPED_BLOCK = register(MavesBlocks.STRIPPED_WARPED_BLOCK);
+
+    public static final Item STRIPPED_APPLE_TREE_BLOCK = register(MavesBlocks.STRIPPED_APPLE_TREE_BLOCK);
+    public static final Item STRIPPED_AZALEA_BLOCK = register(MavesBlocks.STRIPPED_AZALEA_BLOCK);
+    public static final Item STRIPPED_CACAO_TREE_BLOCK = register(MavesBlocks.STRIPPED_CACAO_TREE_BLOCK);
+    public static final Item STRIPPED_RUBBER_BLOCK = register(MavesBlocks.STRIPPED_RUBBER_BLOCK);
+    public static final Item STRIPPED_WILLOW_BLOCK = register(MavesBlocks.STRIPPED_WILLOW_BLOCK);
+
     public static final Item APPLE_TREE_LOG = register(MavesBlocks.APPLE_TREE_LOG);
     public static final Item APPLE_TREE_WOOD = register(MavesBlocks.APPLE_TREE_WOOD);
     public static final Item STRIPPED_APPLE_TREE_LOG = register(MavesBlocks.STRIPPED_APPLE_TREE_LOG);
@@ -141,6 +177,40 @@ public class MavesItems {
     public static final Item WILLOW_BARK = register("willow_bark");
     public static final Item CRIMSON_BARK = register("crimson_bark");
     public static final Item WARPED_BARK = register("warped_bark");
+
+    public static final Item OAK_SLIVER = register("oak_sliver");
+    public static final Item STRIPPED_OAK_SLIVER = register("stripped_oak_sliver");
+    public static final Item SPRUCE_SLIVER = register("spruce_sliver");
+    public static final Item STRIPPED_SPRUCE_SLIVER = register("stripped_spruce_sliver");
+    public static final Item BIRCH_SLIVER = register("birch_sliver");
+    public static final Item STRIPPED_BIRCH_SLIVER = register("stripped_birch_sliver");
+    public static final Item JUNGLE_SLIVER = register("jungle_sliver");
+    public static final Item STRIPPED_JUNGLE_SLIVER = register("stripped_jungle_sliver");
+    public static final Item ACACIA_SLIVER = register("acacia_sliver");
+    public static final Item STRIPPED_ACACIA_SLIVER = register("stripped_acacia_sliver");
+    public static final Item DARK_OAK_SLIVER = register("dark_oak_sliver");
+    public static final Item STRIPPED_DARK_OAK_SLIVER = register("stripped_dark_oak_sliver");
+    public static final Item MANGROVE_SLIVER = register("mangrove_sliver");
+    public static final Item STRIPPED_MANGROVE_SLIVER = register("stripped_mangrove_sliver");
+    public static final Item CHERRY_SLIVER = register("cherry_sliver");
+    public static final Item STRIPPED_CHERRY_SLIVER = register("stripped_cherry_sliver");
+    public static final Item PALE_OAK_SLIVER = register("pale_oak_sliver");
+    public static final Item STRIPPED_PALE_OAK_SLIVER = register("stripped_pale_oak_sliver");
+    public static final Item CRIMSON_SLIVER = register("crimson_sliver");
+    public static final Item STRIPPED_CRIMSON_SLIVER = register("stripped_crimson_sliver");
+    public static final Item WARPED_SLIVER = register("warped_sliver");
+    public static final Item STRIPPED_WARPED_SLIVER = register("stripped_warped_sliver");
+
+    public static final Item APPLE_TREE_SLIVER = register("apple_tree_sliver");
+    public static final Item STRIPPED_APPLE_TREE_SLIVER = register("stripped_apple_tree_sliver");
+    public static final Item AZALEA_SLIVER = register("azalea_sliver");
+    public static final Item STRIPPED_AZALEA_SLIVER = register("stripped_azalea_sliver");
+    public static final Item CACAO_TREE_SLIVER = register("cacao_tree_sliver");
+    public static final Item STRIPPED_CACAO_TREE_SLIVER = register("stripped_cacao_tree_sliver");
+    public static final Item RUBBER_SLIVER = register("rubber_sliver");
+    public static final Item STRIPPED_RUBBER_SLIVER = register("stripped_rubber_sliver");
+    public static final Item WILLOW_SLIVER = register("willow_sliver");
+    public static final Item STRIPPED_WILLOW_SLIVER = register("stripped_willow_sliver");
 
     public static final Item GREEN_APPLE = register("green_apple",
             new Item.Settings().food(MavesFoods.GREEN_APPLE_FOOD_COMPONENT));
@@ -272,6 +342,7 @@ public class MavesItems {
         return register(block, factory, new Item.Settings());
     }
 
+    @SuppressWarnings("deprecation")
     public static Item register(Block block, BiFunction<Block, Item.Settings, Item> factory, Item.Settings settings) {
         return register(
                 keyOf(block.getRegistryEntry().registryKey()), itemSettings -> (Item)factory.apply(block, itemSettings), settings.useBlockPrefixedTranslationKey()

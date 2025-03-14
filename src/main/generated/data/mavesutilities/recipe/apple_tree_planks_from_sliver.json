@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#mavesutilities:apple_slivers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:apple_tree_planks"
+  }
+}

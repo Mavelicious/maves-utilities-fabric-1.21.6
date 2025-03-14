@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.GameEventTags;
 import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -50,34 +51,88 @@ public class MavesItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(MavesItems.WILLOW_SAPLING);
 
         getOrCreateTagBuilder(MavesTags.Items.APPLE_TREE_LOGS)
+                .add(MavesItems.APPLE_TREE_BLOCK)
                 .add(MavesItems.APPLE_TREE_LOG)
                 .add(MavesItems.APPLE_TREE_WOOD)
+                .add(MavesItems.STRIPPED_APPLE_TREE_BLOCK)
                 .add(MavesItems.STRIPPED_APPLE_TREE_LOG)
                 .add(MavesItems.STRIPPED_APPLE_TREE_WOOD);
 
         getOrCreateTagBuilder(MavesTags.Items.AZALEA_STEMS)
+                .add(MavesItems.AZALEA_BLOCK)
                 .add(MavesItems.AZALEA_STEM)
                 .add(MavesItems.AZALEA_WOOD)
+                .add(MavesItems.STRIPPED_AZALEA_BLOCK)
                 .add(MavesItems.STRIPPED_AZALEA_STEM)
                 .add(MavesItems.STRIPPED_AZALEA_WOOD);
 
         getOrCreateTagBuilder(MavesTags.Items.CACAO_TREE_LOGS)
+                .add(MavesItems.CACAO_TREE_BLOCK)
                 .add(MavesItems.CACAO_TREE_LOG)
                 .add(MavesItems.CACAO_TREE_WOOD)
+                .add(MavesItems.STRIPPED_CACAO_TREE_BLOCK)
                 .add(MavesItems.STRIPPED_CACAO_TREE_LOG)
                 .add(MavesItems.STRIPPED_CACAO_TREE_WOOD);
 
         getOrCreateTagBuilder(MavesTags.Items.RUBBER_TREE_LOGS)
+                .add(MavesItems.RUBBER_BLOCK)
                 .add(MavesItems.RUBBER_LOG)
                 .add(MavesItems.RUBBER_WOOD)
+                .add(MavesItems.STRIPPED_RUBBER_BLOCK)
                 .add(MavesItems.STRIPPED_RUBBER_LOG)
                 .add(MavesItems.STRIPPED_RUBBER_WOOD);
 
         getOrCreateTagBuilder(MavesTags.Items.WILLOW_LOGS)
+                .add(MavesItems.WILLOW_BLOCK)
                 .add(MavesItems.WILLOW_LOG)
                 .add(MavesItems.WILLOW_WOOD)
+                .add(MavesItems.STRIPPED_WILLOW_BLOCK)
                 .add(MavesItems.STRIPPED_WILLOW_LOG)
                 .add(MavesItems.STRIPPED_WILLOW_WOOD);
+
+        getOrCreateTagBuilder(ItemTags.OAK_LOGS)
+                .add(MavesItems.OAK_BLOCK)
+                .add(MavesItems.STRIPPED_OAK_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.SPRUCE_LOGS)
+                .add(MavesItems.SPRUCE_BLOCK)
+                .add(MavesItems.STRIPPED_SPRUCE_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.BIRCH_LOGS)
+                .add(MavesItems.BIRCH_BLOCK)
+                .add(MavesItems.STRIPPED_BIRCH_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.JUNGLE_LOGS)
+                .add(MavesItems.JUNGLE_BLOCK)
+                .add(MavesItems.STRIPPED_JUNGLE_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.ACACIA_LOGS)
+                .add(MavesItems.ACACIA_BLOCK)
+                .add(MavesItems.STRIPPED_ACACIA_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.DARK_OAK_LOGS)
+                .add(MavesItems.DARK_OAK_BLOCK)
+                .add(MavesItems.STRIPPED_DARK_OAK_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.MANGROVE_LOGS)
+                .add(MavesItems.MANGROVE_BLOCK)
+                .add(MavesItems.STRIPPED_MANGROVE_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.CHERRY_LOGS)
+                .add(MavesItems.CHERRY_BLOCK)
+                .add(MavesItems.STRIPPED_CHERRY_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.PALE_OAK_LOGS)
+                .add(MavesItems.PALE_OAK_BLOCK)
+                .add(MavesItems.STRIPPED_PALE_OAK_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.CRIMSON_STEMS)
+                .add(MavesItems.CRIMSON_BLOCK)
+                .add(MavesItems.STRIPPED_CRIMSON_BLOCK);
+
+        getOrCreateTagBuilder(ItemTags.WARPED_STEMS)
+                .add(MavesItems.WARPED_BLOCK)
+                .add(MavesItems.STRIPPED_WARPED_BLOCK);
 
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .addTag(MavesTags.Items.APPLE_TREE_LOGS)
@@ -150,6 +205,70 @@ public class MavesItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(MavesItems.WILD_BERRIES_BLUE)
                 .add(MavesItems.WILD_BERRIES_GREEN)
                 .add(MavesItems.WILD_BERRIES_YELLOW);
+
+        getOrCreateTagBuilder(MavesTags.Items.ACACIA_SLIVERS)
+                .add(MavesItems.ACACIA_SLIVER)
+                .add(MavesItems.STRIPPED_ACACIA_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.APPLE_TREE_SLIVERS)
+                .add(MavesItems.APPLE_TREE_SLIVER)
+                .add(MavesItems.STRIPPED_APPLE_TREE_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.AZALEA_SLIVERS)
+                .add(MavesItems.AZALEA_SLIVER)
+                .add(MavesItems.STRIPPED_AZALEA_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.BIRCH_SLIVERS)
+                .add(MavesItems.BIRCH_SLIVER)
+                .add(MavesItems.STRIPPED_BIRCH_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.CHERRY_SLIVERS)
+                .add(MavesItems.CHERRY_SLIVER)
+                .add(MavesItems.STRIPPED_CHERRY_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.CACAO_TREE_SLIVERS)
+                .add(MavesItems.CACAO_TREE_SLIVER)
+                .add(MavesItems.STRIPPED_CACAO_TREE_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.CRIMSON_SLIVERS)
+                .add(MavesItems.CRIMSON_SLIVER)
+                .add(MavesItems.STRIPPED_CRIMSON_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.DARK_OAK_SLIVERS)
+                .add(MavesItems.DARK_OAK_SLIVER)
+                .add(MavesItems.STRIPPED_DARK_OAK_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.JUNGLE_SLIVERS)
+                .add(MavesItems.JUNGLE_SLIVER)
+                .add(MavesItems.STRIPPED_JUNGLE_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.MANGROVE_SLIVERS)
+                .add(MavesItems.MANGROVE_SLIVER)
+                .add(MavesItems.STRIPPED_MANGROVE_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.OAK_SLIVERS)
+                .add(MavesItems.OAK_SLIVER)
+                .add(MavesItems.STRIPPED_OAK_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.PALE_OAK_SLIVERS)
+                .add(MavesItems.PALE_OAK_SLIVER)
+                .add(MavesItems.STRIPPED_PALE_OAK_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.RUBBER_SLIVERS)
+                .add(MavesItems.RUBBER_SLIVER)
+                .add(MavesItems.STRIPPED_RUBBER_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.SPRUCE_SLIVERS)
+                .add(MavesItems.SPRUCE_SLIVER)
+                .add(MavesItems.STRIPPED_SPRUCE_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.WARPED_SLIVERS)
+                .add(MavesItems.WARPED_SLIVER)
+                .add(MavesItems.STRIPPED_WARPED_SLIVER);
+
+        getOrCreateTagBuilder(MavesTags.Items.WILLOW_SLIVERS)
+                .add(MavesItems.WILLOW_SLIVER)
+                .add(MavesItems.STRIPPED_WILLOW_SLIVER);
 
         getOrCreateTagBuilder(ItemTags.BEE_FOOD)
                 .add(MavesItems.ACACIA_FLOWERING_LEAVES)

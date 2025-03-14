@@ -27,6 +27,23 @@ public class MavesTags {
         public static final TagKey<Item> RUBBER_TREE_LOGS = createTag("rubber_tree_logs");
         public static final TagKey<Item> WILLOW_LOGS = createTag("willow_logs");
 
+        public static final TagKey<Item> ACACIA_SLIVERS = createTag("acacia_slivers");
+        public static final TagKey<Item> APPLE_TREE_SLIVERS = createTag("apple_slivers");
+        public static final TagKey<Item> AZALEA_SLIVERS = createTag("azalea_slivers");
+        public static final TagKey<Item> BIRCH_SLIVERS = createTag("birch_slivers");
+        public static final TagKey<Item> CHERRY_SLIVERS = createTag("cherry_slivers");
+        public static final TagKey<Item> CACAO_TREE_SLIVERS = createTag("cacao_slivers");
+        public static final TagKey<Item> CRIMSON_SLIVERS = createTag("crimson_slivers");
+        public static final TagKey<Item> DARK_OAK_SLIVERS = createTag("dark_oak_slivers");
+        public static final TagKey<Item> JUNGLE_SLIVERS = createTag("jungle_slivers");
+        public static final TagKey<Item> MANGROVE_SLIVERS = createTag("mangrove_slivers");
+        public static final TagKey<Item> OAK_SLIVERS = createTag("oak_slivers");
+        public static final TagKey<Item> PALE_OAK_SLIVERS = createTag("pale_oak_slivers");
+        public static final TagKey<Item> RUBBER_SLIVERS = createTag("rubber_slivers");
+        public static final TagKey<Item> SPRUCE_SLIVERS = createTag("spruce_slivers");
+        public static final TagKey<Item> WARPED_SLIVERS = createTag("warped_slivers");
+        public static final TagKey<Item> WILLOW_SLIVERS = createTag("willow_slivers");
+
         public static final TagKey<Item> APPLES = createTag("apples");
         public static final TagKey<Item> WILD_BERRIES = createTag("wild_berries");
 

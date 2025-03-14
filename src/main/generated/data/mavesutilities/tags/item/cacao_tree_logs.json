@@ -1,8 +1,10 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air"
+    "mavesutilities:cacao_tree_block",
+    "mavesutilities:cacao_tree_log",
+    "mavesutilities:cacao_tree_wood",
+    "mavesutilities:stripped_cacao_tree_block",
+    "mavesutilities:stripped_cacao_tree_log",
+    "mavesutilities:stripped_cacao_tree_wood"
   ]
 }

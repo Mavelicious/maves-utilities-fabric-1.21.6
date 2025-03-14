@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "logs",
+  "key": {
+    "#": "mavesutilities:dark_oak_sliver"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:dark_oak_block"
+  }
+}

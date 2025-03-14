@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#mavesutilities:mangrove_slivers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:mangrove_planks"
+  }
+}

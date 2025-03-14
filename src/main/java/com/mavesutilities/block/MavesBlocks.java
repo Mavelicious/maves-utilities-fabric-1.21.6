@@ -229,6 +229,74 @@ public class MavesBlocks {
             settings -> new MavesFloweringLeaves(MavesItems.PALE_ACORN, Blocks.PALE_OAK_LEAVES, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
 
+    public static final Block OAK_BLOCK = register("oak_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+    public static final Block SPRUCE_BLOCK = register("spruce_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.SPRUCE_LOG));
+    public static final Block BIRCH_BLOCK = register("birch_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.BIRCH_LOG));
+    public static final Block JUNGLE_BLOCK = register("jungle_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.JUNGLE_LOG));
+    public static final Block ACACIA_BLOCK = register("acacia_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.ACACIA_LOG));
+    public static final Block DARK_OAK_BLOCK = register("dark_oak_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.DARK_OAK_LOG));
+    public static final Block MANGROVE_BLOCK = register("mangrove_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.MANGROVE_LOG));
+    public static final Block CHERRY_BLOCK = register("cherry_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.CHERRY_LOG));
+    public static final Block PALE_OAK_BLOCK = register("pale_oak_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.PALE_OAK_LOG));
+    public static final Block CRIMSON_BLOCK = register("crimson_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.CRIMSON_STEM));
+    public static final Block WARPED_BLOCK = register("warped_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.WARPED_STEM));
+
+    public static final Block APPLE_TREE_BLOCK = register("apple_tree_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+    public static final Block AZALEA_BLOCK = register("azalea_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+    public static final Block CACAO_TREE_BLOCK = register("cacao_tree_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+    public static final Block RUBBER_BLOCK = register("rubber_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+    public static final Block WILLOW_BLOCK = register("willow_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+
+    public static final Block STRIPPED_OAK_BLOCK = register("stripped_oak_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+    public static final Block STRIPPED_SPRUCE_BLOCK = register("stripped_spruce_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_SPRUCE_LOG));
+    public static final Block STRIPPED_BIRCH_BLOCK = register("stripped_birch_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_BIRCH_LOG));
+    public static final Block STRIPPED_JUNGLE_BLOCK = register("stripped_jungle_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_JUNGLE_LOG));
+    public static final Block STRIPPED_ACACIA_BLOCK = register("stripped_acacia_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_ACACIA_LOG));
+    public static final Block STRIPPED_DARK_OAK_BLOCK = register("stripped_dark_oak_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_DARK_OAK_LOG));
+    public static final Block STRIPPED_MANGROVE_BLOCK = register("stripped_mangrove_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_MANGROVE_LOG));
+    public static final Block STRIPPED_CHERRY_BLOCK = register("stripped_cherry_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_CHERRY_LOG));
+    public static final Block STRIPPED_PALE_OAK_BLOCK = register("stripped_pale_oak_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_PALE_OAK_LOG));
+    public static final Block STRIPPED_CRIMSON_BLOCK = register("stripped_crimson_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_CRIMSON_STEM));
+    public static final Block STRIPPED_WARPED_BLOCK = register("stripped_warped_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_WARPED_STEM));
+
+    public static final Block STRIPPED_APPLE_TREE_BLOCK = register("stripped_apple_tree_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+    public static final Block STRIPPED_AZALEA_BLOCK = register("stripped_azalea_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+    public static final Block STRIPPED_CACAO_TREE_BLOCK = register("stripped_cacao_tree_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+    public static final Block STRIPPED_RUBBER_BLOCK = register("stripped_rubber_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+    public static final Block STRIPPED_WILLOW_BLOCK = register("stripped_willow_block", PillarBlock::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+
     public static final Block APPLE_TREE_LOG = register("apple_tree_log", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LOG));
     public static final Block APPLE_TREE_WOOD = register("apple_tree_wood", PillarBlock::new,

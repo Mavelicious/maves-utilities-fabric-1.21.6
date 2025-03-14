@@ -1,7 +1,9 @@
 {
   "values": [
+    "mavesutilities:rubber_block",
     "mavesutilities:rubber_log",
     "mavesutilities:rubber_wood",
+    "mavesutilities:stripped_rubber_block",
     "mavesutilities:stripped_rubber_log",
     "mavesutilities:stripped_rubber_wood"
   ]

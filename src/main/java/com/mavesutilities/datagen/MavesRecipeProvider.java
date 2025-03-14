@@ -8,7 +8,6 @@ import com.mavesutilities.util.MavesTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -69,9 +68,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.ACACIA_BARK)
                         .input('y', Blocks.STRIPPED_ACACIA_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.ACACIA_LOG),
                                 conditionsFromItem(Blocks.ACACIA_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "acacia_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.APPLE_TREE_LOG)
                         .pattern("x x")
@@ -79,9 +79,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.APPLE_TREE_BARK)
                         .input('y', MavesBlocks.STRIPPED_APPLE_TREE_LOG)
+                        .group("logs")
                         .criterion(hasItem(MavesBlocks.APPLE_TREE_LOG),
                                 conditionsFromItem(MavesBlocks.APPLE_TREE_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "apple_tree_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.AZALEA_STEM)
                         .pattern("x x")
@@ -89,9 +90,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.AZALEA_BARK)
                         .input('y', MavesBlocks.STRIPPED_AZALEA_STEM)
+                        .group("logs")
                         .criterion(hasItem(MavesBlocks.AZALEA_STEM),
                                 conditionsFromItem(MavesBlocks.AZALEA_STEM))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "azalea_stem_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.BIRCH_LOG)
                         .pattern("x x")
@@ -99,9 +101,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.BIRCH_BARK)
                         .input('y', Blocks.STRIPPED_BIRCH_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.BIRCH_LOG),
                                 conditionsFromItem(Blocks.BIRCH_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "birch_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_LOG)
                         .pattern("x x")
@@ -109,9 +112,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.CHERRY_BARK)
                         .input('y', Blocks.STRIPPED_CHERRY_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.CHERRY_LOG),
                                 conditionsFromItem(Blocks.CHERRY_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "cherry_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.CACAO_TREE_LOG)
                         .pattern("x x")
@@ -119,9 +123,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.CACAO_TREE_BARK)
                         .input('y', MavesBlocks.STRIPPED_CACAO_TREE_LOG)
+                        .group("logs")
                         .criterion(hasItem(MavesBlocks.CACAO_TREE_LOG),
                                 conditionsFromItem(MavesBlocks.CACAO_TREE_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "cacao_tree_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.CRIMSON_STEM)
                         .pattern("x x")
@@ -129,9 +134,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.CRIMSON_BARK)
                         .input('y', Blocks.STRIPPED_CRIMSON_STEM)
+                        .group("logs")
                         .criterion(hasItem(Blocks.CRIMSON_STEM),
                                 conditionsFromItem(Blocks.CRIMSON_STEM))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "crimson_stem_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_OAK_LOG)
                         .pattern("x x")
@@ -139,9 +145,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.DARK_OAK_BARK)
                         .input('y', Blocks.STRIPPED_DARK_OAK_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.DARK_OAK_LOG),
                                 conditionsFromItem(Blocks.DARK_OAK_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "dark_oak_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.JUNGLE_LOG)
                         .pattern("x x")
@@ -149,9 +156,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.JUNGLE_BARK)
                         .input('y', Blocks.STRIPPED_JUNGLE_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.JUNGLE_LOG),
                                 conditionsFromItem(Blocks.JUNGLE_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "jungle_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MANGROVE_LOG)
                         .pattern("x x")
@@ -159,9 +167,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.MANGROVE_BARK)
                         .input('y', Blocks.STRIPPED_MANGROVE_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.MANGROVE_LOG),
                                 conditionsFromItem(Blocks.MANGROVE_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "mangrove_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_LOG)
                         .pattern("x x")
@@ -169,9 +178,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.OAK_BARK)
                         .input('y', Blocks.STRIPPED_OAK_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.OAK_LOG),
                                 conditionsFromItem(Blocks.OAK_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "oak_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.PALE_OAK_LOG)
                         .pattern("x x")
@@ -179,9 +189,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.PALE_OAK_BARK)
                         .input('y', Blocks.STRIPPED_PALE_OAK_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.PALE_OAK_LOG),
                                 conditionsFromItem(Blocks.PALE_OAK_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "pale_oak_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.RUBBER_LOG)
                         .pattern("x x")
@@ -189,9 +200,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.RUBBER_BARK)
                         .input('y', MavesBlocks.STRIPPED_RUBBER_LOG)
+                        .group("logs")
                         .criterion(hasItem(MavesBlocks.RUBBER_LOG),
                                 conditionsFromItem(MavesBlocks.RUBBER_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "rubber_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.SPRUCE_LOG)
                         .pattern("x x")
@@ -199,19 +211,21 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.SPRUCE_BARK)
                         .input('y', Blocks.STRIPPED_SPRUCE_LOG)
+                        .group("logs")
                         .criterion(hasItem(Blocks.SPRUCE_LOG),
                                 conditionsFromItem(Blocks.SPRUCE_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "spruce_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.WARPED_STEM)
                         .pattern("x x")
                         .pattern(" y ")
                         .pattern("x x")
-                        .input('x', MavesItems.CHERRY_BARK)
+                        .input('x', MavesItems.WARPED_BARK)
                         .input('y', Blocks.STRIPPED_WARPED_STEM)
+                        .group("logs")
                         .criterion(hasItem(Blocks.WARPED_STEM),
                                 conditionsFromItem(Blocks.WARPED_STEM))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "warped_stem_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.WILLOW_LOG)
                         .pattern("x x")
@@ -219,9 +233,10 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("x x")
                         .input('x', MavesItems.WILLOW_BARK)
                         .input('y', MavesBlocks.STRIPPED_WILLOW_LOG)
+                        .group("logs")
                         .criterion(hasItem(MavesBlocks.WILLOW_LOG),
                                 conditionsFromItem(MavesBlocks.WILLOW_LOG))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "willow_log_from_bark");
 
                 createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.ACACIA_WOOD)
                         .pattern("xxx")
@@ -1012,7 +1027,407 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                         .pattern("B")
                         .criterion(hasItem(MavesBlocks.CARVED_PALE_PUMPKIN),
                                 conditionsFromItem(MavesBlocks.CARVED_PALE_PUMPKIN))
-                        .offerTo(this.exporter);
+                        .offerTo(exporter);
+                
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.ACACIA_PLANKS)
+                        .input(MavesTags.Items.ACACIA_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.ACACIA_PLANKS),
+                                conditionsFromItem(Blocks.ACACIA_PLANKS))
+                        .offerTo(exporter, "acacia_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.APPLE_TREE_PLANKS)
+                        .input(MavesTags.Items.APPLE_TREE_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(MavesBlocks.APPLE_TREE_PLANKS),
+                                conditionsFromItem(MavesBlocks.APPLE_TREE_PLANKS))
+                        .offerTo(exporter, "apple_tree_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.AZALEA_PLANKS)
+                        .input(MavesTags.Items.AZALEA_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(MavesBlocks.AZALEA_PLANKS),
+                                conditionsFromItem(MavesBlocks.AZALEA_PLANKS))
+                        .offerTo(exporter, "azalea_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.BIRCH_PLANKS)
+                        .input(MavesTags.Items.BIRCH_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.BIRCH_PLANKS),
+                                conditionsFromItem(Blocks.BIRCH_PLANKS))
+                        .offerTo(exporter, "birch_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.CHERRY_PLANKS)
+                        .input(MavesTags.Items.CHERRY_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.CHERRY_PLANKS),
+                                conditionsFromItem(Blocks.CHERRY_PLANKS))
+                        .offerTo(exporter, "cherry_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.CACAO_TREE_PLANKS)
+                        .input(MavesTags.Items.CACAO_TREE_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(MavesBlocks.CACAO_TREE_PLANKS),
+                                conditionsFromItem(MavesBlocks.CACAO_TREE_PLANKS))
+                        .offerTo(exporter, "cacao_tree_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.CRIMSON_PLANKS)
+                        .input(MavesTags.Items.CRIMSON_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.CRIMSON_PLANKS),
+                                conditionsFromItem(Blocks.CRIMSON_PLANKS))
+                        .offerTo(exporter, "crimson_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.DARK_OAK_PLANKS)
+                        .input(MavesTags.Items.DARK_OAK_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.DARK_OAK_PLANKS),
+                                conditionsFromItem(Blocks.DARK_OAK_PLANKS))
+                        .offerTo(exporter, "dark_oak_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.JUNGLE_PLANKS)
+                        .input(MavesTags.Items.JUNGLE_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.JUNGLE_PLANKS),
+                                conditionsFromItem(Blocks.JUNGLE_PLANKS))
+                        .offerTo(exporter, "jungle_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.MANGROVE_PLANKS)
+                        .input(MavesTags.Items.MANGROVE_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.MANGROVE_PLANKS),
+                                conditionsFromItem(Blocks.MANGROVE_PLANKS))
+                        .offerTo(exporter, "mangrove_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.OAK_PLANKS)
+                        .input(MavesTags.Items.OAK_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.OAK_PLANKS),
+                                conditionsFromItem(Blocks.OAK_PLANKS))
+                        .offerTo(exporter, "oak_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.PALE_OAK_PLANKS)
+                        .input(MavesTags.Items.PALE_OAK_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.PALE_OAK_PLANKS),
+                                conditionsFromItem(Blocks.PALE_OAK_PLANKS))
+                        .offerTo(exporter, "pale_oak_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.RUBBER_PLANKS)
+                        .input(MavesTags.Items.RUBBER_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(MavesBlocks.RUBBER_PLANKS),
+                                conditionsFromItem(MavesBlocks.RUBBER_PLANKS))
+                        .offerTo(exporter, "rubber_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.SPRUCE_PLANKS)
+                        .input(MavesTags.Items.SPRUCE_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.SPRUCE_PLANKS),
+                                conditionsFromItem(Blocks.SPRUCE_PLANKS))
+                        .offerTo(exporter, "spruce_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.WARPED_PLANKS)
+                        .input(MavesTags.Items.WARPED_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(Blocks.WARPED_PLANKS),
+                                conditionsFromItem(Blocks.WARPED_PLANKS))
+                        .offerTo(exporter, "warped_planks_from_sliver");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.WILLOW_PLANKS)
+                        .input(MavesTags.Items.WILLOW_SLIVERS)
+                        .group("planks")
+                        .criterion(hasItem(MavesBlocks.WILLOW_PLANKS),
+                                conditionsFromItem(MavesBlocks.WILLOW_PLANKS))
+                        .offerTo(exporter, "willow_planks_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.ACACIA_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.ACACIA_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.ACACIA_BLOCK),
+                                conditionsFromItem(MavesBlocks.ACACIA_BLOCK))
+                        .offerTo(exporter, "acacia_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.APPLE_TREE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.APPLE_TREE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.APPLE_TREE_BLOCK),
+                                conditionsFromItem(MavesBlocks.APPLE_TREE_BLOCK))
+                        .offerTo(exporter, "apple_tree_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.AZALEA_STEM)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.AZALEA_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.AZALEA_STEM),
+                                conditionsFromItem(MavesBlocks.AZALEA_STEM))
+                        .offerTo(exporter, "azalea_stem_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.BIRCH_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.BIRCH_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.BIRCH_BLOCK),
+                                conditionsFromItem(MavesBlocks.BIRCH_BLOCK))
+                        .offerTo(exporter, "birch_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.CHERRY_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.CHERRY_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.CHERRY_BLOCK),
+                                conditionsFromItem(MavesBlocks.CHERRY_BLOCK))
+                        .offerTo(exporter, "cherry_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.CACAO_TREE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.CACAO_TREE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.CACAO_TREE_BLOCK),
+                                conditionsFromItem(MavesBlocks.CACAO_TREE_BLOCK))
+                        .offerTo(exporter, "cacao_tree_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.CRIMSON_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.CRIMSON_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.CRIMSON_BLOCK),
+                                conditionsFromItem(MavesBlocks.CRIMSON_BLOCK))
+                        .offerTo(exporter, "crimson_stem_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.DARK_OAK_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.DARK_OAK_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.DARK_OAK_BLOCK),
+                                conditionsFromItem(MavesBlocks.DARK_OAK_BLOCK))
+                        .offerTo(exporter, "dark_oak_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.JUNGLE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.JUNGLE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.JUNGLE_BLOCK),
+                                conditionsFromItem(MavesBlocks.JUNGLE_BLOCK))
+                        .offerTo(exporter, "jungle_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.MANGROVE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.MANGROVE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.MANGROVE_BLOCK),
+                                conditionsFromItem(MavesBlocks.MANGROVE_BLOCK))
+                        .offerTo(exporter, "mangrove_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.OAK_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.OAK_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.OAK_BLOCK),
+                                conditionsFromItem(MavesBlocks.OAK_BLOCK))
+                        .offerTo(exporter, "oak_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.PALE_OAK_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.PALE_OAK_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.PALE_OAK_BLOCK),
+                                conditionsFromItem(MavesBlocks.PALE_OAK_BLOCK))
+                        .offerTo(exporter, "pale_oak_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.RUBBER_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.RUBBER_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.RUBBER_BLOCK),
+                                conditionsFromItem(MavesBlocks.RUBBER_BLOCK))
+                        .offerTo(exporter, "rubber_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.SPRUCE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.SPRUCE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.SPRUCE_BLOCK),
+                                conditionsFromItem(MavesBlocks.SPRUCE_BLOCK))
+                        .offerTo(exporter, "spruce_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.WARPED_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.WARPED_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.WARPED_BLOCK),
+                                conditionsFromItem(MavesBlocks.WARPED_BLOCK))
+                        .offerTo(exporter, "warped_stem_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.WILLOW_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.WILLOW_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.WILLOW_BLOCK),
+                                conditionsFromItem(MavesBlocks.WILLOW_BLOCK))
+                        .offerTo(exporter, "willow_log_from_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_ACACIA_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_ACACIA_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_ACACIA_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_ACACIA_BLOCK))
+                        .offerTo(exporter, "acacia_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_APPLE_TREE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_APPLE_TREE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_APPLE_TREE_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_APPLE_TREE_BLOCK))
+                        .offerTo(exporter, "apple_tree_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_AZALEA_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_AZALEA_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_AZALEA_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_AZALEA_BLOCK))
+                        .offerTo(exporter, "azalea_stem_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_BIRCH_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_BIRCH_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_BIRCH_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_BIRCH_BLOCK))
+                        .offerTo(exporter, "birch_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_CHERRY_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_CHERRY_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_CHERRY_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_CHERRY_BLOCK))
+                        .offerTo(exporter, "cherry_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_CACAO_TREE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_CACAO_TREE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_CACAO_TREE_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_CACAO_TREE_BLOCK))
+                        .offerTo(exporter, "cacao_tree_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_CRIMSON_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_CRIMSON_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_CRIMSON_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_CRIMSON_BLOCK))
+                        .offerTo(exporter, "crimson_stem_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_DARK_OAK_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_DARK_OAK_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_DARK_OAK_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_DARK_OAK_BLOCK))
+                        .offerTo(exporter, "dark_oak_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_JUNGLE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_JUNGLE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_JUNGLE_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_JUNGLE_BLOCK))
+                        .offerTo(exporter, "jungle_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_MANGROVE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_MANGROVE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_MANGROVE_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_MANGROVE_BLOCK))
+                        .offerTo(exporter, "mangrove_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_OAK_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_OAK_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_OAK_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_OAK_BLOCK))
+                        .offerTo(exporter, "oak_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_PALE_OAK_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_PALE_OAK_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_PALE_OAK_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_PALE_OAK_BLOCK))
+                        .offerTo(exporter, "pale_oak_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_RUBBER_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_RUBBER_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_RUBBER_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_RUBBER_BLOCK))
+                        .offerTo(exporter, "rubber_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_SPRUCE_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_SPRUCE_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_SPRUCE_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_SPRUCE_BLOCK))
+                        .offerTo(exporter, "spruce_log_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_WARPED_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_WARPED_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_WARPED_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_WARPED_BLOCK))
+                        .offerTo(exporter, "warped_stem_from_stripped_sliver");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, MavesBlocks.STRIPPED_WILLOW_BLOCK)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', MavesItems.STRIPPED_WILLOW_SLIVER)
+                        .group("logs")
+                        .criterion(hasItem(MavesBlocks.STRIPPED_WILLOW_BLOCK),
+                                conditionsFromItem(MavesBlocks.STRIPPED_WILLOW_BLOCK))
+                        .offerTo(exporter, "willow_log_from_stripped_sliver");
             }
         };
     }

@@ -1,8 +1,10 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air"
+    "mavesutilities:willow_block",
+    "mavesutilities:willow_log",
+    "mavesutilities:willow_wood",
+    "mavesutilities:stripped_willow_block",
+    "mavesutilities:stripped_willow_log",
+    "mavesutilities:stripped_willow_wood"
   ]
 }

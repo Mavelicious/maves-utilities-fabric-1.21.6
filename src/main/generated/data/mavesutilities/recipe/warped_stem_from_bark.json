@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "logs",
+  "key": {
+    "x": "mavesutilities:warped_bark",
+    "y": "minecraft:stripped_warped_stem"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:warped_stem"
+  }
+}

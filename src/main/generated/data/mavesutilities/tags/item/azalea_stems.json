@@ -1,8 +1,10 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air"
+    "mavesutilities:azalea_block",
+    "mavesutilities:azalea_stem",
+    "mavesutilities:azalea_wood",
+    "mavesutilities:stripped_azalea_block",
+    "mavesutilities:stripped_azalea_stem",
+    "mavesutilities:stripped_azalea_wood"
   ]
 }

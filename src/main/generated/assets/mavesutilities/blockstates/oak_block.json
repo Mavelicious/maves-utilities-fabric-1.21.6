@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mavesutilities:block/oak_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mavesutilities:block/oak_block"
+    },
+    "axis=z": {
+      "model": "mavesutilities:block/oak_block_horizontal",
+      "x": 90
+    }
+  }
+}

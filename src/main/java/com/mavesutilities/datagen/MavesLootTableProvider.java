@@ -1,16 +1,13 @@
 package com.mavesutilities.datagen;
 
-import com.mavesutilities.MavesUtilitiesMod;
 import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
+import net.minecraft.item.*;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
@@ -28,13 +25,70 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         super(dataOutput, registryLookup);
     }
 
+    private void addSliverDrop(Block block, Item sliverItem, RegistryWrapper.Impl<Enchantment> impl) {
+        addDrop(block, b -> dropsWithSilkTouch(b,
+                (LootPoolEntry.Builder<?>) applyExplosionDecay(
+                        b,
+                        ItemEntry.builder(sliverItem)
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0F, 4.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+    }
+
     @Override
     public void generate() {
         RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 
-        addDrop(MavesBlocks.APPLE_TREE_LOG);
+        addDrop(MavesBlocks.OAK_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_OAK_BLOCK);
+        addDrop(MavesBlocks.SPRUCE_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_SPRUCE_BLOCK);
+        addDrop(MavesBlocks.BIRCH_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_BIRCH_BLOCK);
+        addDrop(MavesBlocks.JUNGLE_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_JUNGLE_BLOCK);
+        addDrop(MavesBlocks.ACACIA_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_ACACIA_BLOCK);
+        addDrop(MavesBlocks.DARK_OAK_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_DARK_OAK_BLOCK);
+        addDrop(MavesBlocks.MANGROVE_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_MANGROVE_BLOCK);
+        addDrop(MavesBlocks.CHERRY_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_CHERRY_BLOCK);
+        addDrop(MavesBlocks.PALE_OAK_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_PALE_OAK_BLOCK);
+        addDrop(MavesBlocks.CRIMSON_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_CRIMSON_BLOCK);
+        addDrop(MavesBlocks.WARPED_BLOCK);
+        addDrop(MavesBlocks.STRIPPED_WARPED_BLOCK);
+
+        addSliverDrop(Blocks.OAK_LOG, MavesItems.OAK_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_OAK_LOG, MavesItems.OAK_SLIVER, impl);
+        addSliverDrop(Blocks.SPRUCE_LOG, MavesItems.SPRUCE_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_SPRUCE_LOG, MavesItems.SPRUCE_SLIVER, impl);
+        addSliverDrop(Blocks.BIRCH_LOG, MavesItems.BIRCH_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_BIRCH_LOG, MavesItems.BIRCH_SLIVER, impl);
+        addSliverDrop(Blocks.JUNGLE_LOG, MavesItems.JUNGLE_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_JUNGLE_LOG, MavesItems.JUNGLE_SLIVER, impl);
+        addSliverDrop(Blocks.ACACIA_LOG, MavesItems.ACACIA_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_ACACIA_LOG, MavesItems.ACACIA_SLIVER, impl);
+        addSliverDrop(Blocks.DARK_OAK_LOG, MavesItems.DARK_OAK_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_DARK_OAK_LOG, MavesItems.DARK_OAK_SLIVER, impl);
+        addSliverDrop(Blocks.MANGROVE_LOG, MavesItems.MANGROVE_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_MANGROVE_LOG, MavesItems.MANGROVE_SLIVER, impl);
+        addSliverDrop(Blocks.CHERRY_LOG, MavesItems.CHERRY_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_CHERRY_LOG, MavesItems.CHERRY_SLIVER, impl);
+        addSliverDrop(Blocks.PALE_OAK_LOG, MavesItems.PALE_OAK_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_PALE_OAK_LOG, MavesItems.PALE_OAK_SLIVER, impl);
+        addSliverDrop(Blocks.CRIMSON_STEM, MavesItems.CRIMSON_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_CRIMSON_STEM, MavesItems.CRIMSON_SLIVER, impl);
+        addSliverDrop(Blocks.WARPED_STEM, MavesItems.WARPED_SLIVER, impl);
+        addSliverDrop(Blocks.STRIPPED_WARPED_STEM, MavesItems.WARPED_SLIVER, impl);
+
+        addDrop(MavesBlocks.APPLE_TREE_BLOCK);
+        addSliverDrop(MavesBlocks.APPLE_TREE_LOG, MavesItems.APPLE_TREE_SLIVER, impl);
         addDrop(MavesBlocks.APPLE_TREE_WOOD);
-        addDrop(MavesBlocks.STRIPPED_APPLE_TREE_LOG);
+        addDrop(MavesBlocks.STRIPPED_APPLE_TREE_BLOCK);
+        addSliverDrop(MavesBlocks.STRIPPED_APPLE_TREE_LOG, MavesItems.APPLE_TREE_SLIVER, impl);
         addDrop(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
         addDrop(MavesBlocks.APPLE_TREE_SAPLING);
         addPottedPlantDrops(MavesBlocks.POTTED_APPLE_TREE_SAPLING);
@@ -50,9 +104,11 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.APPLE_TREE_STAIRS);
         addDrop(MavesBlocks.APPLE_TREE_TRAPDOOR);
 
-        addDrop(MavesBlocks.AZALEA_STEM);
+        addDrop(MavesBlocks.AZALEA_BLOCK);
+        addSliverDrop(MavesBlocks.AZALEA_STEM, MavesItems.AZALEA_SLIVER, impl);
         addDrop(MavesBlocks.AZALEA_WOOD);
-        addDrop(MavesBlocks.STRIPPED_AZALEA_STEM);
+        addDrop(MavesBlocks.STRIPPED_AZALEA_BLOCK);
+        addSliverDrop(MavesBlocks.STRIPPED_AZALEA_STEM, MavesItems.AZALEA_SLIVER, impl);
         addDrop(MavesBlocks.STRIPPED_AZALEA_WOOD);
         addDrop(MavesBlocks.AZALEA_PLANKS);
         addDrop(MavesBlocks.AZALEA_BUTTON);
@@ -66,9 +122,13 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.AZALEA_STAIRS);
         addDrop(MavesBlocks.AZALEA_TRAPDOOR);
 
+        addDrop(MavesBlocks.CACAO_TREE_BLOCK);
         addDrop(MavesBlocks.CACAO_TREE_LOG);
+        addSliverDrop(MavesBlocks.CACAO_TREE_LOG, MavesItems.CACAO_TREE_SLIVER, impl);
         addDrop(MavesBlocks.CACAO_TREE_WOOD);
+        addDrop(MavesBlocks.STRIPPED_CACAO_TREE_BLOCK);
         addDrop(MavesBlocks.STRIPPED_CACAO_TREE_LOG);
+        addSliverDrop(MavesBlocks.STRIPPED_CACAO_TREE_LOG, MavesItems.CACAO_TREE_SLIVER, impl);
         addDrop(MavesBlocks.STRIPPED_CACAO_TREE_WOOD);
         addDrop(MavesBlocks.CACAO_TREE_SAPLING);
         addPottedPlantDrops(MavesBlocks.POTTED_CACAO_TREE_SAPLING);
@@ -84,9 +144,13 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.CACAO_TREE_STAIRS);
         addDrop(MavesBlocks.CACAO_TREE_TRAPDOOR);
 
+        addDrop(MavesBlocks.RUBBER_BLOCK);
         addDrop(MavesBlocks.RUBBER_LOG);
+        addSliverDrop(MavesBlocks.RUBBER_LOG, MavesItems.RUBBER_SLIVER, impl);
         addDrop(MavesBlocks.RUBBER_WOOD);
+        addDrop(MavesBlocks.STRIPPED_RUBBER_BLOCK);
         addDrop(MavesBlocks.STRIPPED_RUBBER_LOG);
+        addSliverDrop(MavesBlocks.STRIPPED_RUBBER_LOG, MavesItems.RUBBER_SLIVER, impl);
         addDrop(MavesBlocks.STRIPPED_RUBBER_WOOD);
         addDrop(MavesBlocks.RUBBER_SAPLING);
         addPottedPlantDrops(MavesBlocks.POTTED_RUBBER_SAPLING);
@@ -102,9 +166,13 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.RUBBER_STAIRS);
         addDrop(MavesBlocks.RUBBER_TRAPDOOR);
 
+        addDrop(MavesBlocks.WILLOW_BLOCK);
         addDrop(MavesBlocks.WILLOW_LOG);
+        addSliverDrop(MavesBlocks.WILLOW_LOG, MavesItems.WILLOW_SLIVER, impl);
         addDrop(MavesBlocks.WILLOW_WOOD);
+        addDrop(MavesBlocks.STRIPPED_WILLOW_BLOCK);
         addDrop(MavesBlocks.STRIPPED_WILLOW_LOG);
+        addSliverDrop(MavesBlocks.STRIPPED_WILLOW_LOG, MavesItems.WILLOW_SLIVER, impl);
         addDrop(MavesBlocks.STRIPPED_WILLOW_WOOD);
         addDrop(MavesBlocks.WILLOW_SAPLING);
         addPottedPlantDrops(MavesBlocks.POTTED_WILLOW_SAPLING);
@@ -120,19 +188,16 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.WILLOW_STAIRS);
         addDrop(MavesBlocks.WILLOW_TRAPDOOR);
 
-        addDrop(
-                MavesBlocks.PALE_PUMPKIN,
-                block -> dropsWithSilkTouch(
-                        block,
-                        (LootPoolEntry.Builder<?>)applyExplosionDecay(
-                                block,
+        addDrop(Blocks.PUMPKIN, block -> dropsWithSilkTouch(block,
+                (LootPoolEntry.Builder<?>)applyExplosionDecay(block,
+                        ItemEntry.builder(MavesItems.PUMPKIN_SLICE)
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(5.0F, 9.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+        addDrop(MavesBlocks.PALE_PUMPKIN, block -> dropsWithSilkTouch(block,
+                        (LootPoolEntry.Builder<?>)applyExplosionDecay(block,
                                 ItemEntry.builder(MavesItems.PALE_PUMPKIN_SLICE)
-                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0F, 7.0F)))
-                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
-                                        .apply(LimitCountLootFunction.builder(BoundedIntUnaryOperator.createMax(9)))
-                        )
-                )
-        );
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(5.0F, 9.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
         addDrop(MavesBlocks.CARVED_PALE_PUMPKIN);
         addDrop(MavesBlocks.PALE_JACK_O_LANTERN);
         addDrop(MavesBlocks.PALE_PUMPKIN_STEM, block ->

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "logs",
+  "key": {
+    "x": "mavesutilities:willow_bark",
+    "y": "mavesutilities:stripped_willow_log"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:willow_log"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:willow_log_from_sliver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_willow_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mavesutilities:willow_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_willow_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:willow_log_from_sliver"
+    ]
+  }
+}

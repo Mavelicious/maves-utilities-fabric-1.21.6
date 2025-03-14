@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "logs",
+  "key": {
+    "#": "mavesutilities:warped_sliver"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:warped_block"
+  }
+}

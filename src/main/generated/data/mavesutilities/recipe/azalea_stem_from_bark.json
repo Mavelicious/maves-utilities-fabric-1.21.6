@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "logs",
+  "key": {
+    "x": "mavesutilities:azalea_bark",
+    "y": "mavesutilities:stripped_azalea_stem"
+  },
+  "pattern": [
+    "x x",
+    " y ",
+    "x x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mavesutilities:azalea_stem"
+  }
+}
