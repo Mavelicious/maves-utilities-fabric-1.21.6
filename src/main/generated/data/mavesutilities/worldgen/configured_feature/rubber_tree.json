@@ -52,7 +52,7 @@
         "Name": "mavesutilities:rubber_log",
         "Properties": {
           "axis": "y",
-          "cooldown": "true"
+          "cooldown": "false"
         }
       }
     }

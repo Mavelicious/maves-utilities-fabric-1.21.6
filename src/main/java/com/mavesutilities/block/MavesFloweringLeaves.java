@@ -1,9 +1,5 @@
 package com.mavesutilities.block;
 
-import com.mojang.serialization.MapCodec;
-
-import java.util.function.Function;
-
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;

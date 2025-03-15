@@ -3,6 +3,7 @@ package com.mavesutilities;
 import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.item.MavesItems;
 import com.mavesutilities.util.MavesBlockColors;
+import com.mavesutilities.world.gen.MavesTreeGeneration;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -11,7 +12,7 @@ import net.minecraft.client.render.RenderLayer;
 public class MavesUtilitiesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		//MavesTreeGeneration.generateTrees();
+		MavesTreeGeneration.generateTrees();
 		MavesBlockColors.registerBlockColors();
 
 		BlockRenderLayerMap.INSTANCE.putBlock(MavesBlocks.APPLE_TREE_SAPLING, RenderLayer.getCutout());
