@@ -49,7 +49,7 @@ public class MavesPlacedFeatures {
                         MavesBlocks.APPLE_TREE_SAPLING));
         register(context, AZALEA_GIANT_BUSH_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.AZALEA_GIANT_BUSH_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(4, 0.1F, 1),
+                        PlacedFeatures.createCountExtraModifier(1, 0.1F, 1),
                         Blocks.AZALEA));
         register(context, WILLOW_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.WILLOW_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
@@ -71,7 +71,7 @@ public class MavesPlacedFeatures {
                         MavesBlocks.APPLE_TREE_SAPLING));
         register(context, AZALEA_GIANT_BUSH_FLOWER_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.AZALEA_GIANT_BUSH_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(6, 0.1F, 1),
+                        PlacedFeatures.createCountExtraModifier(2, 0.1F, 1),
                         Blocks.AZALEA));
         register(context, WILLOW_FLOWER_FOREST_PLACED_KEY, configuredFeatures.getOrThrow(MavesConfiguredFeatures.WILLOW_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
