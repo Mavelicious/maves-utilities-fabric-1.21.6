@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "mavesutilities:block/hanging_black_widow_planks"
+  }
+}

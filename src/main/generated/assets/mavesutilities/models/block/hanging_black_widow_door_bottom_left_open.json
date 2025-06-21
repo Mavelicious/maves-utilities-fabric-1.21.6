@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "mavesutilities:block/hanging_black_widow_door_bottom",
+    "top": "mavesutilities:block/hanging_black_widow_door_top"
+  }
+}

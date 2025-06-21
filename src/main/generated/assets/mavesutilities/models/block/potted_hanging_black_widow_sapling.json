@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "mavesutilities:block/hanging_black_widow_sapling"
+  }
+}

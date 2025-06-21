@@ -53,4 +53,9 @@ public class MavesFoods {
             .nutrition(6)
             .saturationModifier(0.5f)
             .build();
+
+    public static final FoodComponent BLACK_WIDOW_BERRIES_FOOD_COMPONENT = new FoodComponent.Builder()
+            .nutrition(2)
+            .saturationModifier(0.2f)
+            .build();
 }

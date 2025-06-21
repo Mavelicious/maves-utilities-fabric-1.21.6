@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "mavesutilities:block/hanging_black_widow_mosaic",
+    "side": "mavesutilities:block/hanging_black_widow_mosaic",
+    "top": "mavesutilities:block/hanging_black_widow_mosaic"
+  }
+}

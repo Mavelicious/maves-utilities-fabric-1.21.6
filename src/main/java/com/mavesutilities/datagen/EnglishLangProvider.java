@@ -44,6 +44,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.APPLE_TREE_BARK, "Apple Tree Bark");
         translationBuilder.add(MavesItems.AZALEA_BARK, "Azalea Bark");
         translationBuilder.add(MavesItems.CACAO_TREE_BARK, "Cacao Tree Bark");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BARK, "Hanging Black Widow Bark");
         translationBuilder.add(MavesItems.RUBBER_BARK, "Rubber Bark");
         translationBuilder.add(MavesItems.WILLOW_BARK, "Willow Bark");
         translationBuilder.add(MavesItems.CRIMSON_BARK, "Crimson Bark");
@@ -89,6 +90,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.WILD_BERRIES_BLUE, "Blue Wild Berries");
         translationBuilder.add(MavesItems.WILD_BERRIES_GREEN, "Green Wild Berries");
         translationBuilder.add(MavesItems.WILD_BERRIES_YELLOW, "Yellow Wild Berries");
+        translationBuilder.add(MavesItems.BLACK_WIDOW_BERRIES, "Black Widow Berries");
         translationBuilder.add(MavesItems.MILK_CHOCOLATE, "Milk Chocolate");
         translationBuilder.add(MavesItems.WHITE_CHOCOLATE, "White Chocolate");
         translationBuilder.add(MavesItems.DARK_CHOCOLATE, "Dark Chocolate");
@@ -100,6 +102,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Spruce Cone");
         translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Pale Pumpkin Seeds");
 
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BRANCH, "Hanging Black Widow");
         translationBuilder.add(MavesItems.LATEX_BOTTLE, "Latex Bottle");
 
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Acacia Blossom");
@@ -113,6 +116,8 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.AZALEA_CHEST_BOAT, "Azalea Boat with Chest");
         translationBuilder.add(MavesItems.CACAO_TREE_BOAT, "Cacao Tree Boat");
         translationBuilder.add(MavesItems.CACAO_TREE_CHEST_BOAT, "Cacao Tree Boat with Chest");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BOAT, "Hanging Black Widow Raft");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT, "Hanging Black Widow Raft with Chest");
         translationBuilder.add(MavesItems.RUBBER_BOAT, "Rubber Boat");
         translationBuilder.add(MavesItems.RUBBER_CHEST_BOAT, "Rubber Boat with Chest");
         translationBuilder.add(MavesItems.WILLOW_BOAT, "Willow Boat");
@@ -227,6 +232,31 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesBlocks.CACAO_TREE_SLAB, "Cacao Tree Slab");
         translationBuilder.add(MavesBlocks.CACAO_TREE_STAIRS, "Cacao Tree Stairs");
         translationBuilder.add(MavesBlocks.CACAO_TREE_TRAPDOOR, "Cacao Tree Trapdoor");
+
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_STEM, "Hanging Black Widow Stem");
+        translationBuilder.add(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM, "Stripped Hanging Black Widow Stem");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL, "Hanging Black Widow Leaves");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD, "Hanging Black Widow Leaves");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY, "Hanging Black Widow Leaves");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_SAPLING, "Hanging Black Widow Sapling");
+        translationBuilder.add(MavesBlocks.POTTED_HANGING_BLACK_WIDOW_SAPLING, "Potted Hanging Black Widow Sapling");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_BLOCK, "Block of Hanging Black Widow");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_PLANKS, "Hanging Black Widow Planks");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC, "Hanging Black Widow Mosaic");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_BUTTON, "Hanging Black Widow Button");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_DOOR, "Hanging Black Widow Door");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE, "Hanging Black Widow Fence");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE_GATE, "Hanging Black Widow Fence Gate");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_HANGING_SIGN, "Hanging Black Widow Hanging Sign");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_WALL_HANGING_SIGN.toString(), "Hanging Black Widow Hanging Sign");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_PRESSURE_PLATE, "Hanging Black Widow Pressure Plate");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_SIGN, "Hanging Black Widow Sign");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_WALL_SIGN.toString(), "Hanging Black Widow Sign");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_SLAB, "Hanging Black Widow Slab");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_SLAB, "Hanging Black Widow Mosaic Slab");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_STAIRS, "Hanging Black Widow Stairs");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_STAIRS, "Hanging Black Widow Mosaic Stairs");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_TRAPDOOR, "Hanging Black Widow Trapdoor");
 
         translationBuilder.add(MavesBlocks.RUBBER_LOG, "Rubber Log");
         translationBuilder.add(MavesBlocks.RUBBER_WOOD, "Rubber Wood");

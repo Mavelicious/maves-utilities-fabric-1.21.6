@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mavesutilities:item/hanging_black_widow_bark"
+  }
+}

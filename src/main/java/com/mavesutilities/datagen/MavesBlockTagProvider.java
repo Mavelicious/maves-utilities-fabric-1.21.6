@@ -4,7 +4,6 @@ import com.mavesutilities.block.MavesBlocks;
 import com.mavesutilities.util.MavesTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -18,14 +17,16 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
-        getOrCreateTagBuilder(BlockTags.PLANKS)
+        valueLookupBuilder(BlockTags.PLANKS)
                 .add(MavesBlocks.APPLE_TREE_PLANKS)
                 .add(MavesBlocks.AZALEA_PLANKS)
                 .add(MavesBlocks.CACAO_TREE_PLANKS)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_PLANKS)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC)
                 .add(MavesBlocks.RUBBER_PLANKS)
                 .add(MavesBlocks.WILLOW_PLANKS);
 
-        getOrCreateTagBuilder(BlockTags.LEAVES)
+        valueLookupBuilder(BlockTags.LEAVES)
                 .add(MavesBlocks.ACACIA_FLOWERING_LEAVES)
                 .add(MavesBlocks.ACACIA_FLOWERED_LEAVES)
                 .add(MavesBlocks.BIRCH_FLOWERING_LEAVES)
@@ -38,16 +39,20 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES)
                 .add(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES)
                 .add(MavesBlocks.CACAO_TREE_LEAVES)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY)
                 .add(MavesBlocks.RUBBER_LEAVES)
                 .add(MavesBlocks.WILLOW_LEAVES);
 
-        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+        valueLookupBuilder(BlockTags.SAPLINGS)
                 .add(MavesBlocks.APPLE_TREE_SAPLING)
                 .add(MavesBlocks.CACAO_TREE_SAPLING)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_SAPLING)
                 .add(MavesBlocks.RUBBER_SAPLING)
                 .add(MavesBlocks.WILLOW_SAPLING);
 
-        getOrCreateTagBuilder(MavesTags.Blocks.APPLE_TREE_LOGS)
+        valueLookupBuilder(MavesTags.Blocks.APPLE_TREE_LOGS)
                 .add(MavesBlocks.APPLE_TREE_BLOCK)
                 .add(MavesBlocks.APPLE_TREE_LOG)
                 .add(MavesBlocks.APPLE_TREE_WOOD)
@@ -55,7 +60,7 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.STRIPPED_APPLE_TREE_LOG)
                 .add(MavesBlocks.STRIPPED_APPLE_TREE_WOOD);
 
-        getOrCreateTagBuilder(MavesTags.Blocks.AZALEA_STEMS)
+        valueLookupBuilder(MavesTags.Blocks.AZALEA_STEMS)
                 .add(MavesBlocks.AZALEA_BLOCK)
                 .add(MavesBlocks.AZALEA_STEM)
                 .add(MavesBlocks.AZALEA_WOOD)
@@ -63,7 +68,7 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.STRIPPED_AZALEA_STEM)
                 .add(MavesBlocks.STRIPPED_AZALEA_WOOD);
 
-        getOrCreateTagBuilder(MavesTags.Blocks.CACAO_TREE_LOGS)
+        valueLookupBuilder(MavesTags.Blocks.CACAO_TREE_LOGS)
                 .add(MavesBlocks.CACAO_TREE_BLOCK)
                 .add(MavesBlocks.CACAO_TREE_LOG)
                 .add(MavesBlocks.CACAO_TREE_WOOD)
@@ -71,7 +76,11 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.STRIPPED_CACAO_TREE_LOG)
                 .add(MavesBlocks.STRIPPED_CACAO_TREE_WOOD);
 
-        getOrCreateTagBuilder(MavesTags.Blocks.RUBBER_TREE_LOGS)
+        valueLookupBuilder(MavesTags.Blocks.HANGING_BLACK_WIDOW_STEMS)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_STEM)
+                .add(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM);
+
+        valueLookupBuilder(MavesTags.Blocks.RUBBER_TREE_LOGS)
                 .add(MavesBlocks.RUBBER_BLOCK)
                 .add(MavesBlocks.RUBBER_LOG)
                 .add(MavesBlocks.RUBBER_WOOD)
@@ -79,7 +88,7 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.STRIPPED_RUBBER_LOG)
                 .add(MavesBlocks.STRIPPED_RUBBER_WOOD);
 
-        getOrCreateTagBuilder(MavesTags.Blocks.WILLOW_LOGS)
+        valueLookupBuilder(MavesTags.Blocks.WILLOW_LOGS)
                 .add(MavesBlocks.WILLOW_BLOCK)
                 .add(MavesBlocks.WILLOW_LOG)
                 .add(MavesBlocks.WILLOW_WOOD)
@@ -87,155 +96,172 @@ public class MavesBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(MavesBlocks.STRIPPED_WILLOW_LOG)
                 .add(MavesBlocks.STRIPPED_WILLOW_WOOD);
 
-        getOrCreateTagBuilder(BlockTags.OAK_LOGS)
+        valueLookupBuilder(BlockTags.OAK_LOGS)
                 .add(MavesBlocks.OAK_BLOCK)
                 .add(MavesBlocks.STRIPPED_OAK_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.SPRUCE_LOGS)
+        valueLookupBuilder(BlockTags.SPRUCE_LOGS)
                 .add(MavesBlocks.SPRUCE_BLOCK)
                 .add(MavesBlocks.STRIPPED_SPRUCE_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.BIRCH_LOGS)
+        valueLookupBuilder(BlockTags.BIRCH_LOGS)
                 .add(MavesBlocks.BIRCH_BLOCK)
                 .add(MavesBlocks.STRIPPED_BIRCH_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.JUNGLE_LOGS)
+        valueLookupBuilder(BlockTags.JUNGLE_LOGS)
                 .add(MavesBlocks.JUNGLE_BLOCK)
                 .add(MavesBlocks.STRIPPED_JUNGLE_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.ACACIA_LOGS)
+        valueLookupBuilder(BlockTags.ACACIA_LOGS)
                 .add(MavesBlocks.ACACIA_BLOCK)
                 .add(MavesBlocks.STRIPPED_ACACIA_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.DARK_OAK_LOGS)
+        valueLookupBuilder(BlockTags.DARK_OAK_LOGS)
                 .add(MavesBlocks.DARK_OAK_BLOCK)
                 .add(MavesBlocks.STRIPPED_DARK_OAK_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.MANGROVE_LOGS)
+        valueLookupBuilder(BlockTags.MANGROVE_LOGS)
                 .add(MavesBlocks.MANGROVE_BLOCK)
                 .add(MavesBlocks.STRIPPED_MANGROVE_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.CHERRY_LOGS)
+        valueLookupBuilder(BlockTags.CHERRY_LOGS)
                 .add(MavesBlocks.CHERRY_BLOCK)
                 .add(MavesBlocks.STRIPPED_CHERRY_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.PALE_OAK_LOGS)
+        valueLookupBuilder(BlockTags.PALE_OAK_LOGS)
                 .add(MavesBlocks.PALE_OAK_BLOCK)
                 .add(MavesBlocks.STRIPPED_PALE_OAK_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.CRIMSON_STEMS)
+        valueLookupBuilder(BlockTags.CRIMSON_STEMS)
                 .add(MavesBlocks.CRIMSON_BLOCK)
                 .add(MavesBlocks.STRIPPED_CRIMSON_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.WARPED_STEMS)
+        valueLookupBuilder(BlockTags.WARPED_STEMS)
                 .add(MavesBlocks.WARPED_BLOCK)
                 .add(MavesBlocks.STRIPPED_WARPED_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+        valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
                 .addTag(MavesTags.Blocks.APPLE_TREE_LOGS)
                 .addTag(MavesTags.Blocks.AZALEA_STEMS)
                 .addTag(MavesTags.Blocks.CACAO_TREE_LOGS)
+                .addTag(MavesTags.Blocks.HANGING_BLACK_WIDOW_STEMS)
                 .addTag(MavesTags.Blocks.RUBBER_TREE_LOGS)
                 .addTag(MavesTags.Blocks.WILLOW_LOGS);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
+        valueLookupBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(MavesBlocks.APPLE_TREE_BUTTON)
                 .add(MavesBlocks.AZALEA_BUTTON)
                 .add(MavesBlocks.CACAO_TREE_BUTTON)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_BUTTON)
                 .add(MavesBlocks.RUBBER_BUTTON)
                 .add(MavesBlocks.WILLOW_BUTTON);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+        valueLookupBuilder(BlockTags.WOODEN_DOORS)
                 .add(MavesBlocks.APPLE_TREE_DOOR)
                 .add(MavesBlocks.AZALEA_DOOR)
                 .add(MavesBlocks.CACAO_TREE_DOOR)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_DOOR)
                 .add(MavesBlocks.RUBBER_DOOR)
                 .add(MavesBlocks.WILLOW_DOOR);
 
-        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+        valueLookupBuilder(BlockTags.FENCE_GATES)
                 .add(MavesBlocks.APPLE_TREE_FENCE_GATE)
                 .add(MavesBlocks.AZALEA_FENCE_GATE)
                 .add(MavesBlocks.CACAO_TREE_FENCE_GATE)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE_GATE)
                 .add(MavesBlocks.RUBBER_FENCE_GATE)
                 .add(MavesBlocks.WILLOW_FENCE_GATE);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+        valueLookupBuilder(BlockTags.WOODEN_FENCES)
                 .add(MavesBlocks.APPLE_TREE_FENCE)
                 .add(MavesBlocks.AZALEA_FENCE)
                 .add(MavesBlocks.CACAO_TREE_FENCE)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE)
                 .add(MavesBlocks.RUBBER_FENCE)
                 .add(MavesBlocks.WILLOW_FENCE);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+        valueLookupBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(MavesBlocks.APPLE_TREE_PRESSURE_PLATE)
                 .add(MavesBlocks.AZALEA_PRESSURE_PLATE)
                 .add(MavesBlocks.CACAO_TREE_PRESSURE_PLATE)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_PRESSURE_PLATE)
                 .add(MavesBlocks.RUBBER_PRESSURE_PLATE)
                 .add(MavesBlocks.WILLOW_PRESSURE_PLATE);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
+        valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(MavesBlocks.APPLE_TREE_SLAB)
                 .add(MavesBlocks.AZALEA_SLAB)
                 .add(MavesBlocks.CACAO_TREE_SLAB)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_SLAB)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_SLAB)
                 .add(MavesBlocks.RUBBER_SLAB)
                 .add(MavesBlocks.WILLOW_SLAB);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
+        valueLookupBuilder(BlockTags.WOODEN_STAIRS)
                 .add(MavesBlocks.APPLE_TREE_STAIRS)
                 .add(MavesBlocks.AZALEA_STAIRS)
                 .add(MavesBlocks.CACAO_TREE_STAIRS)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_STAIRS)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_STAIRS)
                 .add(MavesBlocks.RUBBER_STAIRS)
                 .add(MavesBlocks.WILLOW_STAIRS);
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+        valueLookupBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(MavesBlocks.APPLE_TREE_TRAPDOOR)
                 .add(MavesBlocks.AZALEA_TRAPDOOR)
                 .add(MavesBlocks.CACAO_TREE_TRAPDOOR)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_TRAPDOOR)
                 .add(MavesBlocks.RUBBER_TRAPDOOR)
                 .add(MavesBlocks.WILLOW_TRAPDOOR);
         
-        getOrCreateTagBuilder(BlockTags.STANDING_SIGNS)
+        valueLookupBuilder(BlockTags.STANDING_SIGNS)
                 .add(MavesBlocks.APPLE_TREE_SIGN)
                 .add(MavesBlocks.AZALEA_SIGN)
                 .add(MavesBlocks.CACAO_TREE_SIGN)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_SIGN)
                 .add(MavesBlocks.RUBBER_SIGN)
                 .add(MavesBlocks.WILLOW_SIGN);
 
-        getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
+        valueLookupBuilder(BlockTags.WALL_SIGNS)
                 .add(MavesBlocks.APPLE_TREE_WALL_SIGN)
                 .add(MavesBlocks.AZALEA_WALL_SIGN)
                 .add(MavesBlocks.CACAO_TREE_WALL_SIGN)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_WALL_SIGN)
                 .add(MavesBlocks.RUBBER_WALL_SIGN)
                 .add(MavesBlocks.WILLOW_WALL_SIGN);
 
-        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
+        valueLookupBuilder(BlockTags.CEILING_HANGING_SIGNS)
                 .add(MavesBlocks.APPLE_TREE_HANGING_SIGN)
                 .add(MavesBlocks.AZALEA_HANGING_SIGN)
                 .add(MavesBlocks.CACAO_TREE_HANGING_SIGN)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_HANGING_SIGN)
                 .add(MavesBlocks.RUBBER_HANGING_SIGN)
                 .add(MavesBlocks.WILLOW_HANGING_SIGN);
 
-        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
+        valueLookupBuilder(BlockTags.WALL_HANGING_SIGNS)
                 .add(MavesBlocks.APPLE_TREE_WALL_HANGING_SIGN)
                 .add(MavesBlocks.AZALEA_WALL_HANGING_SIGN)
                 .add(MavesBlocks.CACAO_TREE_WALL_HANGING_SIGN)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_WALL_HANGING_SIGN)
                 .add(MavesBlocks.RUBBER_WALL_HANGING_SIGN)
                 .add(MavesBlocks.WILLOW_WALL_HANGING_SIGN);
 
-        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+        valueLookupBuilder(BlockTags.FLOWER_POTS)
                 .add(MavesBlocks.POTTED_APPLE_TREE_SAPLING)
                 .add(MavesBlocks.POTTED_CACAO_TREE_SAPLING)
+                .add(MavesBlocks.POTTED_HANGING_BLACK_WIDOW_SAPLING)
                 .add(MavesBlocks.POTTED_RUBBER_SAPLING)
                 .add(MavesBlocks.POTTED_WILLOW_SAPLING);
 
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+        valueLookupBuilder(BlockTags.AXE_MINEABLE)
+                .add(MavesBlocks.HANGING_BLACK_WIDOW_BLOCK)
                 .add(MavesBlocks.PALE_PUMPKIN)
                 .add(MavesBlocks.CARVED_PALE_PUMPKIN)
                 .add(MavesBlocks.PALE_JACK_O_LANTERN)
                 .add(MavesBlocks.PALE_PUMPKIN_STEM)
                 .add(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM);
 
-        getOrCreateTagBuilder(BlockTags.CROPS)
+        valueLookupBuilder(BlockTags.CROPS)
                 .add(MavesBlocks.PALE_PUMPKIN_STEM);
     }
 }

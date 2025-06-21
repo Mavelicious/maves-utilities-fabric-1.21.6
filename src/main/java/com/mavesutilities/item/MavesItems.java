@@ -25,6 +25,7 @@ public class MavesItems {
     public static final Identifier APPLE_TREE = Identifier.of(MavesUtilitiesMod.MOD_ID, "apple_tree");
     public static final Identifier AZALEA = Identifier.of(MavesUtilitiesMod.MOD_ID, "azalea");
     public static final Identifier CACAO_TREE = Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree");
+    public static final Identifier HANGING_BLACK_WIDOW = Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow");
     public static final Identifier RUBBER = Identifier.of(MavesUtilitiesMod.MOD_ID, "rubber");
     public static final Identifier WILLOW = Identifier.of(MavesUtilitiesMod.MOD_ID, "willow");
 
@@ -123,6 +124,26 @@ public class MavesItems {
     public static final Item CACAO_TREE_STAIRS = register(MavesBlocks.CACAO_TREE_STAIRS);
     public static final Item CACAO_TREE_TRAPDOOR = register(MavesBlocks.CACAO_TREE_TRAPDOOR);
 
+    public static final Item HANGING_BLACK_WIDOW_STEM = register(MavesBlocks.HANGING_BLACK_WIDOW_STEM);
+    public static final Item STRIPPED_HANGING_BLACK_WIDOW_STEM = register(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM);
+    public static final Item HANGING_BLACK_WIDOW_LEAVES_TAIL = register(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL);
+    public static final Item HANGING_BLACK_WIDOW_LEAVES_BODY = register(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY);
+    public static final Item HANGING_BLACK_WIDOW_LEAVES_HEAD = register(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD);
+    public static final Item HANGING_BLACK_WIDOW_SAPLING = register(MavesBlocks.HANGING_BLACK_WIDOW_SAPLING);
+    public static final Item HANGING_BLACK_WIDOW_BLOCK = register(MavesBlocks.HANGING_BLACK_WIDOW_BLOCK);
+    public static final Item HANGING_BLACK_WIDOW_PLANKS = register(MavesBlocks.HANGING_BLACK_WIDOW_PLANKS);
+    public static final Item HANGING_BLACK_WIDOW_MOSAIC = register(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC);
+    public static final Item HANGING_BLACK_WIDOW_BUTTON = register(MavesBlocks.HANGING_BLACK_WIDOW_BUTTON);
+    public static final Item HANGING_BLACK_WIDOW_DOOR = register(MavesBlocks.HANGING_BLACK_WIDOW_DOOR, TallBlockItem::new);
+    public static final Item HANGING_BLACK_WIDOW_FENCE = register(MavesBlocks.HANGING_BLACK_WIDOW_FENCE);
+    public static final Item HANGING_BLACK_WIDOW_FENCE_GATE = register(MavesBlocks.HANGING_BLACK_WIDOW_FENCE_GATE);
+    public static final Item HANGING_BLACK_WIDOW_PRESSURE_PLATE = register(MavesBlocks.HANGING_BLACK_WIDOW_PRESSURE_PLATE);
+    public static final Item HANGING_BLACK_WIDOW_SLAB = register(MavesBlocks.HANGING_BLACK_WIDOW_SLAB);
+    public static final Item HANGING_BLACK_WIDOW_MOSAIC_SLAB = register(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_SLAB);
+    public static final Item HANGING_BLACK_WIDOW_STAIRS = register(MavesBlocks.HANGING_BLACK_WIDOW_STAIRS);
+    public static final Item HANGING_BLACK_WIDOW_MOSAIC_STAIRS = register(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_STAIRS);
+    public static final Item HANGING_BLACK_WIDOW_TRAPDOOR = register(MavesBlocks.HANGING_BLACK_WIDOW_TRAPDOOR);
+
     public static final Item PALE_PUMPKIN = register(MavesBlocks.PALE_PUMPKIN);
     public static final Item CARVED_PALE_PUMPKIN = register(MavesBlocks.CARVED_PALE_PUMPKIN,
             (UnaryOperator<Item.Settings>)(settings -> settings.component(
@@ -175,6 +196,7 @@ public class MavesItems {
     public static final Item APPLE_TREE_BARK = register("apple_tree_bark");
     public static final Item AZALEA_BARK = register("azalea_bark");
     public static final Item CACAO_TREE_BARK = register("cacao_tree_bark");
+    public static final Item HANGING_BLACK_WIDOW_BARK = register("hanging_black_widow_bark");
     public static final Item RUBBER_BARK = register("rubber_bark");
     public static final Item WILLOW_BARK = register("willow_bark");
     public static final Item CRIMSON_BARK = register("crimson_bark");
@@ -234,6 +256,8 @@ public class MavesItems {
             new Item.Settings().maxCount(1).food(MavesFoods.WHITE_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL));
     public static final Item DARK_CHOCOLATE = register("dark_chocolate",
             new Item.Settings().maxCount(1).food(MavesFoods.DARK_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL));
+    public static final Item BLACK_WIDOW_BERRIES = register("black_widow_berries",
+            new Item.Settings().food(MavesFoods.WILD_BERRIES_BLUE_FOOD_COMPONENT));
 
     public static final Item ACORN = register("acorn");
     public static final Item DARK_ACORN = register("dark_acorn");
@@ -243,6 +267,7 @@ public class MavesItems {
     public static final Item PALE_PUMPKIN_SEEDS = register(PALE_PUMPKIN_SEEDS_KEY,
             createBlockItemWithUniqueName(MavesBlocks.PALE_PUMPKIN_STEM));
 
+    public static final Item HANGING_BLACK_WIDOW_BRANCH = register("hanging_black_widow_branch");
     public static final Item LATEX_BOTTLE = register("latex_bottle", new Item.Settings()
                     .recipeRemainder(Items.GLASS_BOTTLE).maxCount(16));
 
@@ -269,6 +294,12 @@ public class MavesItems {
     public static final Item CACAO_TREE_HANGING_SIGN = register(MavesBlocks.CACAO_TREE_HANGING_SIGN,
             (block, settings) -> new HangingSignItem(block, MavesBlocks.CACAO_TREE_WALL_HANGING_SIGN, settings),
             new Item.Settings().maxCount(16));
+    public static final Item HANGING_BLACK_WIDOW_SIGN = register(MavesBlocks.HANGING_BLACK_WIDOW_SIGN,
+            (block, settings) -> new SignItem(block, MavesBlocks.HANGING_BLACK_WIDOW_WALL_SIGN, settings),
+            new Item.Settings().maxCount(16));
+    public static final Item HANGING_BLACK_WIDOW_HANGING_SIGN = register(MavesBlocks.HANGING_BLACK_WIDOW_HANGING_SIGN,
+            (block, settings) -> new HangingSignItem(block, MavesBlocks.HANGING_BLACK_WIDOW_WALL_HANGING_SIGN, settings),
+            new Item.Settings().maxCount(16));
     public static final Item RUBBER_SIGN = register(MavesBlocks.RUBBER_SIGN,
             (block, settings) -> new SignItem(block, MavesBlocks.RUBBER_WALL_SIGN, settings),
             new Item.Settings().maxCount(16));
@@ -294,6 +325,10 @@ public class MavesItems {
             .registerBoatItem(CACAO_TREE, false);
     public static final Item CACAO_TREE_CHEST_BOAT = TerraformBoatItemHelper
             .registerBoatItem(CACAO_TREE, true);
+    public static final Item HANGING_BLACK_WIDOW_BOAT = TerraformBoatItemHelper
+            .registerBoatItem(HANGING_BLACK_WIDOW, false);
+    public static final Item HANGING_BLACK_WIDOW_CHEST_BOAT = TerraformBoatItemHelper
+            .registerBoatItem(HANGING_BLACK_WIDOW, true);
     public static final Item RUBBER_BOAT = TerraformBoatItemHelper
             .registerBoatItem(RUBBER, false);
     public static final Item RUBBER_CHEST_BOAT = TerraformBoatItemHelper

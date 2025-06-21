@@ -33,6 +33,7 @@ public class AxeItemMixin {
         BARK_DROPS.put(MavesBlocks.STRIPPED_APPLE_TREE_LOG, new ItemStack(MavesItems.APPLE_TREE_BARK, 4));
         BARK_DROPS.put(MavesBlocks.STRIPPED_AZALEA_STEM, new ItemStack(MavesItems.AZALEA_BARK, 4));
         BARK_DROPS.put(MavesBlocks.STRIPPED_CACAO_TREE_LOG, new ItemStack(MavesItems.CACAO_TREE_BARK, 4));
+        BARK_DROPS.put(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM, new ItemStack(MavesItems.HANGING_BLACK_WIDOW_BARK, 4));
         BARK_DROPS.put(MavesBlocks.STRIPPED_RUBBER_LOG, new ItemStack(MavesItems.RUBBER_BARK, 4));
         BARK_DROPS.put(MavesBlocks.STRIPPED_WILLOW_LOG, new ItemStack(MavesItems.WILLOW_BARK, 4));
         BARK_DROPS.put(Blocks.STRIPPED_CRIMSON_STEM, new ItemStack(MavesItems.CRIMSON_BARK, 4));

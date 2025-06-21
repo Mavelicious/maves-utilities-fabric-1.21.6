@@ -12,6 +12,7 @@ public class MavesTags {
         public static final TagKey<Block> APPLE_TREE_LOGS = createTag("apple_tree_logs");
         public static final TagKey<Block> AZALEA_STEMS = createTag("azalea_stems");
         public static final TagKey<Block> CACAO_TREE_LOGS = createTag("cacao_tree_logs");
+        public static final TagKey<Block> HANGING_BLACK_WIDOW_STEMS = createTag("hanging_black_widow_stems");
         public static final TagKey<Block> RUBBER_TREE_LOGS = createTag("rubber_tree_logs");
         public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
 
@@ -24,6 +25,7 @@ public class MavesTags {
         public static final TagKey<Item> APPLE_TREE_LOGS = createTag("apple_tree_logs");
         public static final TagKey<Item> AZALEA_STEMS = createTag("azalea_stems");
         public static final TagKey<Item> CACAO_TREE_LOGS = createTag("cacao_tree_logs");
+        public static final TagKey<Item> HANGING_BLACK_WIDOW_STEMS = createTag("hanging_black_widow_stems");
         public static final TagKey<Item> RUBBER_TREE_LOGS = createTag("rubber_tree_logs");
         public static final TagKey<Item> WILLOW_LOGS = createTag("willow_logs");
 

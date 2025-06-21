@@ -2,8 +2,7 @@ package com.mavesutilities;
 
 import com.mavesutilities.datagen.*;
 import com.mavesutilities.world.*;
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.*;
 import net.minecraft.client.data.ModelSupplier;
 import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;

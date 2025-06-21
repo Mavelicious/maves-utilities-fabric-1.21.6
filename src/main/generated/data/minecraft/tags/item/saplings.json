@@ -1,8 +1,9 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air"
+    "mavesutilities:apple_tree_sapling",
+    "mavesutilities:cacao_tree_sapling",
+    "mavesutilities:hanging_black_widow_sapling",
+    "mavesutilities:rubber_sapling",
+    "mavesutilities:willow_sapling"
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "mavesutilities:block/hanging_black_widow_planks"
+  }
+}

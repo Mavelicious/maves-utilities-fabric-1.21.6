@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mavesutilities:block/hanging_black_widow_stem_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mavesutilities:block/hanging_black_widow_stem"
+    },
+    "axis=z": {
+      "model": "mavesutilities:block/hanging_black_widow_stem_horizontal",
+      "x": 90
+    }
+  }
+}

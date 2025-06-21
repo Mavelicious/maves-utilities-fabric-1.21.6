@@ -48,6 +48,7 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.APPLE_TREE_BARK);
             itemGroup.add(MavesItems.AZALEA_BARK);
             itemGroup.add(MavesItems.CACAO_TREE_BARK);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BARK);
             itemGroup.add(MavesItems.RUBBER_BARK);
             itemGroup.add(MavesItems.WILLOW_BARK);
             itemGroup.add(MavesItems.CRIMSON_BARK);
@@ -91,6 +92,7 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.WILD_BERRIES_BLUE);
             itemGroup.add(MavesItems.WILD_BERRIES_GREEN);
             itemGroup.add(MavesItems.WILD_BERRIES_YELLOW);
+            itemGroup.add(MavesItems.BLACK_WIDOW_BERRIES);
             itemGroup.add(MavesItems.MILK_CHOCOLATE);
             itemGroup.add(MavesItems.WHITE_CHOCOLATE);
             itemGroup.add(MavesItems.DARK_CHOCOLATE);
@@ -100,6 +102,7 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.ACACIA_POD);
             itemGroup.add(MavesItems.SPRUCE_CONE);
             itemGroup.add(MavesItems.PALE_PUMPKIN_SEEDS);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BRANCH);
             itemGroup.add(MavesItems.LATEX_BOTTLE);
             itemGroup.add(MavesItems.ACACIA_BLOSSOM);
             itemGroup.add(MavesItems.APPLE_BLOSSOM);
@@ -111,6 +114,8 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.AZALEA_CHEST_BOAT);
             itemGroup.add(MavesItems.CACAO_TREE_BOAT);
             itemGroup.add(MavesItems.CACAO_TREE_CHEST_BOAT);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BOAT);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT);
             itemGroup.add(MavesItems.RUBBER_BOAT);
             itemGroup.add(MavesItems.RUBBER_CHEST_BOAT);
             itemGroup.add(MavesItems.WILLOW_BOAT);
@@ -212,6 +217,25 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.CACAO_TREE_BUTTON);
             itemGroup.add(MavesItems.CACAO_TREE_LEAVES);
             itemGroup.add(MavesItems.CACAO_TREE_SAPLING);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_STEM);
+            itemGroup.add(MavesItems.STRIPPED_HANGING_BLACK_WIDOW_STEM);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BLOCK);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_PLANKS);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_STAIRS);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_SLAB);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_MOSAIC);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_MOSAIC_STAIRS);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_MOSAIC_SLAB);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_FENCE);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_FENCE_GATE);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_SIGN);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_HANGING_SIGN);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_DOOR);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_TRAPDOOR);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_PRESSURE_PLATE);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BUTTON);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_LEAVES_TAIL);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_SAPLING);
             itemGroup.add(MavesItems.RUBBER_LOG);
             itemGroup.add(MavesItems.RUBBER_WOOD);
             itemGroup.add(MavesItems.STRIPPED_RUBBER_LOG);

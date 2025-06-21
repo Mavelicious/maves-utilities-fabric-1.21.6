@@ -18,6 +18,7 @@ public class MavesCompostableItems {
         CompostingChanceRegistry.INSTANCE.add(MavesItems.APPLE_TREE_BARK, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.AZALEA_BARK, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.CACAO_TREE_BARK, 0.3f);
+        CompostingChanceRegistry.INSTANCE.add(MavesItems.HANGING_BLACK_WIDOW_BARK, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.RUBBER_BARK, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.WILLOW_BARK, 0.3f);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.CRIMSON_BARK, 0.3f);
@@ -35,6 +36,7 @@ public class MavesCompostableItems {
         CompostingChanceRegistry.INSTANCE.add(MavesItems.WILD_BERRIES_BLUE, 0.65F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.WILD_BERRIES_GREEN, 0.65F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.WILD_BERRIES_YELLOW, 0.65F);
+        CompostingChanceRegistry.INSTANCE.add(MavesItems.BLACK_WIDOW_BERRIES, 0.65F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.ACACIA_BLOSSOM, 0.65F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.APPLE_BLOSSOM, 0.65F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.AZALEA_BLOSSOM, 0.65F);
@@ -45,10 +47,14 @@ public class MavesCompostableItems {
 
         CompostingChanceRegistry.INSTANCE.add(MavesItems.APPLE_TREE_LEAVES, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.CACAO_TREE_LEAVES, 0.3F);
+        CompostingChanceRegistry.INSTANCE.add(MavesItems.HANGING_BLACK_WIDOW_LEAVES_BODY, 0.3F);
+        CompostingChanceRegistry.INSTANCE.add(MavesItems.HANGING_BLACK_WIDOW_LEAVES_HEAD, 0.3F);
+        CompostingChanceRegistry.INSTANCE.add(MavesItems.HANGING_BLACK_WIDOW_LEAVES_TAIL, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.RUBBER_LEAVES, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.WILLOW_LEAVES, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.APPLE_TREE_SAPLING, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.CACAO_TREE_SAPLING, 0.3F);
+        CompostingChanceRegistry.INSTANCE.add(MavesItems.HANGING_BLACK_WIDOW_SAPLING, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.RUBBER_SAPLING, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.WILLOW_SAPLING, 0.3F);
         CompostingChanceRegistry.INSTANCE.add(MavesItems.ACACIA_FLOWERING_LEAVES, 0.5f);

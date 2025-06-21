@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mavesutilities:block/hanging_black_widow_leaves_stage2"
+  }
+}

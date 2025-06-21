@@ -1,9 +1,11 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air"
+    "mavesutilities:apple_tree_planks",
+    "mavesutilities:azalea_planks",
+    "mavesutilities:cacao_tree_planks",
+    "mavesutilities:hanging_black_widow_planks",
+    "mavesutilities:hanging_black_widow_mosaic",
+    "mavesutilities:rubber_planks",
+    "mavesutilities:willow_planks"
   ]
 }

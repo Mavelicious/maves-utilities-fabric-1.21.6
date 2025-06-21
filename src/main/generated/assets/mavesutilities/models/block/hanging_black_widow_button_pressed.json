@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "mavesutilities:block/hanging_black_widow_planks"
+  }
+}

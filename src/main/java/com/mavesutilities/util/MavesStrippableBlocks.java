@@ -32,6 +32,8 @@ public class MavesStrippableBlocks {
         StrippableBlockRegistry.register(MavesBlocks.CACAO_TREE_LOG, MavesBlocks.STRIPPED_CACAO_TREE_LOG);
         StrippableBlockRegistry.register(MavesBlocks.CACAO_TREE_WOOD, MavesBlocks.STRIPPED_CACAO_TREE_WOOD);
 
+        StrippableBlockRegistry.register(MavesBlocks.HANGING_BLACK_WIDOW_STEM, MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM);
+
         StrippableBlockRegistry.register(MavesBlocks.RUBBER_LOG, MavesBlocks.STRIPPED_RUBBER_LOG);
         StrippableBlockRegistry.register(MavesBlocks.RUBBER_WOOD, MavesBlocks.STRIPPED_RUBBER_WOOD);
 

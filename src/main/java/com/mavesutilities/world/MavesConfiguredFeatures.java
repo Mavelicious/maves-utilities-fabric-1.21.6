@@ -5,9 +5,8 @@ import com.mavesutilities.MavesUtilitiesMod;
 import com.mavesutilities.block.MavesBlocks;
 import net.minecraft.block.*;
 import net.minecraft.registry.*;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.collection.Pool;
 import net.minecraft.util.math.intprovider.*;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
@@ -23,6 +22,7 @@ public class MavesConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> APPLE_TREE_KEY = registerKey("apple_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AZALEA_GIANT_BUSH_KEY = registerKey("azalea_giant_bush");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CACAO_TREE_KEY = registerKey("cacao_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HANGING_BLACK_WIDOW_KEY = registerKey("hanging_black_widow");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUBBER_TREE_KEY = registerKey("rubber_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_TREE_KEY = registerKey("willow_tree");
 
@@ -34,7 +34,7 @@ public class MavesConfiguredFeatures {
                 BlockStateProvider.of(MavesBlocks.APPLE_TREE_LOG),
                 new BendingTrunkPlacer(4,2,0,3, UniformIntProvider.create(1, 2)),
                 new WeightedBlockStateProvider(
-                        DataPool.<BlockState>builder().add(MavesBlocks.APPLE_TREE_LEAVES.getDefaultState(), 3)
+                        Pool.<BlockState>builder().add(MavesBlocks.APPLE_TREE_LEAVES.getDefaultState(), 3)
                                 .add(MavesBlocks.APPLE_TREE_FLOWERING_LEAVES.getDefaultState(), 1)
                 ),
                 new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
@@ -46,7 +46,7 @@ public class MavesConfiguredFeatures {
                 BlockStateProvider.of(MavesBlocks.AZALEA_STEM),
                 new StraightTrunkPlacer(1, 0, 0),
                 new WeightedBlockStateProvider(
-                        DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3)
+                        Pool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3)
                                 .add(Blocks.FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)
                 ),
                 new BushFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
@@ -64,6 +64,15 @@ public class MavesConfiguredFeatures {
                 .decorators(ImmutableList.of(new CocoaTreeDecorator(0.85F)))
                 .ignoreVines()
                 .build()
+        );
+        register(context, HANGING_BLACK_WIDOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(MavesBlocks.HANGING_BLACK_WIDOW_STEM),
+                        new StraightTrunkPlacer(1, 0, 0),
+                        BlockStateProvider.of(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)
+                )
+                        .build()
         );
         register(context, RUBBER_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(MavesBlocks.RUBBER_LOG),

@@ -1,5 +1,6 @@
 package com.mavesutilities.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -22,11 +23,13 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     private static final int field_31112 = 1;
     public static final IntProperty AGE = Properties.AGE_3;
+    protected final float leafParticleChance;
     private final Item fruitItem;
     private final Block shearedLeaves;
 
-    public MavesFloweringLeaves(Item fruitItem, Block shearedLeaves, Settings settings) {
-        super(settings);
+    public MavesFloweringLeaves(float leafParticleChance, Item fruitItem, Block shearedLeaves, Settings settings) {
+        super(leafParticleChance, settings);
+        this.leafParticleChance = leafParticleChance;
         this.fruitItem = fruitItem;
         this.shearedLeaves = shearedLeaves;
         this.setDefaultState(this.stateManager.getDefaultState()
@@ -39,6 +42,11 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
     @Override
     protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(fruitItem);
+    }
+
+    @Override
+    public MapCodec<? extends LeavesBlock> getCodec() {
+        return null;
     }
 
     @Override
@@ -57,6 +65,11 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
     }
 
     @Override
+    protected void spawnLeafParticle(World world, BlockPos pos, Random random) {
+
+    }
+
+    @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int i = (Integer) state.get(AGE);
         boolean bl = i == 3;
@@ -71,9 +84,9 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
 
         if (player.getStackInHand(Hand.MAIN_HAND).getItem() instanceof ShearsItem) {
             if (i < 1) {
-            BlockState newState = shearedLeaves.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
-            world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
-            return ActionResult.SUCCESS;
+                BlockState newState = shearedLeaves.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
+                world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
+                return ActionResult.SUCCESS;
             }
         }
 

@@ -19,6 +19,7 @@ public class MavesFuelItems {
             builder.add(MavesItems.APPLE_TREE_BARK, 20 * 15 / 2);
             builder.add(MavesItems.AZALEA_BARK, 20 * 15 / 2);
             builder.add(MavesItems.CACAO_TREE_BARK, 20 * 15 / 2);
+            builder.add(MavesItems.HANGING_BLACK_WIDOW_BARK, 20 * 15 / 2);
             builder.add(MavesItems.RUBBER_BARK, 20 * 15 / 2);
             builder.add(MavesItems.WILLOW_BARK, 20 * 15 / 2);
             builder.add(MavesItems.CRIMSON_BARK, 20 * 15 / 2);

@@ -1,15 +1,13 @@
 package com.mavesutilities.block;
 
 import com.mavesutilities.MavesUtilitiesMod;
+import com.mavesutilities.block.floweringleaves.*;
+import com.mavesutilities.block.hangingleaves.*;
 import com.mavesutilities.item.MavesItems;
 import com.mavesutilities.world.tree.MavesSaplingGenerators;
-import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
-import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
-import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
-import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
+import com.terraformersmc.terraform.sign.api.block.*;
 import net.minecraft.block.*;
 import net.minecraft.data.family.*;
-import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.*;
@@ -39,6 +37,13 @@ public class MavesBlocks {
             SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_OFF,
             SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF,
             SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON);
+    public static final BlockSetType HANGING_BLACK_WIDOW = new BlockSetType("hanging_black_widow", true, true, true,
+            BlockSetType.ActivationRule.EVERYTHING, BlockSoundGroup.WOOD,
+            SoundEvents.BLOCK_WOODEN_DOOR_CLOSE, SoundEvents.BLOCK_WOODEN_DOOR_OPEN,
+            SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE, SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN,
+            SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_OFF,
+            SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF,
+            SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON);
     public static final BlockSetType RUBBER = new BlockSetType("rubber", true, true, true,
             BlockSetType.ActivationRule.EVERYTHING, BlockSoundGroup.WOOD,
             SoundEvents.BLOCK_WOODEN_DOOR_CLOSE, SoundEvents.BLOCK_WOODEN_DOOR_OPEN,
@@ -61,6 +66,9 @@ public class MavesBlocks {
             BlockSoundGroup.HANGING_SIGN, SoundEvents.BLOCK_FENCE_GATE_CLOSE,
             SoundEvents.BLOCK_FENCE_GATE_OPEN);
     public static final WoodType CACAO_TREE_TYPE = new WoodType("cacao_tree", CACAO_TREE, BlockSoundGroup.WOOD,
+            BlockSoundGroup.HANGING_SIGN, SoundEvents.BLOCK_FENCE_GATE_CLOSE,
+            SoundEvents.BLOCK_FENCE_GATE_OPEN);
+    public static final WoodType HANGING_BLACK_WIDOW_TYPE = new WoodType("hanging_black_widow", HANGING_BLACK_WIDOW, BlockSoundGroup.WOOD,
             BlockSoundGroup.HANGING_SIGN, SoundEvents.BLOCK_FENCE_GATE_CLOSE,
             SoundEvents.BLOCK_FENCE_GATE_OPEN);
     public static final WoodType RUBBER_TYPE = new WoodType("rubber", RUBBER, BlockSoundGroup.WOOD,
@@ -114,6 +122,21 @@ public class MavesBlocks {
             Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_hanging_sign");
     public static final Identifier CACAO_TREE_WALL_HANGING_SIGN_ID =
             Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_wall_hanging_sign");
+
+    public static final Identifier HANGING_BLACK_WIDOW_SIGN_TEXTURE_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "entity/signs/hanging_black_widow");
+    public static final Identifier HANGING_BLACK_WIDOW_HANGING_SIGN_TEXTURE_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "entity/signs/hanging/hanging_black_widow");
+    public static final Identifier HANGING_BLACK_WIDOW_GUI_SIGN_TEXTURE_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "textures/gui/hanging_signs/hanging_black_widow");
+    public static final Identifier HANGING_BLACK_WIDOW_SIGN_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_sign");
+    public static final Identifier HANGING_BLACK_WIDOW_WALL_SIGN_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_wall_sign");
+    public static final Identifier HANGING_BLACK_WIDOW_HANGING_SIGN_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_hanging_sign");
+    public static final Identifier HANGING_BLACK_WIDOW_WALL_HANGING_SIGN_ID =
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_wall_hanging_sign");
 
     public static final Identifier RUBBER_SIGN_TEXTURE_ID =
             Identifier.of(MavesUtilitiesMod.MOD_ID, "entity/signs/rubber");
@@ -172,6 +195,15 @@ public class MavesBlocks {
     public static final RegistryKey<Block> CACAO_TREE_WALL_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "cacao_tree_wall_hanging_sign"));
 
+    public static final RegistryKey<Block> HANGING_BLACK_WIDOW_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_sign"));
+    public static final RegistryKey<Block> HANGING_BLACK_WIDOW_WALL_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_wall_sign"));
+    public static final RegistryKey<Block> HANGING_BLACK_WIDOW_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_hanging_sign"));
+    public static final RegistryKey<Block> HANGING_BLACK_WIDOW_WALL_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
+            Identifier.of(MavesUtilitiesMod.MOD_ID, "hanging_black_widow_wall_hanging_sign"));
+
     public static final RegistryKey<Block> RUBBER_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "rubber_sign"));
     public static final RegistryKey<Block> RUBBER_WALL_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
@@ -190,14 +222,9 @@ public class MavesBlocks {
     public static final RegistryKey<Block> WILLOW_WALL_HANGING_SIGN_KEY = RegistryKey.of(RegistryKeys.BLOCK,
             Identifier.of(MavesUtilitiesMod.MOD_ID, "willow_wall_hanging_sign"));
 
-    public static final RegistryKey<Block> ACACIA_FLOWERING_LEAVES_KEY = of("acacia_flowering_leaves");
-    public static final RegistryKey<Block> BIRCH_FLOWERING_LEAVES_KEY = of("birch_flowering_leaves");
-    public static final RegistryKey<Block> CHERRY_FLOWERING_LEAVES_KEY = of("cherry_flowering_leaves");
-    public static final RegistryKey<Block> DARK_OAK_FLOWERING_LEAVES_KEY = of("dark_oak_flowering_leaves");
-    public static final RegistryKey<Block> OAK_FLOWERING_LEAVES_KEY = of("oak_flowering_leaves");
-    public static final RegistryKey<Block> PALE_OAK_FLOWERING_LEAVES_KEY = of("pale_oak_flowering_leaves");
     public static final RegistryKey<Block> APPLE_TREE_SAPLING_KEY = of("apple_tree_sapling");
     public static final RegistryKey<Block> CACAO_TREE_SAPLING_KEY = of("cacao_tree_sapling");
+    public static final RegistryKey<Block> HANGING_BLACK_WIDOW_SAPLING_KEY = of("hanging_black_widow_sapling");
     public static final RegistryKey<Block> RUBBER_SAPLING_KEY = of("rubber_sapling");
     public static final RegistryKey<Block> WILLOW_SAPLING_KEY = of("willow_sapling");
     public static final RegistryKey<Block> PALE_PUMPKIN_KEY = of("pale_pumpkin");
@@ -206,27 +233,22 @@ public class MavesBlocks {
     public static final RegistryKey<Block> ATTACHED_PALE_PUMPKIN_STEM_KEY = of("attached_pale_pumpkin_stem");
     public static final RegistryKey<Block> PALE_PUMPKIN_STEM_KEY = of("pale_pumpkin_stem");
 
-    public static final Block OAK_FLOWERING_LEAVES = register(OAK_FLOWERING_LEAVES_KEY,
-            settings -> new MavesFloweringLeaves(MavesItems.ACORN, Blocks.OAK_LEAVES, settings),
+    public static final Block OAK_FLOWERING_LEAVES = register("oak_flowering_leaves", MavesOakFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
-    public static final Block BIRCH_FLOWERING_LEAVES = register(BIRCH_FLOWERING_LEAVES_KEY,
-            settings -> new MavesFloweringLeaves(MavesItems.BIRCH_CATKINS, Blocks.BIRCH_LEAVES, settings),
+    public static final Block BIRCH_FLOWERING_LEAVES = register("birch_flowering_leaves", MavesBirchFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
     public static final Block JUNGLE_FLOWERING_LEAVES = register("jungle_flowering_leaves", MavesJungleFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
-    public static final Block ACACIA_FLOWERING_LEAVES = register(ACACIA_FLOWERING_LEAVES_KEY,
-            settings -> new MavesFloweringLeaves(MavesItems.ACACIA_POD, MavesBlocks.ACACIA_FLOWERED_LEAVES, settings),
+    public static final Block ACACIA_FLOWERING_LEAVES = register("acacia_flowering_leaves", MavesAcaciaFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
-    public static final Block ACACIA_FLOWERED_LEAVES = register("acacia_flowered_leaves", LeavesBlock::new,
+    public static final Block ACACIA_FLOWERED_LEAVES = register("acacia_flowered_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
-    public static final Block DARK_OAK_FLOWERING_LEAVES = register(DARK_OAK_FLOWERING_LEAVES_KEY,
-            settings -> new MavesFloweringLeaves(MavesItems.DARK_ACORN, Blocks.DARK_OAK_LEAVES, settings),
+    public static final Block DARK_OAK_FLOWERING_LEAVES = register("dark_oak_flowering_leaves", MavesDarkOakFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
-    public static final Block CHERRY_FLOWERING_LEAVES = register(CHERRY_FLOWERING_LEAVES_KEY,
-            settings -> new MavesFloweringLeaves(MavesItems.CHERRIES, Blocks.CHERRY_LEAVES, settings),
+    public static final Block CHERRY_FLOWERING_LEAVES = register("cherry_flowering_leaves", MavesCherryFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
-    public static final Block PALE_OAK_FLOWERING_LEAVES = register(PALE_OAK_FLOWERING_LEAVES_KEY,
-            settings -> new MavesFloweringLeaves(MavesItems.PALE_ACORN, Blocks.PALE_OAK_LEAVES, settings),
+    public static final Block PALE_OAK_FLOWERING_LEAVES = register("pale_oak_flowering_leaves", MavesPaleOakFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
 
     public static final Block OAK_BLOCK = register("oak_block", PillarBlock::new,
@@ -305,11 +327,13 @@ public class MavesBlocks {
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_APPLE_TREE_WOOD = register("stripped_apple_tree_wood", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD));
-    public static final Block APPLE_TREE_LEAVES = register("apple_tree_leaves", LeavesBlock::new,
+    public static final Block APPLE_TREE_LEAVES = register("apple_tree_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
     public static final Block APPLE_TREE_FLOWERING_LEAVES = register("apple_tree_flowering_leaves", MavesAppleFloweringLeaves::new,
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
-    public static final Block APPLE_TREE_FLOWERED_LEAVES = register("apple_tree_flowered_leaves", LeavesBlock::new,
+    public static final Block APPLE_TREE_FLOWERED_LEAVES = register("apple_tree_flowered_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
     public static final Block APPLE_TREE_SAPLING = register(APPLE_TREE_SAPLING_KEY,
             settings -> new MavesSaplingBlock(MavesSaplingGenerators.APPLE_TREE, settings),
@@ -342,16 +366,23 @@ public class MavesBlocks {
             settings -> new TrapdoorBlock(APPLE_TREE, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque());
     public static final Block APPLE_TREE_SIGN = register(APPLE_TREE_SIGN_KEY,
-            settings -> new TerraformSignBlock(APPLE_TREE_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_SIGN_ID))),
+            settings -> new TerraformSignBlock(APPLE_TREE_SIGN_TEXTURE_ID,
+                    settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
     public static final Block APPLE_TREE_WALL_SIGN = register(APPLE_TREE_WALL_SIGN_KEY,
-            settings -> new TerraformWallSignBlock(APPLE_TREE_SIGN_TEXTURE_ID, settings.lootTable(APPLE_TREE_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_WALL_SIGN_ID))),
+            settings -> new TerraformWallSignBlock(APPLE_TREE_SIGN_TEXTURE_ID,
+                    settings.lootTable(APPLE_TREE_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                            APPLE_TREE_WALL_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN));
     public static final Block APPLE_TREE_HANGING_SIGN = register(APPLE_TREE_HANGING_SIGN_KEY,
-            settings -> new TerraformHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID, APPLE_TREE_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_HANGING_SIGN_ID))),
+            settings -> new TerraformHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID,
+                    APPLE_TREE_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    APPLE_TREE_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN));
     public static final Block APPLE_TREE_WALL_HANGING_SIGN = register(APPLE_TREE_WALL_HANGING_SIGN_KEY,
-            settings -> new TerraformWallHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID, APPLE_TREE_GUI_SIGN_TEXTURE_ID, settings.lootTable(APPLE_TREE_HANGING_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_WALL_HANGING_SIGN_ID))),
+            settings -> new TerraformWallHangingSignBlock(APPLE_TREE_HANGING_SIGN_TEXTURE_ID,
+                    APPLE_TREE_GUI_SIGN_TEXTURE_ID, settings.lootTable(APPLE_TREE_HANGING_SIGN.getLootTableKey())
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, APPLE_TREE_WALL_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN));
 
     public static final Block AZALEA_STEM = register("azalea_stem", PillarBlock::new,
@@ -387,16 +418,23 @@ public class MavesBlocks {
             settings -> new TrapdoorBlock(AZALEA, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque());
     public static final Block AZALEA_SIGN = register(AZALEA_SIGN_KEY,
-            settings -> new TerraformSignBlock(AZALEA_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_SIGN_ID))),
+            settings -> new TerraformSignBlock(AZALEA_SIGN_TEXTURE_ID,
+                    settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
     public static final Block AZALEA_WALL_SIGN = register(AZALEA_WALL_SIGN_KEY,
-            settings -> new TerraformWallSignBlock(AZALEA_SIGN_TEXTURE_ID, settings.lootTable(AZALEA_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_WALL_SIGN_ID))),
+            settings -> new TerraformWallSignBlock(AZALEA_SIGN_TEXTURE_ID,
+                    settings.lootTable(AZALEA_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                            AZALEA_WALL_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN));
     public static final Block AZALEA_HANGING_SIGN = register(AZALEA_HANGING_SIGN_KEY,
-            settings -> new TerraformHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID, AZALEA_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_HANGING_SIGN_ID))),
+            settings -> new TerraformHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID,
+                    AZALEA_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    AZALEA_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN));
     public static final Block AZALEA_WALL_HANGING_SIGN = register(AZALEA_WALL_HANGING_SIGN_KEY,
-            settings -> new TerraformWallHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID, AZALEA_GUI_SIGN_TEXTURE_ID, settings.lootTable(AZALEA_HANGING_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_WALL_HANGING_SIGN_ID))),
+            settings -> new TerraformWallHangingSignBlock(AZALEA_HANGING_SIGN_TEXTURE_ID,
+                    AZALEA_GUI_SIGN_TEXTURE_ID, settings.lootTable(AZALEA_HANGING_SIGN.getLootTableKey())
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, AZALEA_WALL_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN));
 
     public static final Block CACAO_TREE_LOG = register("cacao_tree_log", PillarBlock::new,
@@ -407,7 +445,8 @@ public class MavesBlocks {
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_CACAO_TREE_WOOD = register("stripped_cacao_tree_wood", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD));
-    public static final Block CACAO_TREE_LEAVES = register("cacao_tree_leaves", LeavesBlock::new,
+    public static final Block CACAO_TREE_LEAVES = register("cacao_tree_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
     public static final Block CACAO_TREE_SAPLING = register(CACAO_TREE_SAPLING_KEY,
             settings -> new MavesSaplingBlock(MavesSaplingGenerators.CACAO_TREE, settings),
@@ -440,17 +479,93 @@ public class MavesBlocks {
             settings -> new TrapdoorBlock(CACAO_TREE, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque());
     public static final Block CACAO_TREE_SIGN = register(CACAO_TREE_SIGN_KEY,
-            settings -> new TerraformSignBlock(CACAO_TREE_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_SIGN_ID))),
+            settings -> new TerraformSignBlock(CACAO_TREE_SIGN_TEXTURE_ID,
+                    settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
     public static final Block CACAO_TREE_WALL_SIGN = register(CACAO_TREE_WALL_SIGN_KEY,
-            settings -> new TerraformWallSignBlock(CACAO_TREE_SIGN_TEXTURE_ID, settings.lootTable(CACAO_TREE_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_WALL_SIGN_ID))),
+            settings -> new TerraformWallSignBlock(CACAO_TREE_SIGN_TEXTURE_ID,
+                    settings.lootTable(CACAO_TREE_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                            CACAO_TREE_WALL_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN));
     public static final Block CACAO_TREE_HANGING_SIGN = register(CACAO_TREE_HANGING_SIGN_KEY,
-            settings -> new TerraformHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID, CACAO_TREE_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_HANGING_SIGN_ID))),
+            settings -> new TerraformHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID,
+                    CACAO_TREE_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    CACAO_TREE_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN));
     public static final Block CACAO_TREE_WALL_HANGING_SIGN = register(CACAO_TREE_WALL_HANGING_SIGN_KEY,
-            settings -> new TerraformWallHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID, CACAO_TREE_GUI_SIGN_TEXTURE_ID, settings.lootTable(CACAO_TREE_HANGING_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_WALL_HANGING_SIGN_ID))),
+            settings -> new TerraformWallHangingSignBlock(CACAO_TREE_HANGING_SIGN_TEXTURE_ID,
+                    CACAO_TREE_GUI_SIGN_TEXTURE_ID, settings.lootTable(CACAO_TREE_HANGING_SIGN.getLootTableKey())
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, CACAO_TREE_WALL_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN));
+
+    public static final Block HANGING_BLACK_WIDOW_STEM = register("hanging_black_widow_stem", MavesHangingStem::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LOG));
+    public static final Block STRIPPED_HANGING_BLACK_WIDOW_STEM = register("stripped_hanging_black_widow_stem", MavesHangingStem::new,
+            AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
+    public static final Block HANGING_BLACK_WIDOW_LEAVES_TAIL = register("hanging_black_widow_leaves_tail", MavesHangingLeavesTail::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
+    public static final Block HANGING_BLACK_WIDOW_LEAVES_HEAD = register("hanging_black_widow_leaves_head", MavesHangingLeavesHead::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
+    public static final Block HANGING_BLACK_WIDOW_LEAVES_BODY = register("hanging_black_widow_leaves_body", MavesHangingLeavesBody::new,
+            AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).ticksRandomly());
+    public static final Block HANGING_BLACK_WIDOW_SAPLING = register(HANGING_BLACK_WIDOW_SAPLING_KEY,
+            settings -> new MavesHangingSapling(MavesSaplingGenerators.HANGING_BLACK_WIDOW, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
+    public static final Block POTTED_HANGING_BLACK_WIDOW_SAPLING = register("potted_hanging_black_widow_sapling",
+            settings -> new FlowerPotBlock(MavesBlocks.HANGING_BLACK_WIDOW_SAPLING, settings),
+            AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING));
+    public static final Block HANGING_BLACK_WIDOW_BLOCK = register("hanging_black_widow_block",
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS));
+    public static final Block HANGING_BLACK_WIDOW_PLANKS = register("hanging_black_widow_planks",
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS));
+    public static final Block HANGING_BLACK_WIDOW_MOSAIC = register("hanging_black_widow_mosaic",
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_MOSAIC));
+    public static final Block HANGING_BLACK_WIDOW_BUTTON = register("hanging_black_widow_button",
+            settings -> new ButtonBlock(HANGING_BLACK_WIDOW, 30, settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_BUTTON));
+    public static final Block HANGING_BLACK_WIDOW_DOOR = register("hanging_black_widow_door",
+            settings -> new DoorBlock(HANGING_BLACK_WIDOW, settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_DOOR).nonOpaque());
+    public static final Block HANGING_BLACK_WIDOW_FENCE = register("hanging_black_widow_fence", FenceBlock::new,
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE));
+    public static final Block HANGING_BLACK_WIDOW_FENCE_GATE = register("hanging_black_widow_fence_gate",
+            settings -> new FenceGateBlock(HANGING_BLACK_WIDOW_TYPE, settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_FENCE_GATE));
+    public static final Block HANGING_BLACK_WIDOW_PRESSURE_PLATE = register("hanging_black_widow_pressure_plate",
+            settings -> new PressurePlateBlock(HANGING_BLACK_WIDOW, settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_PRESSURE_PLATE));
+    public static final Block HANGING_BLACK_WIDOW_SLAB = register("hanging_black_widow_slab", SlabBlock::new,
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_SLAB));
+    public static final Block HANGING_BLACK_WIDOW_MOSAIC_SLAB = register("hanging_black_widow_mosaic_slab", SlabBlock::new,
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_MOSAIC_SLAB));
+    public static final Block HANGING_BLACK_WIDOW_STAIRS = register("hanging_black_widow_stairs",
+            settings -> new StairsBlock(HANGING_BLACK_WIDOW_PLANKS.getDefaultState(), settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_STAIRS));
+    public static final Block HANGING_BLACK_WIDOW_MOSAIC_STAIRS = register("hanging_black_widow_mosaic_stairs",
+            settings -> new StairsBlock(HANGING_BLACK_WIDOW_MOSAIC.getDefaultState(), settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_MOSAIC_STAIRS));
+    public static final Block HANGING_BLACK_WIDOW_TRAPDOOR = register("hanging_black_widow_trapdoor",
+            settings -> new TrapdoorBlock(HANGING_BLACK_WIDOW, settings),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_TRAPDOOR).nonOpaque());
+    public static final Block HANGING_BLACK_WIDOW_SIGN = register(HANGING_BLACK_WIDOW_SIGN_KEY,
+            settings -> new TerraformSignBlock(HANGING_BLACK_WIDOW_SIGN_TEXTURE_ID,
+                    settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, HANGING_BLACK_WIDOW_SIGN_ID))),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_SIGN));
+    public static final Block HANGING_BLACK_WIDOW_WALL_SIGN = register(HANGING_BLACK_WIDOW_WALL_SIGN_KEY,
+            settings -> new TerraformWallSignBlock(HANGING_BLACK_WIDOW_SIGN_TEXTURE_ID,
+                    settings.lootTable(HANGING_BLACK_WIDOW_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                            HANGING_BLACK_WIDOW_WALL_SIGN_ID))),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_WALL_SIGN));
+    public static final Block HANGING_BLACK_WIDOW_HANGING_SIGN = register(HANGING_BLACK_WIDOW_HANGING_SIGN_KEY,
+            settings -> new TerraformHangingSignBlock(HANGING_BLACK_WIDOW_HANGING_SIGN_TEXTURE_ID,
+                    HANGING_BLACK_WIDOW_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    HANGING_BLACK_WIDOW_HANGING_SIGN_ID))),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_HANGING_SIGN));
+    public static final Block HANGING_BLACK_WIDOW_WALL_HANGING_SIGN = register(HANGING_BLACK_WIDOW_WALL_HANGING_SIGN_KEY,
+            settings -> new TerraformWallHangingSignBlock(HANGING_BLACK_WIDOW_HANGING_SIGN_TEXTURE_ID,
+                    HANGING_BLACK_WIDOW_GUI_SIGN_TEXTURE_ID, settings.lootTable(HANGING_BLACK_WIDOW_HANGING_SIGN.getLootTableKey())
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, HANGING_BLACK_WIDOW_WALL_HANGING_SIGN_ID))),
+            AbstractBlock.Settings.copy(Blocks.BAMBOO_WALL_HANGING_SIGN));
 
     public static final Block PALE_PUMPKIN = register(PALE_PUMPKIN_KEY, MavesPalePumpkin::new,
             AbstractBlock.Settings.copy(Blocks.PUMPKIN));
@@ -459,10 +574,12 @@ public class MavesBlocks {
     public static final Block PALE_JACK_O_LANTERN = register(PALE_JACK_O_LANTERN_KEY, MavesCarvedPalePumpkin::new,
             AbstractBlock.Settings.copy(Blocks.JACK_O_LANTERN));
     public static final Block ATTACHED_PALE_PUMPKIN_STEM = register(ATTACHED_PALE_PUMPKIN_STEM_KEY,
-            settings -> new AttachedStemBlock(PALE_PUMPKIN_STEM_KEY, PALE_PUMPKIN_KEY, MavesItems.PALE_PUMPKIN_SEEDS_KEY, settings),
+            settings -> new AttachedStemBlock(PALE_PUMPKIN_STEM_KEY, PALE_PUMPKIN_KEY,
+                    MavesItems.PALE_PUMPKIN_SEEDS_KEY, settings),
             AbstractBlock.Settings.copy(Blocks.ATTACHED_PUMPKIN_STEM));
     public static final Block PALE_PUMPKIN_STEM = register(PALE_PUMPKIN_STEM_KEY,
-            settings -> new StemBlock(PALE_PUMPKIN_KEY, ATTACHED_PALE_PUMPKIN_STEM_KEY, MavesItems.PALE_PUMPKIN_SEEDS_KEY, settings),
+            settings -> new StemBlock(PALE_PUMPKIN_KEY, ATTACHED_PALE_PUMPKIN_STEM_KEY,
+                    MavesItems.PALE_PUMPKIN_SEEDS_KEY, settings),
             AbstractBlock.Settings.copy(Blocks.PUMPKIN_STEM));
 
     public static final Block RUBBER_LOG = register("rubber_log", MavesRubberLog::new,
@@ -473,7 +590,8 @@ public class MavesBlocks {
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_RUBBER_WOOD = register("stripped_rubber_wood", MavesRubberLog::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD));
-    public static final Block RUBBER_LEAVES = register("rubber_leaves", LeavesBlock::new,
+    public static final Block RUBBER_LEAVES = register("rubber_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
     public static final Block RUBBER_SAPLING = register(RUBBER_SAPLING_KEY,
             settings -> new MavesSaplingBlock(MavesSaplingGenerators.RUBBER_TREE, settings),
@@ -506,16 +624,23 @@ public class MavesBlocks {
             settings -> new TrapdoorBlock(RUBBER, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque());
     public static final Block RUBBER_SIGN = register(RUBBER_SIGN_KEY,
-            settings -> new TerraformSignBlock(RUBBER_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_SIGN_ID))),
+            settings -> new TerraformSignBlock(RUBBER_SIGN_TEXTURE_ID,
+                    settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
     public static final Block RUBBER_WALL_SIGN = register(RUBBER_WALL_SIGN_KEY,
-            settings -> new TerraformWallSignBlock(RUBBER_SIGN_TEXTURE_ID, settings.lootTable(RUBBER_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_WALL_SIGN_ID))),
+            settings -> new TerraformWallSignBlock(RUBBER_SIGN_TEXTURE_ID,
+                    settings.lootTable(RUBBER_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                            RUBBER_WALL_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN));
     public static final Block RUBBER_HANGING_SIGN = register(RUBBER_HANGING_SIGN_KEY,
-            settings -> new TerraformHangingSignBlock(RUBBER_HANGING_SIGN_TEXTURE_ID, RUBBER_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_HANGING_SIGN_ID))),
+            settings -> new TerraformHangingSignBlock(RUBBER_HANGING_SIGN_TEXTURE_ID,
+                    RUBBER_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    RUBBER_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN));
     public static final Block RUBBER_WALL_HANGING_SIGN = register(RUBBER_WALL_HANGING_SIGN_KEY,
-            settings -> new TerraformWallHangingSignBlock(RUBBER_HANGING_SIGN_TEXTURE_ID, RUBBER_GUI_SIGN_TEXTURE_ID, settings.lootTable(RUBBER_HANGING_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_WALL_HANGING_SIGN_ID))),
+            settings -> new TerraformWallHangingSignBlock(RUBBER_HANGING_SIGN_TEXTURE_ID,
+                    RUBBER_GUI_SIGN_TEXTURE_ID, settings.lootTable(RUBBER_HANGING_SIGN.getLootTableKey())
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, RUBBER_WALL_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN));
 
     public static final Block WILLOW_LOG = register("willow_log", PillarBlock::new,
@@ -526,7 +651,8 @@ public class MavesBlocks {
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG));
     public static final Block STRIPPED_WILLOW_WOOD = register("stripped_willow_wood", PillarBlock::new,
             AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD));
-    public static final Block WILLOW_LEAVES = register("willow_leaves", LeavesBlock::new,
+    public static final Block WILLOW_LEAVES = register("willow_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
     public static final Block WILLOW_SAPLING = register(WILLOW_SAPLING_KEY,
             settings -> new MavesSaplingBlock(MavesSaplingGenerators.WILLOW_TREE, settings),
@@ -559,16 +685,23 @@ public class MavesBlocks {
             settings -> new TrapdoorBlock(WILLOW, settings),
             AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR).nonOpaque());
     public static final Block WILLOW_SIGN = register(WILLOW_SIGN_KEY,
-            settings -> new TerraformSignBlock(WILLOW_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_SIGN_ID))),
+            settings -> new TerraformSignBlock(WILLOW_SIGN_TEXTURE_ID,
+                    settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_SIGN));
     public static final Block WILLOW_WALL_SIGN = register(WILLOW_WALL_SIGN_KEY,
-            settings -> new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE_ID, settings.lootTable(WILLOW_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_WALL_SIGN_ID))),
+            settings -> new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE_ID,
+                    settings.lootTable(WILLOW_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                            WILLOW_WALL_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN));
     public static final Block WILLOW_HANGING_SIGN = register(WILLOW_HANGING_SIGN_KEY,
-            settings -> new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE_ID, WILLOW_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_HANGING_SIGN_ID))),
+            settings -> new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE_ID,
+                    WILLOW_GUI_SIGN_TEXTURE_ID, settings.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+                    WILLOW_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN));
     public static final Block WILLOW_WALL_HANGING_SIGN = register(WILLOW_WALL_HANGING_SIGN_KEY,
-            settings -> new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE_ID, WILLOW_GUI_SIGN_TEXTURE_ID, settings.lootTable(WILLOW_HANGING_SIGN.getLootTableKey()).registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_WALL_HANGING_SIGN_ID))),
+            settings -> new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE_ID,
+                    WILLOW_GUI_SIGN_TEXTURE_ID, settings.lootTable(WILLOW_HANGING_SIGN.getLootTableKey())
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, WILLOW_WALL_HANGING_SIGN_ID))),
             AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN));
 
     public static final BlockFamily APPLE_TREE_FAMILY = BlockFamilies.register(MavesBlocks.APPLE_TREE_PLANKS)
@@ -579,6 +712,9 @@ public class MavesBlocks {
             .group("wooden").unlockCriterionName("has_planks").build();
     public static final BlockFamily CACAO_TREE_FAMILY = BlockFamilies.register(MavesBlocks.CACAO_TREE_PLANKS)
             .sign(MavesBlocks.CACAO_TREE_SIGN, MavesBlocks.CACAO_TREE_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+    public static final BlockFamily HANGING_BLACK_WIDOW_FAMILY = BlockFamilies.register(MavesBlocks.HANGING_BLACK_WIDOW_PLANKS)
+            .sign(MavesBlocks.HANGING_BLACK_WIDOW_SIGN, MavesBlocks.HANGING_BLACK_WIDOW_WALL_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();
     public static final BlockFamily RUBBER_FAMILY = BlockFamilies.register(MavesBlocks.RUBBER_PLANKS)
             .sign(MavesBlocks.RUBBER_SIGN, MavesBlocks.RUBBER_WALL_SIGN)

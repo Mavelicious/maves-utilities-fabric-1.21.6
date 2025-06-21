@@ -1,12 +1,9 @@
 package com.mavesutilities;
 
-import com.mavesutilities.block.MavesBlocks;
-import com.mavesutilities.item.MavesItemGroups;
-import com.mavesutilities.item.MavesItems;
+import com.mavesutilities.block.*;
+import com.mavesutilities.item.*;
 import com.mavesutilities.util.*;
 import com.mavesutilities.world.gen.MavesWorldGeneration;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;

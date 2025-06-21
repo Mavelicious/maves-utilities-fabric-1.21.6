@@ -83,6 +83,22 @@ public class MavesFlammableBlocks {
         registry.add(MavesBlocks.CACAO_TREE_SLAB, 5, 20);
         registry.add(MavesBlocks.CACAO_TREE_STAIRS, 5, 20);
 
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_STEM, 5, 5);
+        registry.add(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM, 5, 5);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY, 30, 60);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD, 30, 60);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL, 30, 60);
+
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_BLOCK, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_PLANKS, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE_GATE, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_SLAB, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_SLAB, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_STAIRS, 5, 20);
+        registry.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_STAIRS, 5, 20);
+
         registry.add(MavesBlocks.RUBBER_LOG, 5, 5);
         registry.add(MavesBlocks.RUBBER_WOOD, 5, 5);
         registry.add(MavesBlocks.STRIPPED_RUBBER_LOG, 5, 5);

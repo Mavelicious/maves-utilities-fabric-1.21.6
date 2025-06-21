@@ -44,6 +44,7 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.APPLE_TREE_BARK, "Casca de Macieira");
         translationBuilder.add(MavesItems.AZALEA_BARK, "Casca de Azaleia");
         translationBuilder.add(MavesItems.CACAO_TREE_BARK, "Casca de Cacaueiro");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BARK, "Casca de Viúva Negra Suspensa");
         translationBuilder.add(MavesItems.RUBBER_BARK, "Casca de Seringueira");
         translationBuilder.add(MavesItems.WILLOW_BARK, "Casca de Salgueiro");
         translationBuilder.add(MavesItems.CRIMSON_BARK, "Casca Carmesim");
@@ -89,6 +90,7 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.WILD_BERRIES_BLUE, "Bagas Selvagens Azuis");
         translationBuilder.add(MavesItems.WILD_BERRIES_GREEN, "Bagas Selvagens Verdes");
         translationBuilder.add(MavesItems.WILD_BERRIES_YELLOW, "Bagas Selvagens Amarelas");
+        translationBuilder.add(MavesItems.BLACK_WIDOW_BERRIES, "Bagas de Viúva Negra");
         translationBuilder.add(MavesItems.MILK_CHOCOLATE, "Chocolate ao Leite");
         translationBuilder.add(MavesItems.WHITE_CHOCOLATE, "Chocolate Branco");
         translationBuilder.add(MavesItems.DARK_CHOCOLATE, "Chocolate Amargo");
@@ -100,6 +102,7 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Cone de Pinheiro");
         translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Sementes de Abóbora Pálida");
 
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BRANCH, "Viúva Negra Suspensa");
         translationBuilder.add(MavesItems.LATEX_BOTTLE, "Frasco de Látex");
 
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Flores de Acácia");
@@ -113,6 +116,8 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.AZALEA_CHEST_BOAT, "Barco de Azaleia com Baú");
         translationBuilder.add(MavesItems.CACAO_TREE_BOAT, "Barco de Cacaueiro");
         translationBuilder.add(MavesItems.CACAO_TREE_CHEST_BOAT, "Barco de Cacaueiro com Baú");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BOAT, "Jangada de Viúva Negra Suspensa");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT, "Jangada de Viúva Negra Suspensa com Baú");
         translationBuilder.add(MavesItems.RUBBER_BOAT, "Barco de Seringueira");
         translationBuilder.add(MavesItems.RUBBER_CHEST_BOAT, "Barco de Seringueira com Baú");
         translationBuilder.add(MavesItems.WILLOW_BOAT, "Barco de Salgueiro");
@@ -227,6 +232,31 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesBlocks.CACAO_TREE_SLAB, "Laje de Cacaueiro");
         translationBuilder.add(MavesBlocks.CACAO_TREE_STAIRS, "Escadas de Cacaueiro");
         translationBuilder.add(MavesBlocks.CACAO_TREE_TRAPDOOR, "Alçapão de Cacaueiro");
+
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_STEM, "Caule de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM, "Caule de Viúva Negra Suspensa Descascado");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL, "Folhas de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD, "Folhas de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY, "Folhas de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_SAPLING, "Muda de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.POTTED_HANGING_BLACK_WIDOW_SAPLING, "Muda de Viúva Negra Suspensa Envasada");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_BLOCK, "Bloco de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_PLANKS, "Tábuas de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC, "Mosaico de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_BUTTON, "Botão de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_DOOR, "Porta de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE, "Cerca de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_FENCE_GATE, "Portão de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_HANGING_SIGN, "Placa Suspensa de Viúva Negra");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_WALL_HANGING_SIGN.toString(), "Placa Suspensa de Viúva Negra");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_PRESSURE_PLATE, "Placa de Pressão de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_SIGN, "Placa de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_WALL_SIGN.toString(), "Placa de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_SLAB, "Laje de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_SLAB, "Laje de Mosaico de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_STAIRS, "Escadas de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_MOSAIC_STAIRS, "Escadas de Mosaico de Viúva Negra Suspensa");
+        translationBuilder.add(MavesBlocks.HANGING_BLACK_WIDOW_TRAPDOOR, "Alçapão de Viúva Negra Suspensa");
 
         translationBuilder.add(MavesBlocks.RUBBER_LOG, "Tronco de Seringueira");
         translationBuilder.add(MavesBlocks.RUBBER_WOOD, "Madeira de Seringueira");

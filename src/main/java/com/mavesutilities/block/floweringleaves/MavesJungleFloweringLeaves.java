@@ -1,30 +1,24 @@
-package com.mavesutilities.block;
+package com.mavesutilities.block.floweringleaves;
 
+import com.mavesutilities.block.*;
 import com.mavesutilities.item.MavesItems;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.ShearsItem;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.item.*;
+import net.minecraft.sound.*;
 import net.minecraft.state.StateManager;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
+import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.*;
 import net.minecraft.world.event.GameEvent;
 
 public class MavesJungleFloweringLeaves extends MavesFloweringLeaves {
     public static final MapCodec<MavesJungleFloweringLeaves> CODEC = createCodec(MavesJungleFloweringLeaves::new);
 
     public MavesJungleFloweringLeaves(Settings settings) {
-        super(MavesItems.WILD_BERRIES_YELLOW, Blocks.JUNGLE_LEAVES, settings);
+        super(0.01F, MavesItems.WILD_BERRIES_YELLOW, Blocks.JUNGLE_LEAVES, settings);
     }
 
     @Override
@@ -39,9 +33,9 @@ public class MavesJungleFloweringLeaves extends MavesFloweringLeaves {
 
         if (player.getStackInHand(Hand.MAIN_HAND).getItem() instanceof ShearsItem) {
             if (i < 1) {
-            BlockState newState = Blocks.JUNGLE_LEAVES.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
-            world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
-            return ActionResult.SUCCESS;
+                BlockState newState = Blocks.JUNGLE_LEAVES.getDefaultState().with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(true)).with(WATERLOGGED, Boolean.valueOf(false));
+                world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
+                return ActionResult.SUCCESS;
             }
         }
 
