@@ -18,12 +18,11 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "mavesutilities:hanging_black_widow_leaves",
+        "Name": "mavesutilities:hanging_black_widow_leaves_head",
         "Properties": {
           "age": "0",
           "distance": "7",
           "persistent": "false",
-          "variant": "tail",
           "waterlogged": "false"
         }
       }

@@ -98,7 +98,6 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.ACORN, "Acorn");
         translationBuilder.add(MavesItems.DARK_ACORN, "Dark Acorn");
         translationBuilder.add(MavesItems.PALE_ACORN, "Pale Acorn");
-        translationBuilder.add(MavesItems.ACACIA_POD, "Acacia Pod");
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Spruce Cone");
         translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Pale Pumpkin Seeds");
 
@@ -108,7 +107,6 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Acacia Blossom");
         translationBuilder.add(MavesItems.APPLE_BLOSSOM, "Apple Blossom");
         translationBuilder.add(MavesItems.AZALEA_BLOSSOM, "Azalea Blossom");
-        translationBuilder.add(MavesItems.BIRCH_CATKINS, "Birch Catkins");
 
         translationBuilder.add(MavesItems.APPLE_TREE_BOAT, "Apple Tree Boat");
         translationBuilder.add(MavesItems.APPLE_TREE_CHEST_BOAT, "Apple Tree Boat with Chest");
@@ -116,16 +114,14 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.AZALEA_CHEST_BOAT, "Azalea Boat with Chest");
         translationBuilder.add(MavesItems.CACAO_TREE_BOAT, "Cacao Tree Boat");
         translationBuilder.add(MavesItems.CACAO_TREE_CHEST_BOAT, "Cacao Tree Boat with Chest");
-        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BOAT, "Hanging Black Widow Raft");
-        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT, "Hanging Black Widow Raft with Chest");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_RAFT, "Hanging Black Widow Raft");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_RAFT, "Hanging Black Widow Raft with Chest");
         translationBuilder.add(MavesItems.RUBBER_BOAT, "Rubber Boat");
         translationBuilder.add(MavesItems.RUBBER_CHEST_BOAT, "Rubber Boat with Chest");
         translationBuilder.add(MavesItems.WILLOW_BOAT, "Willow Boat");
         translationBuilder.add(MavesItems.WILLOW_CHEST_BOAT, "Willow Boat with Chest");
 
-        translationBuilder.add(MavesBlocks.ACACIA_FLOWERING_LEAVES, "Flowering Acacia Leaves");
         translationBuilder.add(MavesBlocks.ACACIA_FLOWERED_LEAVES, "Flowering Acacia Leaves");
-        translationBuilder.add(MavesBlocks.BIRCH_FLOWERING_LEAVES, "Flowering Birch Leaves");
         translationBuilder.add(MavesBlocks.CHERRY_FLOWERING_LEAVES, "Flowering Cherry Leaves");
         translationBuilder.add(MavesBlocks.DARK_OAK_FLOWERING_LEAVES, "Flowering Dark Oak Leaves");
         translationBuilder.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES, "Flowering Jungle Leaves");

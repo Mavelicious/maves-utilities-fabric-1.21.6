@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.10-SNAPSHOT'
+	id 'fabric-loom' version '1.11-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -29,7 +29,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    include (modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:13.0.0-alpha.2")
+    include (modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:15.0.0-beta.1")
 	
 }
 

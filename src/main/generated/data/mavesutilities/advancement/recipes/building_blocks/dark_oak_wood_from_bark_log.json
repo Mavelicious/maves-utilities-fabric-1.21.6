@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dark_oak_wood_from_bark_log"
+        "recipe": "mavesutilities:dark_oak_wood_from_bark_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dark_oak_wood_from_bark_log"
+      "mavesutilities:dark_oak_wood_from_bark_log"
     ]
   }
 }

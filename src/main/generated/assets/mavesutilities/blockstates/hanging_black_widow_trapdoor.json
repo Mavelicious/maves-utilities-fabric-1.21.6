@@ -45,8 +45,7 @@
     },
     "facing=south,half=top,open=true": {
       "model": "mavesutilities:block/hanging_black_widow_trapdoor_open",
-      "x": 180,
-      "y": 0
+      "x": 180
     },
     "facing=west,half=bottom,open=false": {
       "model": "mavesutilities:block/hanging_black_widow_trapdoor_bottom",

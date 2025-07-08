@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cherry_log_from_sliver"
+        "recipe": "mavesutilities:cherry_log_from_sliver"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cherry_log_from_sliver"
+      "mavesutilities:cherry_log_from_sliver"
     ]
   }
 }

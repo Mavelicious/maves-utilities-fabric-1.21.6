@@ -1,14 +1,11 @@
 {
   "values": [
-    "mavesutilities:acacia_flowering_leaves",
     "mavesutilities:acacia_flowered_leaves",
     "mavesutilities:apple_tree_flowering_leaves",
     "mavesutilities:apple_tree_flowered_leaves",
-    "mavesutilities:birch_flowering_leaves",
     "mavesutilities:cherry_flowering_leaves",
     "mavesutilities:acacia_blossom",
     "mavesutilities:apple_blossom",
-    "mavesutilities:azalea_blossom",
-    "mavesutilities:birch_catkins"
+    "mavesutilities:azalea_blossom"
   ]
 }

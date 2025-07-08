@@ -214,12 +214,8 @@ public class MavesLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM, block ->
                 attachedCropStemDrops(block, MavesItems.PALE_PUMPKIN_SEEDS));
 
-        addDrop(MavesBlocks.ACACIA_FLOWERING_LEAVES, leavesDrops(MavesBlocks.ACACIA_FLOWERING_LEAVES,
-                Blocks.ACACIA_SAPLING, 0.0625f));
         addDrop(MavesBlocks.ACACIA_FLOWERED_LEAVES, leavesDrops(MavesBlocks.ACACIA_FLOWERED_LEAVES,
                 Blocks.ACACIA_SAPLING, 0.0625f));
-        addDrop(MavesBlocks.BIRCH_FLOWERING_LEAVES, leavesDrops(MavesBlocks.BIRCH_FLOWERING_LEAVES,
-                Blocks.BIRCH_SAPLING, 0.0625f));
         addDrop(MavesBlocks.CHERRY_FLOWERING_LEAVES, leavesDrops(MavesBlocks.CHERRY_FLOWERING_LEAVES,
                 Blocks.CHERRY_SAPLING, 0.0625f));
         addDrop(MavesBlocks.DARK_OAK_FLOWERING_LEAVES, leavesDrops(MavesBlocks.DARK_OAK_FLOWERING_LEAVES,

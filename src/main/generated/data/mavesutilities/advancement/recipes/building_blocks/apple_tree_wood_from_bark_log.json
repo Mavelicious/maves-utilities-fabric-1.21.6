@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:apple_tree_wood_from_bark_log"
+        "recipe": "mavesutilities:apple_tree_wood_from_bark_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:apple_tree_wood_from_bark_log"
+      "mavesutilities:apple_tree_wood_from_bark_log"
     ]
   }
 }

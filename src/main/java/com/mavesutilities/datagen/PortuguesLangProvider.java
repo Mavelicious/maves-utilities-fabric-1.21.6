@@ -98,7 +98,6 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.ACORN, "Bolota");
         translationBuilder.add(MavesItems.DARK_ACORN, "Bolota Escura");
         translationBuilder.add(MavesItems.PALE_ACORN, "Bolota Pálida");
-        translationBuilder.add(MavesItems.ACACIA_POD, "Vagem de Acácia");
         translationBuilder.add(MavesItems.SPRUCE_CONE, "Cone de Pinheiro");
         translationBuilder.add(MavesItems.PALE_PUMPKIN_SEEDS, "Sementes de Abóbora Pálida");
 
@@ -108,7 +107,6 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.ACACIA_BLOSSOM, "Flores de Acácia");
         translationBuilder.add(MavesItems.APPLE_BLOSSOM, "Flores de Macieira");
         translationBuilder.add(MavesItems.AZALEA_BLOSSOM, "Flores de Azaleia");
-        translationBuilder.add(MavesItems.BIRCH_CATKINS, "Amentilho de Bétula");
         
         translationBuilder.add(MavesItems.APPLE_TREE_BOAT, "Barco de Macieira");
         translationBuilder.add(MavesItems.APPLE_TREE_CHEST_BOAT, "Barco de Macieira com Baú");
@@ -116,16 +114,14 @@ public class PortuguesLangProvider  extends FabricLanguageProvider {
         translationBuilder.add(MavesItems.AZALEA_CHEST_BOAT, "Barco de Azaleia com Baú");
         translationBuilder.add(MavesItems.CACAO_TREE_BOAT, "Barco de Cacaueiro");
         translationBuilder.add(MavesItems.CACAO_TREE_CHEST_BOAT, "Barco de Cacaueiro com Baú");
-        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_BOAT, "Jangada de Viúva Negra Suspensa");
-        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT, "Jangada de Viúva Negra Suspensa com Baú");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_RAFT, "Jangada de Viúva Negra Suspensa");
+        translationBuilder.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_RAFT, "Jangada de Viúva Negra Suspensa com Baú");
         translationBuilder.add(MavesItems.RUBBER_BOAT, "Barco de Seringueira");
         translationBuilder.add(MavesItems.RUBBER_CHEST_BOAT, "Barco de Seringueira com Baú");
         translationBuilder.add(MavesItems.WILLOW_BOAT, "Barco de Salgueiro");
         translationBuilder.add(MavesItems.WILLOW_CHEST_BOAT, "Barco de Salgueiro com Baú");
 
-        translationBuilder.add(MavesBlocks.ACACIA_FLOWERING_LEAVES, "Folhas de Acácia Florescentes");
         translationBuilder.add(MavesBlocks.ACACIA_FLOWERED_LEAVES, "Folhas de Acácia Florescentes");
-        translationBuilder.add(MavesBlocks.BIRCH_FLOWERING_LEAVES, "Folhas de Bétula Florescentes");
         translationBuilder.add(MavesBlocks.CHERRY_FLOWERING_LEAVES, "Folhas de Cerejeira Florescentes");
         translationBuilder.add(MavesBlocks.DARK_OAK_FLOWERING_LEAVES, "Folhas de Carvalho Escuro Florescentes");
         translationBuilder.add(MavesBlocks.JUNGLE_FLOWERING_LEAVES, "Folhas de Selva Florescentes");

@@ -1,8 +1,8 @@
-// 1.21.4	-999999999-01-01T00:00:00	Mave's Utilities/
+// 1.21.7	-999999999-01-01T00:00:00	Mave's Utilities/
 e468bd3722c13846b9eccb47707eef3b577bedaa data/mavesutilities/worldgen/configured_feature/apple_tree.json
 ee003f55580b914c63f50c736bcb718d40c37e57 data/mavesutilities/worldgen/configured_feature/azalea_giant_bush.json
 080a85ab841cc484147f6e6152b1345c090207bf data/mavesutilities/worldgen/configured_feature/cacao_tree.json
-ceee669cd6e5d853df2409b40369cbdb7405c25c data/mavesutilities/worldgen/configured_feature/hanging_black_widow.json
+cc4f214e0642f667bb8a8fb0240e84b6ba7f5ab6 data/mavesutilities/worldgen/configured_feature/hanging_black_widow.json
 45d85ab3c4a9d9cd6de5407c84c86d9ea3a177af data/mavesutilities/worldgen/configured_feature/pale_pumpkin.json
 92580314765a9224c8b357a4389fef8a9cb380d8 data/mavesutilities/worldgen/configured_feature/rubber_tree.json
 7d067adf16230fbc83da9348a479ff16dd8c3b6b data/mavesutilities/worldgen/configured_feature/willow_tree.json

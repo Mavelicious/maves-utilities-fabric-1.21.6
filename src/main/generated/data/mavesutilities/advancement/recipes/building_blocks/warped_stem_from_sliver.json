@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:warped_stem_from_sliver"
+        "recipe": "mavesutilities:warped_stem_from_sliver"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:warped_stem_from_sliver"
+      "mavesutilities:warped_stem_from_sliver"
     ]
   }
 }

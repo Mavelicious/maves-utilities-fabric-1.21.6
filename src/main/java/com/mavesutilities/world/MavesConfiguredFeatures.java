@@ -15,8 +15,6 @@ import net.minecraft.world.gen.stateprovider.*;
 import net.minecraft.world.gen.treedecorator.CocoaTreeDecorator;
 import net.minecraft.world.gen.trunk.*;
 
-import java.util.List;
-
 public class MavesConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> APPLE_TREE_KEY = registerKey("apple_tree");

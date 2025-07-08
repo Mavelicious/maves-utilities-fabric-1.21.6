@@ -55,7 +55,6 @@ public class MavesFuelItems {
             builder.add(MavesItems.STRIPPED_RUBBER_SLIVER, 20 * 30 / 2);
             builder.add(MavesItems.STRIPPED_WILLOW_SLIVER, 20 * 30 / 2);
 
-            builder.add(MavesItems.ACACIA_POD, 200 / 4);
             builder.add(MavesItems.SPRUCE_CONE, 200 / 4);
         });
     }

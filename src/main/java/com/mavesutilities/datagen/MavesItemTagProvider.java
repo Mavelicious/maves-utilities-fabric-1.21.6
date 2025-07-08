@@ -38,10 +38,8 @@ public class MavesItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(MavesItems.RUBBER_LEAVES)
                 .add(MavesItems.WILLOW_LEAVES)
                 .add(MavesItems.ACACIA_FLOWERED_LEAVES)
-                .add(MavesItems.ACACIA_FLOWERING_LEAVES)
                 .add(MavesItems.APPLE_TREE_FLOWERED_LEAVES)
                 .add(MavesItems.APPLE_TREE_FLOWERING_LEAVES)
-                .add(MavesItems.BIRCH_FLOWERING_LEAVES)
                 .add(MavesItems.CHERRY_FLOWERING_LEAVES)
                 .add(MavesItems.DARK_OAK_FLOWERING_LEAVES)
                 .add(MavesItems.JUNGLE_FLOWERING_LEAVES)
@@ -291,16 +289,13 @@ public class MavesItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(MavesItems.STRIPPED_WILLOW_SLIVER);
 
         valueLookupBuilder(ItemTags.BEE_FOOD)
-                .add(MavesItems.ACACIA_FLOWERING_LEAVES)
                 .add(MavesItems.ACACIA_FLOWERED_LEAVES)
                 .add(MavesItems.APPLE_TREE_FLOWERING_LEAVES)
                 .add(MavesItems.APPLE_TREE_FLOWERED_LEAVES)
-                .add(MavesItems.BIRCH_FLOWERING_LEAVES)
                 .add(MavesItems.CHERRY_FLOWERING_LEAVES)
                 .add(MavesItems.ACACIA_BLOSSOM)
                 .add(MavesItems.APPLE_BLOSSOM)
-                .add(MavesItems.AZALEA_BLOSSOM)
-                .add(MavesItems.BIRCH_CATKINS);
+                .add(MavesItems.AZALEA_BLOSSOM);
 
         valueLookupBuilder(ItemTags.CHICKEN_FOOD)
                 .add(MavesItems.PALE_PUMPKIN_SEEDS);

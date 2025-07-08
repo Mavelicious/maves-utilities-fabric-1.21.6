@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cacao_tree_log_from_bark"
+        "recipe": "mavesutilities:cacao_tree_log_from_bark"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cacao_tree_log_from_bark"
+      "mavesutilities:cacao_tree_log_from_bark"
     ]
   }
 }

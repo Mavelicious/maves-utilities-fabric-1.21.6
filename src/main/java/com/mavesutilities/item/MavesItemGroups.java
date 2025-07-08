@@ -99,7 +99,6 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.ACORN);
             itemGroup.add(MavesItems.DARK_ACORN);
             itemGroup.add(MavesItems.PALE_ACORN);
-            itemGroup.add(MavesItems.ACACIA_POD);
             itemGroup.add(MavesItems.SPRUCE_CONE);
             itemGroup.add(MavesItems.PALE_PUMPKIN_SEEDS);
             itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BRANCH);
@@ -107,15 +106,14 @@ public class MavesItemGroups {
             itemGroup.add(MavesItems.ACACIA_BLOSSOM);
             itemGroup.add(MavesItems.APPLE_BLOSSOM);
             itemGroup.add(MavesItems.AZALEA_BLOSSOM);
-            itemGroup.add(MavesItems.BIRCH_CATKINS);
             itemGroup.add(MavesItems.APPLE_TREE_BOAT);
             itemGroup.add(MavesItems.APPLE_TREE_CHEST_BOAT);
             itemGroup.add(MavesItems.AZALEA_BOAT);
             itemGroup.add(MavesItems.AZALEA_CHEST_BOAT);
             itemGroup.add(MavesItems.CACAO_TREE_BOAT);
             itemGroup.add(MavesItems.CACAO_TREE_CHEST_BOAT);
-            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_BOAT);
-            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_RAFT);
+            itemGroup.add(MavesItems.HANGING_BLACK_WIDOW_CHEST_RAFT);
             itemGroup.add(MavesItems.RUBBER_BOAT);
             itemGroup.add(MavesItems.RUBBER_CHEST_BOAT);
             itemGroup.add(MavesItems.WILLOW_BOAT);
@@ -124,9 +122,7 @@ public class MavesItemGroups {
 
         ItemGroupEvents.modifyEntriesEvent(MAVES_BLOCKS_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(MavesItems.OAK_FLOWERING_LEAVES);
-            itemGroup.add(MavesItems.BIRCH_FLOWERING_LEAVES);
             itemGroup.add(MavesItems.JUNGLE_FLOWERING_LEAVES);
-            itemGroup.add(MavesItems.ACACIA_FLOWERING_LEAVES);
             itemGroup.add(MavesItems.ACACIA_FLOWERED_LEAVES);
             itemGroup.add(MavesItems.DARK_OAK_FLOWERING_LEAVES);
             itemGroup.add(MavesItems.CHERRY_FLOWERING_LEAVES);

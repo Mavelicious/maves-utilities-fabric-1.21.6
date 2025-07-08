@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:acacia_log_from_bark"
+        "recipe": "mavesutilities:acacia_log_from_bark"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:acacia_log_from_bark"
+      "mavesutilities:acacia_log_from_bark"
     ]
   }
 }

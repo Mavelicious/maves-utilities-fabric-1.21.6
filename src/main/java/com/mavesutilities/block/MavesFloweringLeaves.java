@@ -21,7 +21,6 @@ public class MavesFloweringLeaves extends LeavesBlock implements Fertilizable {
     public static final IntProperty DISTANCE = Properties.DISTANCE_1_7;
     public static final BooleanProperty PERSISTENT = Properties.PERSISTENT;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    private static final int field_31112 = 1;
     public static final IntProperty AGE = Properties.AGE_3;
     protected final float leafParticleChance;
     private final Item fruitItem;

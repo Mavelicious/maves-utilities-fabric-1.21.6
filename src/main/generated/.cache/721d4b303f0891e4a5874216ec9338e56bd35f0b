@@ -1,4 +1,4 @@
-// 1.21.4	-999999999-01-01T00:00:00	Mave's Utilities/Tags for minecraft:block
+// 1.21.7	-999999999-01-01T00:00:00	Mave's Utilities/Tags for minecraft:block
 d5d319e9e17f015150c4a267a4f41da5df0dc9dd data/mavesutilities/tags/block/apple_tree_logs.json
 8657d0a615797a97bdcc049c9fb95c654e7fed21 data/mavesutilities/tags/block/azalea_stems.json
 a918840c8d932a4832ebcd67f927e2a5ee33aa2d data/mavesutilities/tags/block/cacao_tree_logs.json
@@ -15,7 +15,7 @@ a4a2482e84cc4a852fe40a999facf74b292adb39 data/minecraft/tags/block/dark_oak_logs
 28cbe8a62b68ae83903094b2fe48a8088f43de81 data/minecraft/tags/block/fence_gates.json
 615306844bf37b56e8823651c631a4a00d8907a2 data/minecraft/tags/block/flower_pots.json
 81d1d70d9037a8153d2b0a88ed55b55b27c40c4a data/minecraft/tags/block/jungle_logs.json
-3a92357e2ca47ceeaa17e6c29f6b4538f544fc15 data/minecraft/tags/block/leaves.json
+269d9301f286c34d344a2ca9c65c48f1aea14edf data/minecraft/tags/block/leaves.json
 cdabd2649f2527add42255c30b9efb87f655be27 data/minecraft/tags/block/logs_that_burn.json
 9718ce47e4b9a673193f4d5bf176fdcb79c1d76d data/minecraft/tags/block/mangrove_logs.json
 d393de500ddecc89374f6a9e61d3cb175477e2de data/minecraft/tags/block/mineable/axe.json

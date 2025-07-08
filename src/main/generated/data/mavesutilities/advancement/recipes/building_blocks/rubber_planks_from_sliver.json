@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:rubber_planks_from_sliver"
+        "recipe": "mavesutilities:rubber_planks_from_sliver"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:rubber_planks_from_sliver"
+      "mavesutilities:rubber_planks_from_sliver"
     ]
   }
 }

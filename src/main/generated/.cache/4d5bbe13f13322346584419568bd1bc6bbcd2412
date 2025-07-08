@@ -1,4 +1,4 @@
-// 1.21.4	-999999999-01-01T00:00:00	Mave's Utilities/Tags for minecraft:item
+// 1.21.7	-999999999-01-01T00:00:00	Mave's Utilities/Tags for minecraft:item
 152bbb8666ad683562639f1ed7c16fcbad3ae49c data/mavesutilities/tags/item/acacia_slivers.json
 7752f4ff34fe9ad8205c12b0e216dafc57cd9dbd data/mavesutilities/tags/item/apple_slivers.json
 d5d319e9e17f015150c4a267a4f41da5df0dc9dd data/mavesutilities/tags/item/apple_tree_logs.json
@@ -24,7 +24,7 @@ e0dab0b7890f8c91dd67aea051a7c2003c3120a4 data/mavesutilities/tags/item/warped_sl
 d2c3f3f23cf2f5e5e39167af4862e467a20a3571 data/mavesutilities/tags/item/willow_logs.json
 1625b5d5a8c764058d4cc9d7c77ac35188cb2262 data/mavesutilities/tags/item/willow_slivers.json
 794af36683296e69433e9ca33e730bedaeb97667 data/minecraft/tags/item/acacia_logs.json
-50f01b81ed3a4fc196b8fd9cf230b1974d15f484 data/minecraft/tags/item/bee_food.json
+d3af491723d0b26eb6c71199e679e46787c18be6 data/minecraft/tags/item/bee_food.json
 524195de2cd269e64024b9f574219c27a474e9d4 data/minecraft/tags/item/birch_logs.json
 88a4da755f3e75e94241ff70a6ba307809a83c9f data/minecraft/tags/item/cherry_logs.json
 d23d5b449b3a0e6f8792acf92ce4b8ff1b359909 data/minecraft/tags/item/chicken_food.json
@@ -34,7 +34,7 @@ a4a2482e84cc4a852fe40a999facf74b292adb39 data/minecraft/tags/item/dark_oak_logs.
 329a5c191a2549c43111d310e3ce21e1ada60b16 data/minecraft/tags/item/fox_food.json
 4bdad985ed1c2c9fe17a35da60505fab987ac11b data/minecraft/tags/item/horse_food.json
 81d1d70d9037a8153d2b0a88ed55b55b27c40c4a data/minecraft/tags/item/jungle_logs.json
-06da99b82702b55eaa17e59234e8c4e1dab121d7 data/minecraft/tags/item/leaves.json
+4be164c51422aff763a781e3010c8237cf901b32 data/minecraft/tags/item/leaves.json
 cdabd2649f2527add42255c30b9efb87f655be27 data/minecraft/tags/item/logs_that_burn.json
 9718ce47e4b9a673193f4d5bf176fdcb79c1d76d data/minecraft/tags/item/mangrove_logs.json
 a8b440f5679cb76a4d8bf6b117b95e2d9137ead1 data/minecraft/tags/item/oak_logs.json

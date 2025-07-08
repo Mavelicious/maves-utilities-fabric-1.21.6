@@ -31,10 +31,10 @@ public class MavesItems {
 
     public static final RegistryKey<Item> PALE_PUMPKIN_SEEDS_KEY = of("pale_pumpkin_seeds");
 
+    //Blocks
+
     public static final Item OAK_FLOWERING_LEAVES = register(MavesBlocks.OAK_FLOWERING_LEAVES);
-    public static final Item BIRCH_FLOWERING_LEAVES = register(MavesBlocks.BIRCH_FLOWERING_LEAVES);
     public static final Item JUNGLE_FLOWERING_LEAVES = register(MavesBlocks.JUNGLE_FLOWERING_LEAVES);
-    public static final Item ACACIA_FLOWERING_LEAVES = register(MavesBlocks.ACACIA_FLOWERING_LEAVES);
     public static final Item ACACIA_FLOWERED_LEAVES = register(MavesBlocks.ACACIA_FLOWERED_LEAVES);
     public static final Item DARK_OAK_FLOWERING_LEAVES = register(MavesBlocks.DARK_OAK_FLOWERING_LEAVES);
     public static final Item CHERRY_FLOWERING_LEAVES = register(MavesBlocks.CHERRY_FLOWERING_LEAVES);
@@ -184,6 +184,8 @@ public class MavesItems {
     public static final Item WILLOW_STAIRS = register(MavesBlocks.WILLOW_STAIRS);
     public static final Item WILLOW_TRAPDOOR = register(MavesBlocks.WILLOW_TRAPDOOR);
 
+    //Items
+
     public static final Item OAK_BARK = register("oak_bark");
     public static final Item SPRUCE_BARK = register("spruce_bark");
     public static final Item BIRCH_BARK = register("birch_bark");
@@ -257,12 +259,11 @@ public class MavesItems {
     public static final Item DARK_CHOCOLATE = register("dark_chocolate",
             new Item.Settings().maxCount(1).food(MavesFoods.DARK_CHOCOLATE_FOOD_COMPONENT).useRemainder(Items.BOWL));
     public static final Item BLACK_WIDOW_BERRIES = register("black_widow_berries",
-            new Item.Settings().food(MavesFoods.WILD_BERRIES_BLUE_FOOD_COMPONENT));
+            new Item.Settings().food(MavesFoods.BLACK_WIDOW_BERRIES_FOOD_COMPONENT));
 
     public static final Item ACORN = register("acorn");
     public static final Item DARK_ACORN = register("dark_acorn");
     public static final Item PALE_ACORN = register("pale_acorn");
-    public static final Item ACACIA_POD = register("acacia_pod");
     public static final Item SPRUCE_CONE = register("spruce_cone");
     public static final Item PALE_PUMPKIN_SEEDS = register(PALE_PUMPKIN_SEEDS_KEY,
             createBlockItemWithUniqueName(MavesBlocks.PALE_PUMPKIN_STEM));
@@ -274,7 +275,6 @@ public class MavesItems {
     public static final Item ACACIA_BLOSSOM = register("acacia_blossom");
     public static final Item APPLE_BLOSSOM = register("apple_blossom");
     public static final Item AZALEA_BLOSSOM = register("azalea_blossom");
-    public static final Item BIRCH_CATKINS = register("birch_catkins");
 
     public static final Item APPLE_TREE_SIGN = register(MavesBlocks.APPLE_TREE_SIGN,
             (block, settings) -> new SignItem(block, MavesBlocks.APPLE_TREE_WALL_SIGN, settings),
@@ -314,29 +314,29 @@ public class MavesItems {
             new Item.Settings().maxCount(16));
 
     public static final Item APPLE_TREE_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(APPLE_TREE, false);
+            .registerBoatItem(APPLE_TREE, false, false);
     public static final Item APPLE_TREE_CHEST_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(APPLE_TREE, true);
+            .registerBoatItem(APPLE_TREE, true, false);
     public static final Item AZALEA_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(AZALEA, false);
+            .registerBoatItem(AZALEA, false, false);
     public static final Item AZALEA_CHEST_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(AZALEA, true);
+            .registerBoatItem(AZALEA, true, false);
     public static final Item CACAO_TREE_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(CACAO_TREE, false);
+            .registerBoatItem(CACAO_TREE, false, false);
     public static final Item CACAO_TREE_CHEST_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(CACAO_TREE, true);
-    public static final Item HANGING_BLACK_WIDOW_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(HANGING_BLACK_WIDOW, false);
-    public static final Item HANGING_BLACK_WIDOW_CHEST_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(HANGING_BLACK_WIDOW, true);
+            .registerBoatItem(CACAO_TREE, true, false);
+    public static final Item HANGING_BLACK_WIDOW_RAFT = TerraformBoatItemHelper
+            .registerBoatItem(HANGING_BLACK_WIDOW, false, true);
+    public static final Item HANGING_BLACK_WIDOW_CHEST_RAFT = TerraformBoatItemHelper
+            .registerBoatItem(HANGING_BLACK_WIDOW, true, true);
     public static final Item RUBBER_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(RUBBER, false);
+            .registerBoatItem(RUBBER, false, false);
     public static final Item RUBBER_CHEST_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(RUBBER, true);
+            .registerBoatItem(RUBBER, true, false);
     public static final Item WILLOW_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(WILLOW, false);
+            .registerBoatItem(WILLOW, false, false);
     public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper
-            .registerBoatItem(WILLOW, true);
+            .registerBoatItem(WILLOW, true, false);
 
 
 

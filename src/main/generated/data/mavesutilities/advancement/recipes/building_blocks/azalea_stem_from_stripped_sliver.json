@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:azalea_stem_from_stripped_sliver"
+        "recipe": "mavesutilities:azalea_stem_from_stripped_sliver"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:azalea_stem_from_stripped_sliver"
+      "mavesutilities:azalea_stem_from_stripped_sliver"
     ]
   }
 }

@@ -138,8 +138,6 @@ public class MavesModelProvider extends FabricModelProvider {
                 .log(MavesBlocks.CACAO_TREE_LOG).wood(MavesBlocks.CACAO_TREE_WOOD);
         g.createLogTexturePool(MavesBlocks.RUBBER_LOG)
                 .log(MavesBlocks.RUBBER_LOG).wood(MavesBlocks.RUBBER_WOOD);
-        g.createLogTexturePool(MavesBlocks.HANGING_BLACK_WIDOW_STEM)
-                .log(MavesBlocks.HANGING_BLACK_WIDOW_STEM);
         g.createLogTexturePool(MavesBlocks.WILLOW_LOG)
                 .log(MavesBlocks.WILLOW_LOG).wood(MavesBlocks.WILLOW_WOOD);
         g.createLogTexturePool(MavesBlocks.STRIPPED_APPLE_TREE_LOG)
@@ -148,44 +146,20 @@ public class MavesModelProvider extends FabricModelProvider {
                 .log(MavesBlocks.STRIPPED_AZALEA_STEM).wood(MavesBlocks.STRIPPED_AZALEA_WOOD);
         g.createLogTexturePool(MavesBlocks.STRIPPED_CACAO_TREE_LOG)
                 .log(MavesBlocks.STRIPPED_CACAO_TREE_LOG).wood(MavesBlocks.STRIPPED_CACAO_TREE_WOOD);
-        g.createLogTexturePool(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM)
-                .log(MavesBlocks.STRIPPED_HANGING_BLACK_WIDOW_STEM);
         g.createLogTexturePool(MavesBlocks.STRIPPED_RUBBER_LOG)
                 .log(MavesBlocks.STRIPPED_RUBBER_LOG).wood(MavesBlocks.STRIPPED_RUBBER_WOOD);
         g.createLogTexturePool(MavesBlocks.STRIPPED_WILLOW_LOG)
                 .log(MavesBlocks.STRIPPED_WILLOW_LOG).wood(MavesBlocks.STRIPPED_WILLOW_WOOD);
 
-        registerTintableBlockWithStages(g, MavesBlocks.ACACIA_FLOWERING_LEAVES,
-                Properties.AGE_3, -12012264, 0, 1, 2, 3);
-        g.registerTintedBlockAndItem(MavesBlocks.ACACIA_FLOWERED_LEAVES,
-                TexturedModel.LEAVES, -12012264);
-        registerTintableBlockWithStages(g, MavesBlocks.BIRCH_FLOWERING_LEAVES,
-                Properties.AGE_3, -8345771, 0, 1, 2, 3);
         registerBlockWithStages(g, MavesBlocks.CHERRY_FLOWERING_LEAVES,
                 Properties.AGE_3, 0, 1, 2, 3);
-        registerTintableBlockWithStages(g, MavesBlocks.DARK_OAK_FLOWERING_LEAVES,
-                Properties.AGE_3, -12012264, 0, 1, 2, 3);
-        registerTintableBlockWithStages(g, MavesBlocks.JUNGLE_FLOWERING_LEAVES,
-                Properties.AGE_3, -12012264, 0, 1, 2, 3);
-        registerTintableBlockWithStages(g, MavesBlocks.OAK_FLOWERING_LEAVES,
-                Properties.AGE_3, -12012264, 0, 1, 2, 3);
         registerBlockWithStages(g, MavesBlocks.PALE_OAK_FLOWERING_LEAVES,
                 Properties.AGE_3, 0, 1, 2, 3);
 
         g.registerTintedBlockAndItem(MavesBlocks.APPLE_TREE_LEAVES,
                 TexturedModel.LEAVES, 0xbeff00);
-        registerTintableBlockWithStages(g, MavesBlocks.APPLE_TREE_FLOWERING_LEAVES,
-                Properties.AGE_3, 0xbeff00, 0, 1, 2, 3);
-        g.registerTintedBlockAndItem(MavesBlocks.APPLE_TREE_FLOWERED_LEAVES,
-                TexturedModel.LEAVES, 0xbeff00);
         g.registerTintedBlockAndItem(MavesBlocks.CACAO_TREE_LEAVES,
                 TexturedModel.LEAVES, 0x97ff00);
-        g.registerTintableCrossBlockStateWithStages(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD,
-                BlockStateModelGenerator.CrossType.NOT_TINTED, Properties.AGE_3, 0, 1, 2, 3);
-        g.registerTintableCrossBlockStateWithStages(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY,
-                BlockStateModelGenerator.CrossType.NOT_TINTED, Properties.AGE_3, 0, 1, 2, 3);
-        g.registerTintableCrossBlockStateWithStages(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL,
-                BlockStateModelGenerator.CrossType.NOT_TINTED, Properties.AGE_3, 0, 1, 2, 3);
         g.registerTintedBlockAndItem(MavesBlocks.RUBBER_LEAVES,
                 TexturedModel.LEAVES, 0x00ff03);
         g.registerTintedBlockAndItem(MavesBlocks.WILLOW_LEAVES,
@@ -372,7 +346,6 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.ACORN, Models.GENERATED);
         itemModelGenerator.register(MavesItems.DARK_ACORN, Models.GENERATED);
         itemModelGenerator.register(MavesItems.PALE_ACORN, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.ACACIA_POD, Models.GENERATED);
         itemModelGenerator.register(MavesItems.SPRUCE_CONE, Models.GENERATED);
 
         itemModelGenerator.register(MavesItems.HANGING_BLACK_WIDOW_BRANCH, Models.GENERATED);
@@ -381,7 +354,6 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.ACACIA_BLOSSOM, Models.GENERATED);
         itemModelGenerator.register(MavesItems.APPLE_BLOSSOM, Models.GENERATED);
         itemModelGenerator.register(MavesItems.AZALEA_BLOSSOM, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.BIRCH_CATKINS, Models.GENERATED);
 
         itemModelGenerator.register(MavesItems.APPLE_TREE_BOAT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.APPLE_TREE_CHEST_BOAT, Models.GENERATED);
@@ -389,8 +361,8 @@ public class MavesModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MavesItems.AZALEA_CHEST_BOAT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.CACAO_TREE_BOAT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.CACAO_TREE_CHEST_BOAT, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.HANGING_BLACK_WIDOW_BOAT, Models.GENERATED);
-        itemModelGenerator.register(MavesItems.HANGING_BLACK_WIDOW_CHEST_BOAT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.HANGING_BLACK_WIDOW_RAFT, Models.GENERATED);
+        itemModelGenerator.register(MavesItems.HANGING_BLACK_WIDOW_CHEST_RAFT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.RUBBER_BOAT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.RUBBER_CHEST_BOAT, Models.GENERATED);
         itemModelGenerator.register(MavesItems.WILLOW_BOAT, Models.GENERATED);

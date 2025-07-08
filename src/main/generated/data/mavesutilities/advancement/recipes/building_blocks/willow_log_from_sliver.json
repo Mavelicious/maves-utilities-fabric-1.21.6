@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:willow_log_from_sliver"
+        "recipe": "mavesutilities:willow_log_from_sliver"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:willow_log_from_sliver"
+      "mavesutilities:willow_log_from_sliver"
     ]
   }
 }

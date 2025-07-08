@@ -20,15 +20,9 @@ public class MavesBlockColors {
     public static void registerBlockColors() {
         BlockColors blockColors = new BlockColors();
         ColorProviderRegistry<Block, BlockColorProvider> add = ColorProviderRegistry.BLOCK;
-
-        add.register((state, world, pos, tintIndex) ->
-                (world != null && pos != null) ? BiomeColors.getFoliageColor(world, pos) :
-                        -12012264, MavesBlocks.ACACIA_FLOWERING_LEAVES);
         add.register((state, world, pos, tintIndex) ->
                 (world != null && pos != null) ? BiomeColors.getFoliageColor(world, pos) :
                         -12012264, MavesBlocks.ACACIA_FLOWERED_LEAVES);
-        add.register((state, world, pos, tintIndex) ->
-                -8345771, MavesBlocks.BIRCH_FLOWERING_LEAVES);
         add.register((state, world, pos, tintIndex) ->
                 (world != null && pos != null) ? BiomeColors.getFoliageColor(world, pos) :
                         -12012264, MavesBlocks.DARK_OAK_FLOWERING_LEAVES);
@@ -62,8 +56,6 @@ public class MavesBlockColors {
             Method registerColorPropertyMethod = BlockColors.class.getDeclaredMethod("registerColorProperty", Property.class, Block[].class);
             registerColorPropertyMethod.setAccessible(true);
             registerColorPropertyMethod.invoke(blockColors, MavesFloweringLeaves.AGE, new Block[]{
-                    MavesBlocks.ACACIA_FLOWERING_LEAVES,
-                    MavesBlocks.BIRCH_FLOWERING_LEAVES,
                     MavesBlocks.DARK_OAK_FLOWERING_LEAVES,
                     MavesBlocks.OAK_FLOWERING_LEAVES
             });

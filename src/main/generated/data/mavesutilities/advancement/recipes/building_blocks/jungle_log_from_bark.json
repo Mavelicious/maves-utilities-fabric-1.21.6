@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jungle_log_from_bark"
+        "recipe": "mavesutilities:jungle_log_from_bark"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jungle_log_from_bark"
+      "mavesutilities:jungle_log_from_bark"
     ]
   }
 }

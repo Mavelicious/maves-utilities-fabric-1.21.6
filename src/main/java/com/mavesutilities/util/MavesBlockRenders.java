@@ -14,6 +14,9 @@ public class MavesBlockRenders {
         BlockRenderLayerMap.putBlock(MavesBlocks.WILLOW_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(MavesBlocks.PALE_PUMPKIN_STEM, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(MavesBlocks.ATTACHED_PALE_PUMPKIN_STEM, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_HEAD, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_BODY, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(MavesBlocks.HANGING_BLACK_WIDOW_LEAVES_TAIL, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(MavesBlocks.APPLE_TREE_DOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(MavesBlocks.APPLE_TREE_DOOR, BlockRenderLayer.TRANSLUCENT);

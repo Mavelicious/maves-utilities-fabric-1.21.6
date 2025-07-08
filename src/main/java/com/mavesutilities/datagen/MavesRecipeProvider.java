@@ -979,13 +979,6 @@ public class MavesRecipeProvider extends FabricRecipeProvider {
                                 conditionsFromItem(MavesItems.AZALEA_BLOSSOM))
                         .offerTo(exporter, "pink_dye_from_azalea_blossom");
 
-                createShapeless(RecipeCategory.MISC, Items.BROWN_DYE)
-                        .input(MavesItems.BIRCH_CATKINS)
-                        .group("brown_dye")
-                        .criterion(hasItem(MavesItems.BIRCH_CATKINS),
-                                conditionsFromItem(MavesItems.BIRCH_CATKINS))
-                        .offerTo(exporter, "brown_dye_from_birch_catkin");
-
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, Blocks.PUMPKIN)
                         .input(MavesItems.PUMPKIN_SLICE)
                         .input(MavesItems.PUMPKIN_SLICE)
